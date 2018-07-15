@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:tmz:canvas:block:twitter-moment-block:1-0-0">
+    <mixins>
+      <curie-major>triniti:canvas:mixin:block:v1</curie-major>
+      <curie-major>triniti:canvas:mixin:twitter-moment-block:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

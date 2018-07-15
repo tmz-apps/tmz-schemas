@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:tmz:dam:node:video-asset:1-0-0">
+    <mixins>
+      <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
+      <curie-major>triniti:dam:mixin:asset:v1</curie-major>
+      <curie-major>triniti:dam:mixin:video-asset:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:expirable:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
+      <curie-major>triniti:people:mixin:has-people:v1</curie-major>
+      <curie-major>triniti:taxonomy:mixin:hashtaggable:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

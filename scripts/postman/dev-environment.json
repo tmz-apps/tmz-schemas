@@ -1,0 +1,28 @@
+{
+  "id": "9023b369-71a7-248d-eda7-9a9aa1335d80",
+  "name": "api.tmz.com (dev)",
+  "values": [
+    {
+      "enabled": true,
+      "key": "api_endpoint",
+      "type": "text",
+      "value": "https://localhost"
+    },
+    {
+      "enabled": true,
+      "key": "pbjx_endpoint",
+      "type": "text",
+      "value": "https://localhost/pbjx"
+    },
+    {
+      "enabled": true,
+      "key": "access_token",
+      "type": "text",
+      "value": "YOUR_JWT_HERE"
+    }
+  ],
+  "timestamp": 1515013449298,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2018-01-03T21:07:41.060Z",
+  "_postman_exported_using": "Postman/5.4.1"
+}

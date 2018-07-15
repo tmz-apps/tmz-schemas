@@ -1,0 +1,26 @@
+domain: http://schemas.tmz.com
+
+namespaces:
+  - tmz:apollo
+  - tmz:boost
+  - tmz:canvas
+  - tmz:curator
+  - tmz:dam
+  - tmz:iam
+  - tmz:news
+  - tmz:notify
+  - tmz:ovp
+  - tmz:people
+  - tmz:sys
+  - tmz:taxonomy
+
+languages:
+  php:
+    output: ./build/php/src
+
+  js:
+    output: ./build/js/src
+
+  json-schema:
+    include_all: true
+    output: ./gh-pages/json-schema
