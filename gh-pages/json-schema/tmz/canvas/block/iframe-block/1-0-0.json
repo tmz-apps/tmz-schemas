@@ -1,0 +1,92 @@
+{
+  "id": "http://schemas.tmz.com/json-schema/tmz/canvas/block/iframe-block/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_schema": {
+      "type": "string",
+      "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
+      "default": "pbj:tmz:canvas:block:iframe-block:1-0-0"
+    },
+    "etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "css_class": {
+      "type": "string",
+      "pattern": "^[\\w\\s-]+$",
+      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "updated_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Used to visually represent an update that occurred on this block that is NOT when this block was literally last modified.",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
+    "src": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "width": {
+      "type": "string",
+      "pattern": "^\\d+(%|px)?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "height": {
+      "type": "string",
+      "pattern": "^\\d+(%|px)?$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "align": {
+      "type": "string",
+      "pattern": "^(center|right|left)$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "data": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map containing values for the data-* attributes",
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
+    }
+  },
+  "required": [
+    "_schema",
+    "src"
+  ],
+  "additionalProperties": false
+}

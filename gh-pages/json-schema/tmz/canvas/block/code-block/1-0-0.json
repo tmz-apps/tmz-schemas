@@ -1,0 +1,51 @@
+{
+  "id": "http://schemas.tmz.com/json-schema/tmz/canvas/block/code-block/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_schema": {
+      "type": "string",
+      "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
+      "default": "pbj:tmz:canvas:block:code-block:1-0-0"
+    },
+    "etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "css_class": {
+      "type": "string",
+      "pattern": "^[\\w\\s-]+$",
+      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "updated_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Used to visually represent an update that occurred on this block that is NOT when this block was literally last modified.",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
+    "code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
+    }
+  },
+  "required": [
+    "_schema"
+  ],
+  "additionalProperties": false
+}
