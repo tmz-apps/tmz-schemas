@@ -434,18 +434,31 @@
     * `tmz:people:request:search-people-response`
   * __tmz:sys__
     * `tmz:sys:command:create-picklist`
+    * `tmz:sys:command:create-redirect`
     * `tmz:sys:command:delete-picklist`
+    * `tmz:sys:command:delete-redirect`
     * `tmz:sys:command:update-picklist`
+    * `tmz:sys:command:update-redirect`
     * `tmz:sys:event:picklist-created`
     * `tmz:sys:event:picklist-deleted`
     * `tmz:sys:event:picklist-updated`
+    * `tmz:sys:event:redirect-created`
+    * `tmz:sys:event:redirect-deleted`
+    * `tmz:sys:event:redirect-updated`
     * `tmz:sys:node:picklist`
+    * `tmz:sys:node:redirect`
     * `tmz:sys:request:get-picklist-history-request`
     * `tmz:sys:request:get-picklist-history-response`
     * `tmz:sys:request:get-picklist-request`
     * `tmz:sys:request:get-picklist-response`
+    * `tmz:sys:request:get-redirect-history-request`
+    * `tmz:sys:request:get-redirect-history-response`
+    * `tmz:sys:request:get-redirect-request`
+    * `tmz:sys:request:get-redirect-response`
     * `tmz:sys:request:list-all-picklists-request`
     * `tmz:sys:request:list-all-picklists-response`
+    * `tmz:sys:request:search-redirects-request`
+    * `tmz:sys:request:search-redirects-response`
   * __tmz:taxonomy__
     * `tmz:taxonomy:command:create-category`
     * `tmz:taxonomy:command:create-channel`
