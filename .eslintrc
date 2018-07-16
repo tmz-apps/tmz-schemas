@@ -21,7 +21,7 @@
     "import/no-extraneous-dependencies": "off",
     "max-len": "off",
     "no-trailing-spaces": "off",
-    "prefer-destructuring": "off"
+    "quotes": "off"
   },
   "settings": {
     "import/resolver": {
