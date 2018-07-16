@@ -1,6 +1,5 @@
 {
   "name": "tmz/schemas",
-  "version": "dev-master",
   "homepage": "http://schemas.tmz.com/",
   "description": "Schemas for all TMZ apps and components.",
   "type": "pbj-schema-store",
