@@ -9,17 +9,30 @@
 
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import '@tmz/schemas/tmz/sys/command/CreatePicklistV1';
+import '@tmz/schemas/tmz/sys/command/CreateRedirectV1';
 import '@tmz/schemas/tmz/sys/command/DeletePicklistV1';
+import '@tmz/schemas/tmz/sys/command/DeleteRedirectV1';
 import '@tmz/schemas/tmz/sys/command/UpdatePicklistV1';
+import '@tmz/schemas/tmz/sys/command/UpdateRedirectV1';
 import '@tmz/schemas/tmz/sys/event/PicklistCreatedV1';
 import '@tmz/schemas/tmz/sys/event/PicklistDeletedV1';
 import '@tmz/schemas/tmz/sys/event/PicklistUpdatedV1';
+import '@tmz/schemas/tmz/sys/event/RedirectCreatedV1';
+import '@tmz/schemas/tmz/sys/event/RedirectDeletedV1';
+import '@tmz/schemas/tmz/sys/event/RedirectUpdatedV1';
 import '@tmz/schemas/tmz/sys/node/PicklistV1';
+import '@tmz/schemas/tmz/sys/node/RedirectV1';
 import '@tmz/schemas/tmz/sys/request/GetPicklistHistoryRequestV1';
 import '@tmz/schemas/tmz/sys/request/GetPicklistHistoryResponseV1';
 import '@tmz/schemas/tmz/sys/request/GetPicklistRequestV1';
 import '@tmz/schemas/tmz/sys/request/GetPicklistResponseV1';
+import '@tmz/schemas/tmz/sys/request/GetRedirectHistoryRequestV1';
+import '@tmz/schemas/tmz/sys/request/GetRedirectHistoryResponseV1';
+import '@tmz/schemas/tmz/sys/request/GetRedirectRequestV1';
+import '@tmz/schemas/tmz/sys/request/GetRedirectResponseV1';
 import '@tmz/schemas/tmz/sys/request/ListAllPicklistsRequestV1';
 import '@tmz/schemas/tmz/sys/request/ListAllPicklistsResponseV1';
+import '@tmz/schemas/tmz/sys/request/SearchRedirectsRequestV1';
+import '@tmz/schemas/tmz/sys/request/SearchRedirectsResponseV1';
 
 export default MessageResolver;
