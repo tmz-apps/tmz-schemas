@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.1.1
+* Re-publish to npm now that it's separated from monorepo.  We will now publish new npm tags on each update.
+
+
 ## v0.1.0
 * __Add Schemas:__
   * __tmz:apollo__
