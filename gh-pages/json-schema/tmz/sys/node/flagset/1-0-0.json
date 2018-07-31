@@ -167,6 +167,50 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "string_flags": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "additionalProperties": false,
+      "pbj": {
+        "type": "string",
+        "rule": "map"
+      }
+    },
+    "int_flags": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "additionalProperties": false,
+      "pbj": {
+        "type": "int",
+        "rule": "map"
+      }
+    },
+    "boolean_flags": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "pbj": {
+        "type": "boolean",
+        "rule": "map"
+      }
     }
   },
   "required": [
