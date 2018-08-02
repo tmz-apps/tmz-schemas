@@ -105,13 +105,22 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "#/definitions/node"
+          "$ref": "#/definitions/redirect"
         }
       ],
       "pbj": {
         "type": "message",
-        "rule": "single",
-        "overridable": true
+        "rule": "single"
+      }
+    },
+    "resolves_to": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "The URL (absolute or relative on the current domain) that the redirect resolves to which takes into account vanity url associations.",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
       }
     }
   },
@@ -128,11 +137,11 @@
         }
       ]
     },
-    "node": {
+    "redirect": {
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+          "$ref": "http://schemas.tmz.com/json-schema/triniti/sys/mixin/redirect/1-0-0.json#"
         }
       ]
     }
