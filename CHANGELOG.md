@@ -16,12 +16,12 @@
   * `tmz:sys:request:get-flagset-response`
   * `tmz:sys:request:list-all-flagsets-request`
   * `tmz:sys:request:list-all-flagsets-response`
-    
 * __Modify Schemas:__
   * `tmz:canvas:node:page`
     * Add mixin `triniti:sys:mixin:vanity-urlable:v1`
   * `tmz:sys:request:get-redirect-response`
     * Add mixin `triniti:sys:mixin:get-redirect-response:v1`
+
 
 ## v0.1.1
 * Re-publish to npm now that it's separated from monorepo.  We will now publish new npm tags on each update.
