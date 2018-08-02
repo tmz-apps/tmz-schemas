@@ -1,6 +1,28 @@
 # CHANGELOG
 
 
+## v0.1.2
+* __Add Schemas:__
+  * `tmz:sys:commmand:create-flagset`
+  * `tmz:sys:commmand:delete-flagset`
+  * `tmz:sys:commmand:update-flagset`
+  * `tmz:sys:event:flagset-created`
+  * `tmz:sys:event:flagset-deleted`
+  * `tmz:sys:event:flagset-updated`
+  * `tmz:sys:node:flagset`
+  * `tmz:sys:request:get-flagset-history-request`
+  * `tmz:sys:request:get-flagset-history-response`
+  * `tmz:sys:request:get-flagset-request`
+  * `tmz:sys:request:get-flagset-response`
+  * `tmz:sys:request:list-all-flagsets-request`
+  * `tmz:sys:request:list-all-flagsets-response`
+    
+* __Modify Schemas:__
+  * `tmz:canvas:node:page`
+    * Add mixin `triniti:sys:mixin:vanity-urlable:v1`
+  * `tmz:sys:request:get-redirect-response`
+    * Add mixin `triniti:sys:mixin:get-redirect-response:v1`
+
 ## v0.1.1
 * Re-publish to npm now that it's separated from monorepo.  We will now publish new npm tags on each update.
 
