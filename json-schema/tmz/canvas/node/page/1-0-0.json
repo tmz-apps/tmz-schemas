@@ -409,6 +409,14 @@
         "rule": "set"
       }
     },
+    "redirect_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "category_refs": {
       "type": "array",
       "items": [
