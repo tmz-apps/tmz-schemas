@@ -51,10 +51,10 @@ export default class PageV1 extends Message {
         TrinitiCommonThemeableV1Mixin.create(),
         TrinitiCuratorTeaserableV1Mixin.create(),
         TrinitiPeopleHasPeopleV1Mixin.create(),
+        TrinitiSysVanityUrlableV1Mixin.create(),
         TrinitiTaxonomyCategorizableV1Mixin.create(),
         TrinitiTaxonomyHasChannelV1Mixin.create(),
         TrinitiTaxonomyHashtaggableV1Mixin.create(),
-        TrinitiSysVanityUrlableV1Mixin.create(),
       ],
     );
   }

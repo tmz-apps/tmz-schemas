@@ -65,10 +65,10 @@ final class PageV1 extends AbstractMessage implements
     TrinitiCommonThemeableV1,
     TrinitiCuratorTeaserableV1,
     TrinitiPeopleHasPeopleV1,
+    TrinitiSysVanityUrlableV1,
     TrinitiTaxonomyCategorizableV1,
     TrinitiTaxonomyHasChannelV1,
-    TrinitiTaxonomyHashtaggableV1,
-    TrinitiSysVanityUrlableV1
+    TrinitiTaxonomyHashtaggableV1
 {
     use GdbotsNcrNodeV1Trait;
     use TrinitiCanvasPageV1Trait;
@@ -97,10 +97,10 @@ final class PageV1 extends AbstractMessage implements
                 TrinitiCommonThemeableV1Mixin::create(),
                 TrinitiCuratorTeaserableV1Mixin::create(),
                 TrinitiPeopleHasPeopleV1Mixin::create(),
+                TrinitiSysVanityUrlableV1Mixin::create(),
                 TrinitiTaxonomyCategorizableV1Mixin::create(),
                 TrinitiTaxonomyHasChannelV1Mixin::create(),
                 TrinitiTaxonomyHashtaggableV1Mixin::create(),
-                TrinitiSysVanityUrlableV1Mixin::create(),
             ]
         );
     }
