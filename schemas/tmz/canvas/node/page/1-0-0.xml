@@ -24,6 +24,7 @@
       <curie-major>triniti:taxonomy:mixin:categorizable:v1</curie-major>
       <curie-major>triniti:taxonomy:mixin:has-channel:v1</curie-major>
       <curie-major>triniti:taxonomy:mixin:hashtaggable:v1</curie-major>
+      <curie-major>triniti:sys:mixin:vanity-urlable:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

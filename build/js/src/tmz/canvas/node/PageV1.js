@@ -20,6 +20,7 @@ import TrinitiCommonSwipeableV1Mixin from '@triniti/schemas/triniti/common/mixin
 import TrinitiCommonThemeableV1Mixin from '@triniti/schemas/triniti/common/mixin/themeable/ThemeableV1Mixin';
 import TrinitiCuratorTeaserableV1Mixin from '@triniti/schemas/triniti/curator/mixin/teaserable/TeaserableV1Mixin';
 import TrinitiPeopleHasPeopleV1Mixin from '@triniti/schemas/triniti/people/mixin/has-people/HasPeopleV1Mixin';
+import TrinitiSysVanityUrlableV1Mixin from '@triniti/schemas/triniti/sys/mixin/vanity-urlable/VanityUrlableV1Mixin';
 import TrinitiTaxonomyCategorizableV1Mixin from '@triniti/schemas/triniti/taxonomy/mixin/categorizable/CategorizableV1Mixin';
 import TrinitiTaxonomyHasChannelV1Mixin from '@triniti/schemas/triniti/taxonomy/mixin/has-channel/HasChannelV1Mixin';
 import TrinitiTaxonomyHashtaggableV1Mixin from '@triniti/schemas/triniti/taxonomy/mixin/hashtaggable/HashtaggableV1Mixin';
@@ -53,6 +54,7 @@ export default class PageV1 extends Message {
         TrinitiTaxonomyCategorizableV1Mixin.create(),
         TrinitiTaxonomyHasChannelV1Mixin.create(),
         TrinitiTaxonomyHashtaggableV1Mixin.create(),
+        TrinitiSysVanityUrlableV1Mixin.create(),
       ],
     );
   }

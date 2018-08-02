@@ -38,6 +38,8 @@ use Triniti\Schemas\Curator\Mixin\Teaserable\TeaserableV1 as TrinitiCuratorTease
 use Triniti\Schemas\Curator\Mixin\Teaserable\TeaserableV1Mixin as TrinitiCuratorTeaserableV1Mixin;
 use Triniti\Schemas\People\Mixin\HasPeople\HasPeopleV1 as TrinitiPeopleHasPeopleV1;
 use Triniti\Schemas\People\Mixin\HasPeople\HasPeopleV1Mixin as TrinitiPeopleHasPeopleV1Mixin;
+use Triniti\Schemas\Sys\Mixin\VanityUrlable\VanityUrlableV1 as TrinitiSysVanityUrlableV1;
+use Triniti\Schemas\Sys\Mixin\VanityUrlable\VanityUrlableV1Mixin as TrinitiSysVanityUrlableV1Mixin;
 use Triniti\Schemas\Taxonomy\Mixin\Categorizable\CategorizableV1 as TrinitiTaxonomyCategorizableV1;
 use Triniti\Schemas\Taxonomy\Mixin\Categorizable\CategorizableV1Mixin as TrinitiTaxonomyCategorizableV1Mixin;
 use Triniti\Schemas\Taxonomy\Mixin\HasChannel\HasChannelV1 as TrinitiTaxonomyHasChannelV1;
@@ -65,7 +67,8 @@ final class PageV1 extends AbstractMessage implements
     TrinitiPeopleHasPeopleV1,
     TrinitiTaxonomyCategorizableV1,
     TrinitiTaxonomyHasChannelV1,
-    TrinitiTaxonomyHashtaggableV1
+    TrinitiTaxonomyHashtaggableV1,
+    TrinitiSysVanityUrlableV1
 {
     use GdbotsNcrNodeV1Trait;
     use TrinitiCanvasPageV1Trait;
@@ -97,6 +100,7 @@ final class PageV1 extends AbstractMessage implements
                 TrinitiTaxonomyCategorizableV1Mixin::create(),
                 TrinitiTaxonomyHasChannelV1Mixin::create(),
                 TrinitiTaxonomyHashtaggableV1Mixin::create(),
+                TrinitiSysVanityUrlableV1Mixin::create(),
             ]
         );
     }
