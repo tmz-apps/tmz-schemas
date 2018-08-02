@@ -9,11 +9,14 @@ use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1Mixin as GdbotsNcr
 use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1 as GdbotsPbjxResponseV1;
 use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Mixin as GdbotsPbjxResponseV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait as GdbotsPbjxResponseV1Trait;
+use Triniti\Schemas\Sys\Mixin\GetRedirectResponse\GetRedirectResponseV1 as TrinitiSysGetRedirectResponseV1;
+use Triniti\Schemas\Sys\Mixin\GetRedirectResponse\GetRedirectResponseV1Mixin as TrinitiSysGetRedirectResponseV1Mixin;
 
 final class GetRedirectResponseV1 extends AbstractMessage implements
     GetRedirectResponse,
     GdbotsPbjxResponseV1,
-    GdbotsNcrGetNodeResponseV1
+    GdbotsNcrGetNodeResponseV1,
+    TrinitiSysGetRedirectResponseV1
 {
     use GdbotsPbjxResponseV1Trait;
 
@@ -27,6 +30,7 @@ final class GetRedirectResponseV1 extends AbstractMessage implements
             [
                 GdbotsPbjxResponseV1Mixin::create(),
                 GdbotsNcrGetNodeResponseV1Mixin::create(),
+                TrinitiSysGetRedirectResponseV1Mixin::create(),
             ]
         );
     }

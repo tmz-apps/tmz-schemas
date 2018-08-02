@@ -57,6 +57,7 @@
     'tmz:notify:node:sms-notification' => 'Tmz\Schemas\Notify\Node\SmsNotificationV1',
     'tmz:ovp:node:video' => 'Tmz\Schemas\Ovp\Node\VideoV1',
     'tmz:people:node:person' => 'Tmz\Schemas\People\Node\PersonV1',
+    'tmz:sys:node:flagset' => 'Tmz\Schemas\Sys\Node\FlagsetV1',
     'tmz:sys:node:picklist' => 'Tmz\Schemas\Sys\Node\PicklistV1',
     'tmz:sys:node:redirect' => 'Tmz\Schemas\Sys\Node\RedirectV1',
     'tmz:taxonomy:node:category' => 'Tmz\Schemas\Taxonomy\Node\CategoryV1',

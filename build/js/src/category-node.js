@@ -56,6 +56,7 @@ import '@tmz/schemas/tmz/notify/node/SlackNotificationV1';
 import '@tmz/schemas/tmz/notify/node/SmsNotificationV1';
 import '@tmz/schemas/tmz/ovp/node/VideoV1';
 import '@tmz/schemas/tmz/people/node/PersonV1';
+import '@tmz/schemas/tmz/sys/node/FlagsetV1';
 import '@tmz/schemas/tmz/sys/node/PicklistV1';
 import '@tmz/schemas/tmz/sys/node/RedirectV1';
 import '@tmz/schemas/tmz/taxonomy/node/CategoryV1';
