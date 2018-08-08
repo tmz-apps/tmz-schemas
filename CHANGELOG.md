@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.1.3
+* __Add Schemas:__
+  * `tmz:curator:command:sync-teaser`
+
+
 ## v0.1.2
 * __Add Schemas:__
   * `tmz:sys:commmand:create-flagset`

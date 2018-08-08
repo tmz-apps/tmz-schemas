@@ -66,6 +66,7 @@ import '@tmz/schemas/tmz/curator/command/PublishTeaserV1';
 import '@tmz/schemas/tmz/curator/command/PublishTimelineV1';
 import '@tmz/schemas/tmz/curator/command/RenameGalleryV1';
 import '@tmz/schemas/tmz/curator/command/RenameTimelineV1';
+import '@tmz/schemas/tmz/curator/command/SyncTeaserV1';
 import '@tmz/schemas/tmz/curator/command/UnpublishGalleryV1';
 import '@tmz/schemas/tmz/curator/command/UnpublishPromotionV1';
 import '@tmz/schemas/tmz/curator/command/UnpublishTeaserV1';

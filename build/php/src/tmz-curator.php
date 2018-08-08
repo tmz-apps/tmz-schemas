@@ -37,6 +37,7 @@
     'tmz:curator:command:publish-timeline' => 'Tmz\Schemas\Curator\Command\PublishTimelineV1',
     'tmz:curator:command:rename-gallery' => 'Tmz\Schemas\Curator\Command\RenameGalleryV1',
     'tmz:curator:command:rename-timeline' => 'Tmz\Schemas\Curator\Command\RenameTimelineV1',
+    'tmz:curator:command:sync-teaser' => 'Tmz\Schemas\Curator\Command\SyncTeaserV1',
     'tmz:curator:command:unpublish-gallery' => 'Tmz\Schemas\Curator\Command\UnpublishGalleryV1',
     'tmz:curator:command:unpublish-promotion' => 'Tmz\Schemas\Curator\Command\UnpublishPromotionV1',
     'tmz:curator:command:unpublish-teaser' => 'Tmz\Schemas\Curator\Command\UnpublishTeaserV1',
