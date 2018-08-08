@@ -4,7 +4,7 @@
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wb-schemas/tmz-schemas.git"
+    "url": "https://github.com/wb-apps/tmz-schemas.git"
   },
   "license": "Apache-2.0",
   "scripts": {
