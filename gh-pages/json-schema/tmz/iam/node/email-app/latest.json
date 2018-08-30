@@ -182,6 +182,16 @@
         "type": "identifier",
         "rule": "set"
       }
+    },
+    "sendgrid_api_key": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "This field contains an access token (used as bearer token) and in some cases SMTP username and password. It should be encrypted. @link https://sendgrid.com/docs/ui/account-and-settings/api-keys/",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
     }
   },
   "required": [

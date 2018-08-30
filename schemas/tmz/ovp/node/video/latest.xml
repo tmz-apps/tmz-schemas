@@ -5,7 +5,6 @@
 
   <schema id="pbj:tmz:ovp:node:video:1-0-0">
     <fields>
-      <field name="launch_quote" type="string"/>
       <field name="episode_highlights" type="string" rule="list"/>
     </fields>
 
