@@ -201,6 +201,15 @@
         "rule": "single"
       }
     },
+    "launch_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "duration": {
       "type": "integer",
       "default": 0,
@@ -604,15 +613,6 @@
         "type": "string",
         "rule": "set",
         "format": "hashtag"
-      }
-    },
-    "launch_quote": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
       }
     },
     "episode_highlights": {

@@ -182,6 +182,34 @@
         "type": "identifier",
         "rule": "set"
       }
+    },
+    "channel_id": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "description": "The \"channel_id\" comes from Apple News and is not a secret so it does not require encryption. It is usually a version 4 uuid. @link https://developer.apple.com/documentation/apple_news/apple_news_api/about_the_news_security_model",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "api_key": {
+      "type": "string",
+      "pattern": "^[\\w-]+$",
+      "description": "The \"api_key\" comes from Apple News and is not a secret so it does not require encryption. It is usually a version 4 uuid (similar to channel_id).",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "api_secret": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "The \"api_secret\" should be encrypted and never stored in plain text.",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
     }
   },
   "required": [
