@@ -33,8 +33,6 @@ export default class VideoV1 extends Message {
   static defineSchema() {
     return new Schema('pbj:tmz:ovp:node:video:1-0-0', VideoV1,
       [
-        Fb.create('launch_quote', T.StringType.create())
-          .build(),
         Fb.create('episode_highlights', T.StringType.create())
           .asAList()
           .build(),

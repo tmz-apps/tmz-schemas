@@ -73,8 +73,6 @@ final class VideoV1 extends AbstractMessage implements
     {
         return new Schema('pbj:tmz:ovp:node:video:1-0-0', __CLASS__,
             [
-                Fb::create('launch_quote', T\StringType::create())
-                    ->build(),
                 Fb::create('episode_highlights', T\StringType::create())
                     ->asAList()
                     ->build(),
