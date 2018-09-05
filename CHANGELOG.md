@@ -3,6 +3,9 @@
 
 ## v0.1.5
 * Use `gdbots/schemas` v1.5.6 and `triniti/schemas` v0.6.5.
+* __Add Schemas:__
+  * `tmz:curator:node:gridler-widget`
+  * `tmz:curator:node:tetris-widget`
 
 
 ## v0.1.4
