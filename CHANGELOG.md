@@ -2,7 +2,7 @@
 
 
 ## v0.1.6
-* Use `gdbots/schemas` v1.5.7
+* Use `gdbots/schemas` v1.5.7 and `triniti/schemas` v0.7.0.
 
 
 ## v0.1.5
