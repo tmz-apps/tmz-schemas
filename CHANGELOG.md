@@ -1,9 +1,7 @@
 # CHANGELOG
 
 
-## v0.2.0
-__BREAKING CHANGES__
-
+## v0.1.6
 * Use `gdbots/schemas` v1.5.7 and `triniti/schemas` v0.7.0.
 * __Delete Schemas:__
   * `tmz:canvas:block:pinterest-board-block`
@@ -19,7 +17,6 @@ __BREAKING CHANGES__
   * `tmz:canvas:block:twitter-user-timeline-block`
   * `tmz:canvas:block:twitter-video-block`
   * `tmz:canvas:block:vevo-video-block`
-
 
 
 ## v0.1.5
