@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v0.1.6
+* Use `gdbots/schemas` v1.5.7 and `triniti/schemas` v0.7.0.
+* __Delete Schemas:__
+  * `tmz:canvas:block:pinterest-board-block`
+  * `tmz:canvas:block:pinterest-profile-block`
+  * `tmz:canvas:block:twitter-collection-timeline-block`
+  * `tmz:canvas:block:twitter-follow-button-block`
+  * `tmz:canvas:block:twitter-hashtag-button-block`
+  * `tmz:canvas:block:twitter-likes-timeline-block`
+  * `tmz:canvas:block:twitter-list-timeline-block`
+  * `tmz:canvas:block:twitter-mention-button-block`
+  * `tmz:canvas:block:twitter-moment-block`
+  * `tmz:canvas:block:twitter-search-timeline-block`
+  * `tmz:canvas:block:twitter-user-timeline-block`
+  * `tmz:canvas:block:twitter-video-block`
+  * `tmz:canvas:block:vevo-video-block`
+
+
 ## v0.1.5
 * Use `gdbots/schemas` v1.5.6 and `triniti/schemas` v0.6.5.
 * __Add Schemas:__
