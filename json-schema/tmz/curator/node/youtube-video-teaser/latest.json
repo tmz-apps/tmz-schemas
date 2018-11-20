@@ -311,6 +311,15 @@
         "rule": "single"
       }
     },
+    "seo_published_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Allows customization of the publish date for SEO purposes. For example if something meaningful within an article is updated, adjust this date instead of the actual publish date.",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
     "meta_description": {
       "type": "string",
       "minLength": 0,
@@ -364,6 +373,21 @@
         "type": "string",
         "rule": "single",
         "format": "slug"
+      }
+    },
+    "primary_person_refs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^[\\w\\/\\.:-]+$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "pbj": {
+        "type": "identifier",
+        "rule": "set"
       }
     },
     "person_refs": {
