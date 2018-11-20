@@ -7,6 +7,7 @@ import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Tr
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
+import TrinitiApolloHasPollV1Mixin from '@triniti/schemas/triniti/apollo/mixin/has-poll/HasPollV1Mixin';
 import TrinitiDamAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/asset/AssetV1Mixin';
 import TrinitiDamImageAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/image-asset/ImageAssetV1Mixin';
 import TrinitiDamImageAssetV1Trait from '@triniti/schemas/triniti/dam/mixin/image-asset/ImageAssetV1Trait';
@@ -29,6 +30,7 @@ export default class ImageAssetV1 extends Message {
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrExpirableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
+        TrinitiApolloHasPollV1Mixin.create(),
         TrinitiPeopleHasPeopleV1Mixin.create(),
         TrinitiTaxonomyHashtaggableV1Mixin.create(),
       ],

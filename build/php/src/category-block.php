@@ -34,5 +34,4 @@
     'tmz:canvas:block:vimeo-video-block' => 'Tmz\Schemas\Canvas\Block\VimeoVideoBlockV1',
     'tmz:canvas:block:youtube-playlist-block' => 'Tmz\Schemas\Canvas\Block\YoutubePlaylistBlockV1',
     'tmz:canvas:block:youtube-video-block' => 'Tmz\Schemas\Canvas\Block\YoutubeVideoBlockV1',
-    'triniti:canvas:block:render-context' => 'Triniti\Schemas\Canvas\Block\RenderContextV1',
 ]);

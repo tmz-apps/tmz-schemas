@@ -33,6 +33,5 @@ import '@tmz/schemas/tmz/canvas/block/VideoBlockV1';
 import '@tmz/schemas/tmz/canvas/block/VimeoVideoBlockV1';
 import '@tmz/schemas/tmz/canvas/block/YoutubePlaylistBlockV1';
 import '@tmz/schemas/tmz/canvas/block/YoutubeVideoBlockV1';
-import '@triniti/schemas/triniti/canvas/block/RenderContextV1';
 
 export default MessageResolver;

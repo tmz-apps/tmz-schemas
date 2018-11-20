@@ -6,6 +6,7 @@ import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import TrinitiCuratorSearchTeasersRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/search-teasers-request/SearchTeasersRequestV1Mixin';
+import TrinitiCuratorWidgetSearchRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget-search-request/WidgetSearchRequestV1Mixin';
 
 export default class SearchTeasersRequestV1 extends Message {
   /**
@@ -20,6 +21,7 @@ export default class SearchTeasersRequestV1 extends Message {
         GdbotsPbjxRequestV1Mixin.create(),
         GdbotsNcrSearchNodesRequestV1Mixin.create(),
         TrinitiCuratorSearchTeasersRequestV1Mixin.create(),
+        TrinitiCuratorWidgetSearchRequestV1Mixin.create(),
       ],
     );
   }

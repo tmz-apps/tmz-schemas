@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.1.7
+* Use `triniti/schemas` v0.8.0.
+* __Modify Schemas:__
+  * `tmz:curator:request:search-teasers-request`
+    * Add mixin `triniti:curator:mixin:widget-search-request:v1`
+  * `tmz:dam:node:image-asset`
+    * Add mixin `triniti:apollo:mixin:has-poll:v1`
+  * `tmz:news:request:search-articles-request`
+    * Add mixin `triniti:curator:mixin:widget-search-request:v1`
+
+
 ## v0.1.6
 * Use `gdbots/schemas` v1.5.7 and `triniti/schemas` v0.7.0.
 * __Delete Schemas:__

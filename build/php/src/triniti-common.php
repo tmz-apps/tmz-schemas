@@ -9,5 +9,5 @@
  */
 
 \Gdbots\Pbj\MessageResolver::registerMap([
-    'triniti:curator::widget-render-context' => 'Triniti\Schemas\Curator\WidgetRenderContextV1',
+    'triniti:common::render-context' => 'Triniti\Schemas\Common\RenderContextV1',
 ]);

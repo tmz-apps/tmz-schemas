@@ -13,6 +13,8 @@ use Gdbots\Schemas\Ncr\Mixin\Indexed\IndexedV1Mixin as GdbotsNcrIndexedV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1 as GdbotsNcrNodeV1;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin as GdbotsNcrNodeV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait as GdbotsNcrNodeV1Trait;
+use Triniti\Schemas\Apollo\Mixin\HasPoll\HasPollV1 as TrinitiApolloHasPollV1;
+use Triniti\Schemas\Apollo\Mixin\HasPoll\HasPollV1Mixin as TrinitiApolloHasPollV1Mixin;
 use Triniti\Schemas\Dam\Mixin\Asset\AssetV1 as TrinitiDamAssetV1;
 use Triniti\Schemas\Dam\Mixin\Asset\AssetV1Mixin as TrinitiDamAssetV1Mixin;
 use Triniti\Schemas\Dam\Mixin\ImageAsset\ImageAssetV1 as TrinitiDamImageAssetV1;
@@ -31,6 +33,7 @@ final class ImageAssetV1 extends AbstractMessage implements
     GdbotsCommonTaggableV1,
     GdbotsNcrExpirableV1,
     GdbotsNcrIndexedV1,
+    TrinitiApolloHasPollV1,
     TrinitiPeopleHasPeopleV1,
     TrinitiTaxonomyHashtaggableV1
 {
@@ -51,6 +54,7 @@ final class ImageAssetV1 extends AbstractMessage implements
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrExpirableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
+                TrinitiApolloHasPollV1Mixin::create(),
                 TrinitiPeopleHasPeopleV1Mixin::create(),
                 TrinitiTaxonomyHashtaggableV1Mixin::create(),
             ]

@@ -9,6 +9,8 @@ use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequestV1Mixin as Gdb
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1 as GdbotsPbjxRequestV1;
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin as GdbotsPbjxRequestV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Trait as GdbotsPbjxRequestV1Trait;
+use Triniti\Schemas\Curator\Mixin\WidgetSearchRequest\WidgetSearchRequestV1 as TrinitiCuratorWidgetSearchRequestV1;
+use Triniti\Schemas\Curator\Mixin\WidgetSearchRequest\WidgetSearchRequestV1Mixin as TrinitiCuratorWidgetSearchRequestV1Mixin;
 use Triniti\Schemas\News\Mixin\SearchArticlesRequest\SearchArticlesRequestV1 as TrinitiNewsSearchArticlesRequestV1;
 use Triniti\Schemas\News\Mixin\SearchArticlesRequest\SearchArticlesRequestV1Mixin as TrinitiNewsSearchArticlesRequestV1Mixin;
 
@@ -16,7 +18,8 @@ final class SearchArticlesRequestV1 extends AbstractMessage implements
     SearchArticlesRequest,
     GdbotsPbjxRequestV1,
     GdbotsNcrSearchNodesRequestV1,
-    TrinitiNewsSearchArticlesRequestV1
+    TrinitiNewsSearchArticlesRequestV1,
+    TrinitiCuratorWidgetSearchRequestV1
 {
     use GdbotsPbjxRequestV1Trait;
 
@@ -31,6 +34,7 @@ final class SearchArticlesRequestV1 extends AbstractMessage implements
                 GdbotsPbjxRequestV1Mixin::create(),
                 GdbotsNcrSearchNodesRequestV1Mixin::create(),
                 TrinitiNewsSearchArticlesRequestV1Mixin::create(),
+                TrinitiCuratorWidgetSearchRequestV1Mixin::create(),
             ]
         );
     }
