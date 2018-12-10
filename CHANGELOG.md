@@ -1,9 +1,48 @@
 # CHANGELOG
 
 
+## v0.2.0
+__BREAKING CHANGES__
+
+* Use `triniti/schemas` v0.9.0.
+* __Add Schemas:__
+  * `tmz:curator:mixin:card-widget`
+  * `tmz:curator:mixin:code-widget`
+  * `tmz:curator:mixin:hero-bar-widget`
+  * `tmz:curator:mixin:render-promotion-request`
+  * `tmz:curator:mixin:render-promotion-response`
+  * `tmz:curator:mixin:render-widget-request`
+  * `tmz:curator:mixin:render-widget-response`
+  * `tmz:curator:mixin:slider-widget`
+  * `tmz:curator:mixin:tag-cloud-widget`
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
+  * `tmz:curator:node:blogroll-widget`
+    * Add mixin `triniti:curator:mixin:widget-has-search-request:v1`
+  * `tmz:curator:node:carousel-widget`
+    * Add mixin `triniti:curator:mixin:widget-has-search-request:v1`
+  * `tmz:curator:node:gridler-widget`
+    * Add mixin `triniti:curator:mixin:widget-has-search-request:v1`
+  * `tmz:curator:node:tetris-widget`
+    * Add mixin `triniti:curator:mixin:widget-has-search-request:v1`
+  * `tmz:curator:request:search-galleries-request`
+    * Add mixin `triniti:curator:mixin:widget-search-request:v1`
+  * `tmz:curator:request:search-galleries-response`
+    * Add mixin `triniti:curator:mixin:widget-search-response:v1`
+  * `tmz:curator:request:search-teasers-response`
+    * Add mixin `triniti:curator:mixin:widget-search-response:v1`
+  * `tmz:news:request:search-articles-response`
+    * Add mixin `triniti:curator:mixin:widget-search-response:v1`
+  * `tmz:ovp:request:search-videos-request`
+    * Add mixin `triniti:curator:mixin:widget-search-request:v1`
+  * `tmz:ovp:request:search-videos-response`
+    * Add mixin `triniti:curator:mixin:widget-search-response:v1`
+* __Delete Schemas:__
+  * `tmz:curator:node:card-deck-widget`
+
+
 ## v0.1.7
 * Use `triniti/schemas` v0.8.0.
-* __Modify Schemas:__
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `tmz:curator:request:search-teasers-request`
     * Add mixin `triniti:curator:mixin:widget-search-request:v1`
   * `tmz:dam:node:image-asset`
@@ -39,7 +78,7 @@
 
 ## v0.1.4
 * Use `gdbots/schemas` v1.5.5 and `triniti/schemas` v0.6.4.
-* __Modify Schemas:__
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `tmz:ovp:node:video`
     * Remove `launch_quote` string field.
 
@@ -64,7 +103,7 @@
   * `tmz:sys:request:get-flagset-response`
   * `tmz:sys:request:list-all-flagsets-request`
   * `tmz:sys:request:list-all-flagsets-response`
-* __Modify Schemas:__
+* __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `tmz:canvas:node:page`
     * Add mixin `triniti:sys:mixin:vanity-urlable:v1`
   * `tmz:sys:request:get-redirect-response`

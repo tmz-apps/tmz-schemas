@@ -9,6 +9,7 @@ import Schema from '@gdbots/pbj/Schema';
 import TrinitiCommonThemeableV1Mixin from '@triniti/schemas/triniti/common/mixin/themeable/ThemeableV1Mixin';
 import TrinitiCuratorCarouselWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/carousel-widget/CarouselWidgetV1Mixin';
 import TrinitiCuratorCarouselWidgetV1Trait from '@triniti/schemas/triniti/curator/mixin/carousel-widget/CarouselWidgetV1Trait';
+import TrinitiCuratorWidgetHasSearchRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget-has-search-request/WidgetHasSearchRequestV1Mixin';
 import TrinitiCuratorWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget/WidgetV1Mixin';
 
 export default class CarouselWidgetV1 extends Message {
@@ -27,6 +28,7 @@ export default class CarouselWidgetV1 extends Message {
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
         TrinitiCommonThemeableV1Mixin.create(),
+        TrinitiCuratorWidgetHasSearchRequestV1Mixin.create(),
       ],
     );
   }

@@ -9,6 +9,7 @@ import Schema from '@gdbots/pbj/Schema';
 import TrinitiCommonThemeableV1Mixin from '@triniti/schemas/triniti/common/mixin/themeable/ThemeableV1Mixin';
 import TrinitiCuratorGridlerWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/gridler-widget/GridlerWidgetV1Mixin';
 import TrinitiCuratorGridlerWidgetV1Trait from '@triniti/schemas/triniti/curator/mixin/gridler-widget/GridlerWidgetV1Trait';
+import TrinitiCuratorWidgetHasSearchRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget-has-search-request/WidgetHasSearchRequestV1Mixin';
 import TrinitiCuratorWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget/WidgetV1Mixin';
 
 export default class GridlerWidgetV1 extends Message {
@@ -27,6 +28,7 @@ export default class GridlerWidgetV1 extends Message {
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
         TrinitiCommonThemeableV1Mixin.create(),
+        TrinitiCuratorWidgetHasSearchRequestV1Mixin.create(),
       ],
     );
   }
