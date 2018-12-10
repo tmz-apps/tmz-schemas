@@ -5,6 +5,7 @@ import GdbotsPbjxRequestV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/request/
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
+import TrinitiCuratorWidgetSearchRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget-search-request/WidgetSearchRequestV1Mixin';
 import TrinitiOvpSearchVideosRequestV1Mixin from '@triniti/schemas/triniti/ovp/mixin/search-videos-request/SearchVideosRequestV1Mixin';
 
 export default class SearchVideosRequestV1 extends Message {
@@ -20,6 +21,7 @@ export default class SearchVideosRequestV1 extends Message {
         GdbotsPbjxRequestV1Mixin.create(),
         GdbotsNcrSearchNodesRequestV1Mixin.create(),
         TrinitiOvpSearchVideosRequestV1Mixin.create(),
+        TrinitiCuratorWidgetSearchRequestV1Mixin.create(),
       ],
     );
   }

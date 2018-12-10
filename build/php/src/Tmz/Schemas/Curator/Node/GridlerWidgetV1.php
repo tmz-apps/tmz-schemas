@@ -16,6 +16,8 @@ use Triniti\Schemas\Common\Mixin\Themeable\ThemeableV1Mixin as TrinitiCommonThem
 use Triniti\Schemas\Curator\Mixin\GridlerWidget\GridlerWidgetV1 as TrinitiCuratorGridlerWidgetV1;
 use Triniti\Schemas\Curator\Mixin\GridlerWidget\GridlerWidgetV1Mixin as TrinitiCuratorGridlerWidgetV1Mixin;
 use Triniti\Schemas\Curator\Mixin\GridlerWidget\GridlerWidgetV1Trait as TrinitiCuratorGridlerWidgetV1Trait;
+use Triniti\Schemas\Curator\Mixin\WidgetHasSearchRequest\WidgetHasSearchRequestV1 as TrinitiCuratorWidgetHasSearchRequestV1;
+use Triniti\Schemas\Curator\Mixin\WidgetHasSearchRequest\WidgetHasSearchRequestV1Mixin as TrinitiCuratorWidgetHasSearchRequestV1Mixin;
 use Triniti\Schemas\Curator\Mixin\Widget\WidgetV1 as TrinitiCuratorWidgetV1;
 use Triniti\Schemas\Curator\Mixin\Widget\WidgetV1Mixin as TrinitiCuratorWidgetV1Mixin;
 
@@ -26,7 +28,8 @@ final class GridlerWidgetV1 extends AbstractMessage implements
     TrinitiCuratorGridlerWidgetV1,
     GdbotsCommonTaggableV1,
     GdbotsNcrIndexedV1,
-    TrinitiCommonThemeableV1
+    TrinitiCommonThemeableV1,
+    TrinitiCuratorWidgetHasSearchRequestV1
 {
     use GdbotsNcrNodeV1Trait;
     use TrinitiCuratorGridlerWidgetV1Trait;
@@ -45,6 +48,7 @@ final class GridlerWidgetV1 extends AbstractMessage implements
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
                 TrinitiCommonThemeableV1Mixin::create(),
+                TrinitiCuratorWidgetHasSearchRequestV1Mixin::create(),
             ]
         );
     }

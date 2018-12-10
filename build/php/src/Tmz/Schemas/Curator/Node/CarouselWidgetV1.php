@@ -16,6 +16,8 @@ use Triniti\Schemas\Common\Mixin\Themeable\ThemeableV1Mixin as TrinitiCommonThem
 use Triniti\Schemas\Curator\Mixin\CarouselWidget\CarouselWidgetV1 as TrinitiCuratorCarouselWidgetV1;
 use Triniti\Schemas\Curator\Mixin\CarouselWidget\CarouselWidgetV1Mixin as TrinitiCuratorCarouselWidgetV1Mixin;
 use Triniti\Schemas\Curator\Mixin\CarouselWidget\CarouselWidgetV1Trait as TrinitiCuratorCarouselWidgetV1Trait;
+use Triniti\Schemas\Curator\Mixin\WidgetHasSearchRequest\WidgetHasSearchRequestV1 as TrinitiCuratorWidgetHasSearchRequestV1;
+use Triniti\Schemas\Curator\Mixin\WidgetHasSearchRequest\WidgetHasSearchRequestV1Mixin as TrinitiCuratorWidgetHasSearchRequestV1Mixin;
 use Triniti\Schemas\Curator\Mixin\Widget\WidgetV1 as TrinitiCuratorWidgetV1;
 use Triniti\Schemas\Curator\Mixin\Widget\WidgetV1Mixin as TrinitiCuratorWidgetV1Mixin;
 
@@ -26,7 +28,8 @@ final class CarouselWidgetV1 extends AbstractMessage implements
     TrinitiCuratorCarouselWidgetV1,
     GdbotsCommonTaggableV1,
     GdbotsNcrIndexedV1,
-    TrinitiCommonThemeableV1
+    TrinitiCommonThemeableV1,
+    TrinitiCuratorWidgetHasSearchRequestV1
 {
     use GdbotsNcrNodeV1Trait;
     use TrinitiCuratorCarouselWidgetV1Trait;
@@ -45,6 +48,7 @@ final class CarouselWidgetV1 extends AbstractMessage implements
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
                 TrinitiCommonThemeableV1Mixin::create(),
+                TrinitiCuratorWidgetHasSearchRequestV1Mixin::create(),
             ]
         );
     }

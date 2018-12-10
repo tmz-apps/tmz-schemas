@@ -11,11 +11,14 @@ use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Mixin as GdbotsPbjxResponseV1Mi
 use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait as GdbotsPbjxResponseV1Trait;
 use Triniti\Schemas\Curator\Mixin\SearchGalleriesResponse\SearchGalleriesResponseV1 as TrinitiCuratorSearchGalleriesResponseV1;
 use Triniti\Schemas\Curator\Mixin\SearchGalleriesResponse\SearchGalleriesResponseV1Mixin as TrinitiCuratorSearchGalleriesResponseV1Mixin;
+use Triniti\Schemas\Curator\Mixin\WidgetSearchResponse\WidgetSearchResponseV1 as TrinitiCuratorWidgetSearchResponseV1;
+use Triniti\Schemas\Curator\Mixin\WidgetSearchResponse\WidgetSearchResponseV1Mixin as TrinitiCuratorWidgetSearchResponseV1Mixin;
 
 final class SearchGalleriesResponseV1 extends AbstractMessage implements
     SearchGalleriesResponse,
     GdbotsPbjxResponseV1,
     GdbotsNcrSearchNodesResponseV1,
+    TrinitiCuratorWidgetSearchResponseV1,
     TrinitiCuratorSearchGalleriesResponseV1
 {
     use GdbotsPbjxResponseV1Trait;
@@ -30,6 +33,7 @@ final class SearchGalleriesResponseV1 extends AbstractMessage implements
             [
                 GdbotsPbjxResponseV1Mixin::create(),
                 GdbotsNcrSearchNodesResponseV1Mixin::create(),
+                TrinitiCuratorWidgetSearchResponseV1Mixin::create(),
                 TrinitiCuratorSearchGalleriesResponseV1Mixin::create(),
             ]
         );

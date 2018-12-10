@@ -9,6 +9,7 @@ import Schema from '@gdbots/pbj/Schema';
 import TrinitiCommonThemeableV1Mixin from '@triniti/schemas/triniti/common/mixin/themeable/ThemeableV1Mixin';
 import TrinitiCuratorBlogrollWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/blogroll-widget/BlogrollWidgetV1Mixin';
 import TrinitiCuratorBlogrollWidgetV1Trait from '@triniti/schemas/triniti/curator/mixin/blogroll-widget/BlogrollWidgetV1Trait';
+import TrinitiCuratorWidgetHasSearchRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget-has-search-request/WidgetHasSearchRequestV1Mixin';
 import TrinitiCuratorWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget/WidgetV1Mixin';
 
 export default class BlogrollWidgetV1 extends Message {
@@ -27,6 +28,7 @@ export default class BlogrollWidgetV1 extends Message {
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
         TrinitiCommonThemeableV1Mixin.create(),
+        TrinitiCuratorWidgetHasSearchRequestV1Mixin.create(),
       ],
     );
   }
