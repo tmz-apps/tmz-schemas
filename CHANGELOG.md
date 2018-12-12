@@ -1,20 +1,31 @@
 # CHANGELOG
 
 
+## v0.3.0
+__BREAKING CHANGES__
+
+* Use `triniti/schemas` v0.10.0.
+* __Add Schemas:__
+  * `tmz:curator:node:showtimes-widget`
+  * `tmz:curator:node:spotlight-widget`
+* __Delete Schemas:__
+  * `tmz:curator:node:card-widget`
+
+
 ## v0.2.0
 __BREAKING CHANGES__
 
 * Use `triniti/schemas` v0.9.0.
 * __Add Schemas:__
-  * `tmz:curator:mixin:card-widget`
-  * `tmz:curator:mixin:code-widget`
-  * `tmz:curator:mixin:hero-bar-widget`
-  * `tmz:curator:mixin:render-promotion-request`
-  * `tmz:curator:mixin:render-promotion-response`
-  * `tmz:curator:mixin:render-widget-request`
-  * `tmz:curator:mixin:render-widget-response`
-  * `tmz:curator:mixin:slider-widget`
-  * `tmz:curator:mixin:tag-cloud-widget`
+  * `tmz:curator:node:card-widget`
+  * `tmz:curator:node:code-widget`
+  * `tmz:curator:node:hero-bar-widget`
+  * `tmz:curator:node:slider-widget`
+  * `tmz:curator:node:tag-cloud-widget`
+  * `tmz:curator:request:render-promotion-request`
+  * `tmz:curator:request:render-promotion-response`
+  * `tmz:curator:request:render-widget-request`
+  * `tmz:curator:request:render-widget-response`
 * __Modify Schemas:__ _(no version changes as there is no production use yet)_
   * `tmz:curator:node:blogroll-widget`
     * Add mixin `triniti:curator:mixin:widget-has-search-request:v1`

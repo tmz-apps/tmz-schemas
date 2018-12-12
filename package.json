@@ -22,7 +22,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "^1.5.7",
-    "@triniti/schemas": "^0.9.0"
+    "@triniti/schemas": "^0.10.0"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",

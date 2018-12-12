@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/curator/node/card-widget/1-0-0.json#
+// @link http://schemas.tmz.com/json-schema/tmz/curator/node/showtimes-widget/1-0-0.json#
 namespace Tmz\Schemas\Curator\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -13,42 +13,38 @@ use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin as GdbotsNcrNodeV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait as GdbotsNcrNodeV1Trait;
 use Triniti\Schemas\Common\Mixin\Themeable\ThemeableV1 as TrinitiCommonThemeableV1;
 use Triniti\Schemas\Common\Mixin\Themeable\ThemeableV1Mixin as TrinitiCommonThemeableV1Mixin;
-use Triniti\Schemas\Curator\Mixin\CardWidget\CardWidgetV1 as TrinitiCuratorCardWidgetV1;
-use Triniti\Schemas\Curator\Mixin\CardWidget\CardWidgetV1Mixin as TrinitiCuratorCardWidgetV1Mixin;
-use Triniti\Schemas\Curator\Mixin\CardWidget\CardWidgetV1Trait as TrinitiCuratorCardWidgetV1Trait;
-use Triniti\Schemas\Curator\Mixin\WidgetHasSearchRequest\WidgetHasSearchRequestV1 as TrinitiCuratorWidgetHasSearchRequestV1;
-use Triniti\Schemas\Curator\Mixin\WidgetHasSearchRequest\WidgetHasSearchRequestV1Mixin as TrinitiCuratorWidgetHasSearchRequestV1Mixin;
+use Triniti\Schemas\Curator\Mixin\ShowtimesWidget\ShowtimesWidgetV1 as TrinitiCuratorShowtimesWidgetV1;
+use Triniti\Schemas\Curator\Mixin\ShowtimesWidget\ShowtimesWidgetV1Mixin as TrinitiCuratorShowtimesWidgetV1Mixin;
+use Triniti\Schemas\Curator\Mixin\ShowtimesWidget\ShowtimesWidgetV1Trait as TrinitiCuratorShowtimesWidgetV1Trait;
 use Triniti\Schemas\Curator\Mixin\Widget\WidgetV1 as TrinitiCuratorWidgetV1;
 use Triniti\Schemas\Curator\Mixin\Widget\WidgetV1Mixin as TrinitiCuratorWidgetV1Mixin;
 
-final class CardWidgetV1 extends AbstractMessage implements
-    CardWidget,
+final class ShowtimesWidgetV1 extends AbstractMessage implements
+    ShowtimesWidget,
     GdbotsNcrNodeV1,
     TrinitiCuratorWidgetV1,
-    TrinitiCuratorCardWidgetV1,
+    TrinitiCuratorShowtimesWidgetV1,
     GdbotsCommonTaggableV1,
     GdbotsNcrIndexedV1,
-    TrinitiCommonThemeableV1,
-    TrinitiCuratorWidgetHasSearchRequestV1
+    TrinitiCommonThemeableV1
 {
     use GdbotsNcrNodeV1Trait;
-    use TrinitiCuratorCardWidgetV1Trait;
+    use TrinitiCuratorShowtimesWidgetV1Trait;
 
     /**
      * @return Schema
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:tmz:curator:node:card-widget:1-0-0', __CLASS__,
+        return new Schema('pbj:tmz:curator:node:showtimes-widget:1-0-0', __CLASS__,
             [],
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 TrinitiCuratorWidgetV1Mixin::create(),
-                TrinitiCuratorCardWidgetV1Mixin::create(),
+                TrinitiCuratorShowtimesWidgetV1Mixin::create(),
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
                 TrinitiCommonThemeableV1Mixin::create(),
-                TrinitiCuratorWidgetHasSearchRequestV1Mixin::create(),
             ]
         );
     }
