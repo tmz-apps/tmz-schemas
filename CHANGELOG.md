@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v0.4.0
+__BREAKING CHANGES__
+
+* Use `triniti/schemas` v0.11.0.
+* __Add Schemas:__
+  * `tmz:curator:node:ad-widget`
+  * `tmz:curator:node:media-list-widget`
+
+
 ## v0.3.0
 __BREAKING CHANGES__
 

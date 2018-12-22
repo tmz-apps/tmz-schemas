@@ -22,7 +22,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "^1.5.7",
-    "@triniti/schemas": "^0.10.0"
+    "@triniti/schemas": "^0.11.0"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -52,7 +52,7 @@
     "lodash": "^4.17.10",
     "lodash-es": "^4.17.10",
     "md5": "^2.2.1",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "rimraf": "^2.6.2",
     "tape": "^4.9.1",
     "utf8": "^3.0.0",
