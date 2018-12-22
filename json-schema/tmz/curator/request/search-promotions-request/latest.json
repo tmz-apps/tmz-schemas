@@ -328,6 +328,15 @@
         "format": "slug"
       }
     },
+    "render_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Used to search for promotions that will render at this time.",
+      "pbj": {
+        "type": "date-time",
+        "rule": "single"
+      }
+    },
     "sort": {
       "type": "string",
       "default": "relevance",
@@ -341,7 +350,9 @@
         "published-at-asc",
         "published-at-desc",
         "title-asc",
-        "title-desc"
+        "title-desc",
+        "priority-asc",
+        "priority-desc"
       ],
       "pbj": {
         "type": "string-enum",
