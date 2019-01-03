@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.tmz.com/json-schema/tmz/sys/command/update-redirect/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/tmz/sys/command/update-redirect/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -241,7 +241,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/contexts/app/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/contexts/app/1-0-0.json#"
         }
       ]
     },
@@ -249,7 +249,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/contexts/cloud/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/contexts/cloud/1-0-0.json#"
         }
       ]
     },
@@ -257,7 +257,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
         }
       ]
     }
