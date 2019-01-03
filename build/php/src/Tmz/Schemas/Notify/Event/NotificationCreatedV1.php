@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/notify/event/notification-created/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/notify/event/notification-created/1-0-0.json#
 namespace Tmz\Schemas\Notify\Event;
 
 use Gdbots\Pbj\AbstractMessage;

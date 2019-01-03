@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/node/ios-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/node/ios-app/1-0-0.json#
 import GdbotsIamAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/app/AppV1Mixin';
 import GdbotsIamIosAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/ios-app/IosAppV1Mixin';
 import GdbotsIamIosAppV1Trait from '@gdbots/schemas/gdbots/iam/mixin/ios-app/IosAppV1Trait';

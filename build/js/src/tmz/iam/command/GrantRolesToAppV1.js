@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/command/grant-roles-to-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/command/grant-roles-to-app/1-0-0.json#
 import GdbotsIamGrantRolesToAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/grant-roles-to-app/GrantRolesToAppV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';

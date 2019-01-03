@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/curator/command/publish-gallery/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/command/publish-gallery/1-0-0.json#
 import GdbotsNcrPublishNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/publish-node/PublishNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';

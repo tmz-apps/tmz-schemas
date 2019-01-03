@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/news/event/article-expired/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/event/article-expired/1-0-0.json#
 import GdbotsNcrNodeExpiredV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-expired/NodeExpiredV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';

@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/people/request/get-person-history-response/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/request/get-person-history-response/1-0-0.json#
 import GdbotsPbjxGetEventsResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/get-events-response/GetEventsResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';

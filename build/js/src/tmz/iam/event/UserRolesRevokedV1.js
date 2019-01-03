@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/event/user-roles-revoked/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/event/user-roles-revoked/1-0-0.json#
 import GdbotsAnalyticsTrackedMessageV1Mixin from '@gdbots/schemas/gdbots/analytics/mixin/tracked-message/TrackedMessageV1Mixin';
 import GdbotsEnrichmentsIpToGeoV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/ip-to-geo/IpToGeoV1Mixin';
 import GdbotsEnrichmentsTimePartingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-parting/TimePartingV1Mixin';

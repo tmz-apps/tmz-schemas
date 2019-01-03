@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/apollo/node/poll/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/apollo/node/poll/1-0-0.json#
 namespace Tmz\Schemas\Apollo\Node;
 
 use Gdbots\Pbj\AbstractMessage;

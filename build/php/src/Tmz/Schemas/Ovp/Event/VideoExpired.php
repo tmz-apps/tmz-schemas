@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/ovp/event/video-expired/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/event/video-expired/latest.json#
 namespace Tmz\Schemas\Ovp\Event;
 
 use Gdbots\Pbj\Message;

@@ -5,7 +5,7 @@
  *
  * Registers all of the pbj schemas with the MessageResolver.
  *
- * @link http://schemas.tmz.com/
+ * @link https://schemas.tmz.com/
  */
 
 \Gdbots\Pbj\MessageResolver::registerMap([
@@ -127,6 +127,7 @@
     'tmz:canvas:block:poll-grid-block' => 'Tmz\Schemas\Canvas\Block\PollGridBlockV1',
     'tmz:canvas:block:quote-block' => 'Tmz\Schemas\Canvas\Block\QuoteBlockV1',
     'tmz:canvas:block:soundcloud-audio-block' => 'Tmz\Schemas\Canvas\Block\SoundcloudAudioBlockV1',
+    'tmz:canvas:block:spotify-track-block' => 'Tmz\Schemas\Canvas\Block\SpotifyTrackBlockV1',
     'tmz:canvas:block:text-block' => 'Tmz\Schemas\Canvas\Block\TextBlockV1',
     'tmz:canvas:block:twitter-tweet-block' => 'Tmz\Schemas\Canvas\Block\TwitterTweetBlockV1',
     'tmz:canvas:block:video-block' => 'Tmz\Schemas\Canvas\Block\VideoBlockV1',

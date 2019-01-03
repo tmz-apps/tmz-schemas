@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/request/get-user-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/request/get-user-request/1-0-0.json#
 import GdbotsIamGetUserRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-user-request/GetUserRequestV1Mixin';
 import GdbotsNcrGetNodeRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-request/GetNodeRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';

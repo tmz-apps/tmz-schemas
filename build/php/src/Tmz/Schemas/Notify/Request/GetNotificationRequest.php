@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/notify/request/get-notification-request/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/notify/request/get-notification-request/latest.json#
 namespace Tmz\Schemas\Notify\Request;
 
 use Gdbots\Pbj\Message;

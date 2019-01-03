@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/sys/node/picklist/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/sys/node/picklist/1-0-0.json#
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
 import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';
 import Message from '@gdbots/pbj/Message';

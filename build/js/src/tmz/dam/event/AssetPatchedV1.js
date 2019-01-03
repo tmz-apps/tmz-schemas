@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/dam/event/asset-patched/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/event/asset-patched/1-0-0.json#
 import GdbotsNcrNodePatchedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-patched/NodePatchedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';

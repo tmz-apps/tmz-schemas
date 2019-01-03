@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/people/command/delete-person/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/command/delete-person/1-0-0.json#
 namespace Tmz\Schemas\People\Command;
 
 use Gdbots\Pbj\AbstractMessage;

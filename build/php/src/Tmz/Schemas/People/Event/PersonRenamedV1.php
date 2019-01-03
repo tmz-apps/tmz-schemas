@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/people/event/person-renamed/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/event/person-renamed/1-0-0.json#
 namespace Tmz\Schemas\People\Event;
 
 use Gdbots\Pbj\AbstractMessage;

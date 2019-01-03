@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/sys/request/list-all-flagsets-request/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/sys/request/list-all-flagsets-request/latest.json#
 namespace Tmz\Schemas\Sys\Request;
 
 use Gdbots\Pbj\Message;

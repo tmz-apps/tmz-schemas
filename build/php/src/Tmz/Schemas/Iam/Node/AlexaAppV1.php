@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/iam/node/alexa-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/node/alexa-app/1-0-0.json#
 namespace Tmz\Schemas\Iam\Node;
 
 use Gdbots\Pbj\AbstractMessage;

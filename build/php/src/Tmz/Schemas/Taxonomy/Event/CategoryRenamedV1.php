@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/taxonomy/event/category-renamed/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/taxonomy/event/category-renamed/1-0-0.json#
 namespace Tmz\Schemas\Taxonomy\Event;
 
 use Gdbots\Pbj\AbstractMessage;

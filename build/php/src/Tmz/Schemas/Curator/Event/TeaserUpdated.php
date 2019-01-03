@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/curator/event/teaser-updated/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/event/teaser-updated/latest.json#
 namespace Tmz\Schemas\Curator\Event;
 
 use Gdbots\Pbj\Message;

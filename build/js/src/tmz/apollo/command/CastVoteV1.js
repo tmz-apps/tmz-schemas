@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/apollo/command/cast-vote/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/apollo/command/cast-vote/1-0-0.json#
 import GdbotsEnrichmentsTimePartingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-parting/TimePartingV1Mixin';
 import GdbotsEnrichmentsTimeSamplingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-sampling/TimeSamplingV1Mixin';
 import GdbotsEnrichmentsUtmV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/utm/UtmV1Mixin';

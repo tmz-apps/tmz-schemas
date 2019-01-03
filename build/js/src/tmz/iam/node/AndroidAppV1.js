@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/node/android-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/node/android-app/1-0-0.json#
 import GdbotsIamAndroidAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/android-app/AndroidAppV1Mixin';
 import GdbotsIamAndroidAppV1Trait from '@gdbots/schemas/gdbots/iam/mixin/android-app/AndroidAppV1Trait';
 import GdbotsIamAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/app/AppV1Mixin';

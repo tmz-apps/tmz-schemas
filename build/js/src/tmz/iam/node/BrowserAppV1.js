@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/node/browser-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/node/browser-app/1-0-0.json#
 import GdbotsIamAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/app/AppV1Mixin';
 import GdbotsIamBrowserAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/browser-app/BrowserAppV1Mixin';
 import GdbotsIamBrowserAppV1Trait from '@gdbots/schemas/gdbots/iam/mixin/browser-app/BrowserAppV1Trait';

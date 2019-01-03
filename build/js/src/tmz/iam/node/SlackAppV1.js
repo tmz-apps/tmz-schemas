@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/node/slack-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/node/slack-app/1-0-0.json#
 import GdbotsIamAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/app/AppV1Mixin';
 import GdbotsIamSlackAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/slack-app/SlackAppV1Mixin';
 import GdbotsIamSlackAppV1Trait from '@gdbots/schemas/gdbots/iam/mixin/slack-app/SlackAppV1Trait';

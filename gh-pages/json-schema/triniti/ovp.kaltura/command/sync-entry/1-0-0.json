@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.tmz.com/json-schema/triniti/ovp.kaltura/command/sync-entry/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/triniti/ovp.kaltura/command/sync-entry/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -242,7 +242,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/contexts/app/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/contexts/app/1-0-0.json#"
         }
       ]
     },
@@ -250,7 +250,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/contexts/cloud/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/contexts/cloud/1-0-0.json#"
         }
       ]
     },
@@ -258,7 +258,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/triniti/ovp.kaltura/entry/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/ovp.kaltura/entry/1-0-0.json#"
         }
       ]
     },
@@ -266,7 +266,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/triniti/ovp.kaltura/flavor/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/ovp.kaltura/flavor/1-0-0.json#"
         }
       ]
     },
@@ -274,7 +274,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/triniti/ovp.kaltura/caption/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/ovp.kaltura/caption/1-0-0.json#"
         }
       ]
     }

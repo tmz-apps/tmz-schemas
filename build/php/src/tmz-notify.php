@@ -5,7 +5,7 @@
  *
  * Registers all of the pbj schemas with the MessageResolver.
  *
- * @link http://schemas.tmz.com/
+ * @link https://schemas.tmz.com/
  */
 
 \Gdbots\Pbj\MessageResolver::registerMap([

@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/canvas/block/youtube-video-block/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/canvas/block/youtube-video-block/1-0-0.json#
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';

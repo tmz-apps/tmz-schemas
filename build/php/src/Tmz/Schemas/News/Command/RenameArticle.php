@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/news/command/rename-article/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/command/rename-article/latest.json#
 namespace Tmz\Schemas\News\Command;
 
 use Gdbots\Pbj\Message;

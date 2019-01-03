@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/ovp/command/unpublish-video/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/command/unpublish-video/1-0-0.json#
 namespace Tmz\Schemas\Ovp\Command;
 
 use Gdbots\Pbj\AbstractMessage;

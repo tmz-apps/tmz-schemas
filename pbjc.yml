@@ -1,4 +1,4 @@
-domain: http://schemas.tmz.com
+domain: https://schemas.tmz.com
 
 namespaces:
   - tmz:apollo

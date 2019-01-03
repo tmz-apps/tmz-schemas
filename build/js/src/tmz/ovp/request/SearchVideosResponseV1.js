@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/ovp/request/search-videos-response/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/request/search-videos-response/1-0-0.json#
 import GdbotsNcrSearchNodesResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/search-nodes-response/SearchNodesResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';

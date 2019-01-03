@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/taxonomy/event/channel-renamed/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/taxonomy/event/channel-renamed/latest.json#
 namespace Tmz\Schemas\Taxonomy\Event;
 
 use Gdbots\Pbj\Message;

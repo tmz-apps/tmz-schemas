@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/dam/request/get-asset-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/request/get-asset-request/1-0-0.json#
 namespace Tmz\Schemas\Dam\Request;
 
 use Gdbots\Pbj\AbstractMessage;

@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/taxonomy/node/channel/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/taxonomy/node/channel/1-0-0.json#
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
 import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/taxonomy/command/rename-category/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/taxonomy/command/rename-category/1-0-0.json#
 namespace Tmz\Schemas\Taxonomy\Command;
 
 use Gdbots\Pbj\AbstractMessage;

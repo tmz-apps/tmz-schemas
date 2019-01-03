@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/boost/event/sponsor-published/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/boost/event/sponsor-published/1-0-0.json#
 import GdbotsAnalyticsTrackedMessageV1Mixin from '@gdbots/schemas/gdbots/analytics/mixin/tracked-message/TrackedMessageV1Mixin';
 import GdbotsEnrichmentsTimePartingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-parting/TimePartingV1Mixin';
 import GdbotsEnrichmentsTimeSamplingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-sampling/TimeSamplingV1Mixin';

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/canvas/block/soundcloud-audio-block/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/canvas/block/soundcloud-audio-block/1-0-0.json#
 namespace Tmz\Schemas\Canvas\Block;
 
 use Gdbots\Pbj\AbstractMessage;

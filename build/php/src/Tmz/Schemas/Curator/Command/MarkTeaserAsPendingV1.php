@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/curator/command/mark-teaser-as-pending/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/command/mark-teaser-as-pending/1-0-0.json#
 namespace Tmz\Schemas\Curator\Command;
 
 use Gdbots\Pbj\AbstractMessage;

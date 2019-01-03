@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.tmz.com/json-schema/tmz/canvas/block/twitter-tweet-block/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/tmz/canvas/block/twitter-tweet-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -36,7 +36,7 @@
     },
     "screen_name": {
       "type": "string",
-      "pattern": "^[\\w\\.]+$",
+      "pattern": "^\\w{1,15}$",
       "pbj": {
         "type": "string",
         "rule": "single"

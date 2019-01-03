@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/curator/node/hero-bar-widget/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/node/hero-bar-widget/latest.json#
 namespace Tmz\Schemas\Curator\Node;
 
 use Gdbots\Pbj\Message;

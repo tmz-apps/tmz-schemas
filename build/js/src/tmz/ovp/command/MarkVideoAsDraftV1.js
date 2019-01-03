@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/ovp/command/mark-video-as-draft/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/command/mark-video-as-draft/1-0-0.json#
 import GdbotsNcrMarkNodeAsDraftV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/mark-node-as-draft/MarkNodeAsDraftV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';

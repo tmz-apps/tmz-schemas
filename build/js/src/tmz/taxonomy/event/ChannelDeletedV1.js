@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/taxonomy/event/channel-deleted/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/taxonomy/event/channel-deleted/1-0-0.json#
 import GdbotsNcrNodeDeletedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-deleted/NodeDeletedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';

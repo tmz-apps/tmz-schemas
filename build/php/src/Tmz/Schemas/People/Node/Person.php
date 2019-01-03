@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/people/node/person/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/node/person/latest.json#
 namespace Tmz\Schemas\People\Node;
 
 use Gdbots\Pbj\Message;

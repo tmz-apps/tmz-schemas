@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/boost/command/expire-sponsor/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/boost/command/expire-sponsor/1-0-0.json#
 import GdbotsNcrExpireNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expire-node/ExpireNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';

@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/command/revoke-roles-from-app/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/command/revoke-roles-from-app/1-0-0.json#
 import GdbotsIamRevokeRolesFromAppV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/revoke-roles-from-app/RevokeRolesFromAppV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';

@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/curator/request/get-gallery-history-response/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/request/get-gallery-history-response/1-0-0.json#
 namespace Tmz\Schemas\Curator\Request;
 
 use Gdbots\Pbj\AbstractMessage;

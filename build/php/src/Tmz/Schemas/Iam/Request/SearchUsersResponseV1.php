@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/iam/request/search-users-response/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/request/search-users-response/1-0-0.json#
 namespace Tmz\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;

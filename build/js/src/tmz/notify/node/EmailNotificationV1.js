@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/notify/node/email-notification/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/notify/node/email-notification/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Format from '@gdbots/pbj/enums/Format';
 import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';

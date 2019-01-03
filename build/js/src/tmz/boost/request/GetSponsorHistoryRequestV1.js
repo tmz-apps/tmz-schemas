@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/boost/request/get-sponsor-history-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/boost/request/get-sponsor-history-request/1-0-0.json#
 import GdbotsPbjxGetEventsRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/get-events-request/GetEventsRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import GdbotsPbjxRequestV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Trait';

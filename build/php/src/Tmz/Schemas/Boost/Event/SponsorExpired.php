@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/boost/event/sponsor-expired/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/boost/event/sponsor-expired/latest.json#
 namespace Tmz\Schemas\Boost\Event;
 
 use Gdbots\Pbj\Message;

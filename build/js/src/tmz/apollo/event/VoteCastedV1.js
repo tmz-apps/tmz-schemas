@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/apollo/event/vote-casted/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/apollo/event/vote-casted/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsAnalyticsTrackedMessageV1Mixin from '@gdbots/schemas/gdbots/analytics/mixin/tracked-message/TrackedMessageV1Mixin';
 import GdbotsEnrichmentsIpToGeoV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/ip-to-geo/IpToGeoV1Mixin';

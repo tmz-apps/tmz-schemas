@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.tmz.com/json-schema/tmz/curator/node/hero-bar-widget/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/tmz/curator/node/hero-bar-widget/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -272,7 +272,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
         }
       ]
     }

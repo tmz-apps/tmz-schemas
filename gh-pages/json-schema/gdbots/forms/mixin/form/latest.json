@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.tmz.com/json-schema/gdbots/forms/mixin/form/1-0-2.json#",
+  "id": "https://schemas.tmz.com/json-schema/gdbots/forms/mixin/form/1-0-2.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -271,13 +271,13 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/forms/mixin/field/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/forms/mixin/field/1-0-0.json#"
         },
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/forms/mixin/field/1-0-1.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/forms/mixin/field/1-0-1.json#"
         },
         {
-          "$ref": "http://schemas.tmz.com/json-schema/gdbots/forms/mixin/field/1-0-2.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/forms/mixin/field/1-0-2.json#"
         }
       ]
     }

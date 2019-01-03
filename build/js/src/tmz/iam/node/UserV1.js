@@ -1,4 +1,4 @@
-// @link http://schemas.tmz.com/json-schema/tmz/iam/node/user/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/node/user/1-0-0.json#
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsIamUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Mixin';
 import GdbotsIamUserV1Trait from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Trait';

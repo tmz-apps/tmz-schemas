@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/iam/command/create-role/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/command/create-role/1-0-0.json#
 namespace Tmz\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;

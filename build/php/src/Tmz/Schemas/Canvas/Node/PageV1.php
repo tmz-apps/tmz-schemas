@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/canvas/node/page/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/canvas/node/page/1-0-0.json#
 namespace Tmz\Schemas\Canvas\Node;
 
 use Gdbots\Pbj\AbstractMessage;

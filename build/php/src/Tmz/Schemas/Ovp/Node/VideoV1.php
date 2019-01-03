@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-0.json#
 namespace Tmz\Schemas\Ovp\Node;
 
 use Gdbots\Pbj\AbstractMessage;

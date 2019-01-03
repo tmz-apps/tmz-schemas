@@ -1,5 +1,5 @@
 {
-  "id": "http://schemas.tmz.com/json-schema/gdbots/forms/field/phone-field/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/gdbots/forms/field/phone-field/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {

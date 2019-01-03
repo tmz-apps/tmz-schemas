@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/iam/request/get-role-response/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/iam/request/get-role-response/latest.json#
 namespace Tmz\Schemas\Iam\Request;
 
 use Gdbots\Pbj\Message;

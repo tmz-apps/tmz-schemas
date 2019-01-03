@@ -1,5 +1,5 @@
 <?php
-// @link http://schemas.tmz.com/json-schema/tmz/canvas/event/page-created/latest.json#
+// @link https://schemas.tmz.com/json-schema/tmz/canvas/event/page-created/latest.json#
 namespace Tmz\Schemas\Canvas\Event;
 
 use Gdbots\Pbj\Message;

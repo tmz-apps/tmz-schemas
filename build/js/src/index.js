@@ -4,7 +4,7 @@
  *
  * Registers all of the pbj schemas with the MessageResolver.
  *
- * @link http://schemas.tmz.com/
+ * @link https://schemas.tmz.com/
  */
 
 import MessageResolver from '@gdbots/pbj/MessageResolver';
@@ -126,6 +126,7 @@ import '@tmz/schemas/tmz/canvas/block/PollBlockV1';
 import '@tmz/schemas/tmz/canvas/block/PollGridBlockV1';
 import '@tmz/schemas/tmz/canvas/block/QuoteBlockV1';
 import '@tmz/schemas/tmz/canvas/block/SoundcloudAudioBlockV1';
+import '@tmz/schemas/tmz/canvas/block/SpotifyTrackBlockV1';
 import '@tmz/schemas/tmz/canvas/block/TextBlockV1';
 import '@tmz/schemas/tmz/canvas/block/TwitterTweetBlockV1';
 import '@tmz/schemas/tmz/canvas/block/VideoBlockV1';
