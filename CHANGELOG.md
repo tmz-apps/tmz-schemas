@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.4.2
+* Use `triniti/schemas` v0.11.2.
+* __Add Schemas:__
+  * `tmz:curator:node:alert-widget`
+  * `tmz:curator:node:gallery-widget`
+  * `tmz:curator:node:playlist-widget`
+  * `tmz:news:command:remove-article-slotting`
+  * `tmz:news:event:apple-news-article-synced`
+  * `tmz:news:event:article-slotting-removed`
+
+
 ## v0.4.1
 * Use `triniti/schemas` v0.11.1.
 * __Add Schemas:__

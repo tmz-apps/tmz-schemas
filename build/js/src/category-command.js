@@ -104,6 +104,7 @@ import '@tmz/schemas/tmz/news/command/LockArticleV1';
 import '@tmz/schemas/tmz/news/command/MarkArticleAsDraftV1';
 import '@tmz/schemas/tmz/news/command/MarkArticleAsPendingV1';
 import '@tmz/schemas/tmz/news/command/PublishArticleV1';
+import '@tmz/schemas/tmz/news/command/RemoveArticleSlottingV1';
 import '@tmz/schemas/tmz/news/command/RenameArticleV1';
 import '@tmz/schemas/tmz/news/command/UnlockArticleV1';
 import '@tmz/schemas/tmz/news/command/UnpublishArticleV1';
@@ -142,6 +143,7 @@ import '@tmz/schemas/tmz/taxonomy/command/RenameCategoryV1';
 import '@tmz/schemas/tmz/taxonomy/command/RenameChannelV1';
 import '@tmz/schemas/tmz/taxonomy/command/UpdateCategoryV1';
 import '@tmz/schemas/tmz/taxonomy/command/UpdateChannelV1';
+import '@triniti/schemas/triniti/migrator/command/SyncCfNodeV1';
 import '@triniti/schemas/triniti/ovp.kaltura/command/SyncEntryV1';
 
 export default MessageResolver;

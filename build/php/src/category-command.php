@@ -105,6 +105,7 @@
     'tmz:news:command:mark-article-as-draft' => 'Tmz\Schemas\News\Command\MarkArticleAsDraftV1',
     'tmz:news:command:mark-article-as-pending' => 'Tmz\Schemas\News\Command\MarkArticleAsPendingV1',
     'tmz:news:command:publish-article' => 'Tmz\Schemas\News\Command\PublishArticleV1',
+    'tmz:news:command:remove-article-slotting' => 'Tmz\Schemas\News\Command\RemoveArticleSlottingV1',
     'tmz:news:command:rename-article' => 'Tmz\Schemas\News\Command\RenameArticleV1',
     'tmz:news:command:unlock-article' => 'Tmz\Schemas\News\Command\UnlockArticleV1',
     'tmz:news:command:unpublish-article' => 'Tmz\Schemas\News\Command\UnpublishArticleV1',
@@ -143,5 +144,6 @@
     'tmz:taxonomy:command:rename-channel' => 'Tmz\Schemas\Taxonomy\Command\RenameChannelV1',
     'tmz:taxonomy:command:update-category' => 'Tmz\Schemas\Taxonomy\Command\UpdateCategoryV1',
     'tmz:taxonomy:command:update-channel' => 'Tmz\Schemas\Taxonomy\Command\UpdateChannelV1',
+    'triniti:migrator:command:sync-cf-node' => 'Triniti\Schemas\Migrator\Command\SyncCfNodeV1',
     'triniti:ovp.kaltura:command:sync-entry' => 'Triniti\Schemas\OvpKaltura\Command\SyncEntryV1',
 ]);
