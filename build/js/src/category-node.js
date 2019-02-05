@@ -9,6 +9,7 @@
 
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import '@tmz/schemas/tmz/apollo/node/PollV1';
+import '@tmz/schemas/tmz/apollo/node/PollStatsV1';
 import '@tmz/schemas/tmz/boost/node/SponsorV1';
 import '@tmz/schemas/tmz/canvas/node/PageV1';
 import '@tmz/schemas/tmz/curator/node/AdWidgetV1';
@@ -58,6 +59,7 @@ import '@tmz/schemas/tmz/iam/node/SlackAppV1';
 import '@tmz/schemas/tmz/iam/node/SmsAppV1';
 import '@tmz/schemas/tmz/iam/node/UserV1';
 import '@tmz/schemas/tmz/news/node/ArticleV1';
+import '@tmz/schemas/tmz/news/node/ArticleStatsV1';
 import '@tmz/schemas/tmz/notify/node/AlexaNotificationV1';
 import '@tmz/schemas/tmz/notify/node/AndroidNotificationV1';
 import '@tmz/schemas/tmz/notify/node/AppleNewsNotificationV1';

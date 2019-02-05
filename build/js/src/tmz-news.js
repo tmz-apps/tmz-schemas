@@ -35,6 +35,7 @@ import '@tmz/schemas/tmz/news/event/ArticleUnlockedV1';
 import '@tmz/schemas/tmz/news/event/ArticleUnpublishedV1';
 import '@tmz/schemas/tmz/news/event/ArticleUpdatedV1';
 import '@tmz/schemas/tmz/news/node/ArticleV1';
+import '@tmz/schemas/tmz/news/node/ArticleStatsV1';
 import '@tmz/schemas/tmz/news/request/GetArticleHistoryRequestV1';
 import '@tmz/schemas/tmz/news/request/GetArticleHistoryResponseV1';
 import '@tmz/schemas/tmz/news/request/GetArticleRequestV1';

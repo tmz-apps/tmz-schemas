@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.4.3
+* Use `triniti/schemas` v0.12.0.
+* __Add Schemas:__
+  * `tmz:apollo:node:poll-stats`
+  * `tmz:news:node:article-stats`
+
+
 ## v0.4.2
 * Use `triniti/schemas` v0.11.2.
 * __Add Schemas:__

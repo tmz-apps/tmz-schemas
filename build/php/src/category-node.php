@@ -10,6 +10,7 @@
 
 \Gdbots\Pbj\MessageResolver::registerMap([
     'tmz:apollo:node:poll' => 'Tmz\Schemas\Apollo\Node\PollV1',
+    'tmz:apollo:node:poll-stats' => 'Tmz\Schemas\Apollo\Node\PollStatsV1',
     'tmz:boost:node:sponsor' => 'Tmz\Schemas\Boost\Node\SponsorV1',
     'tmz:canvas:node:page' => 'Tmz\Schemas\Canvas\Node\PageV1',
     'tmz:curator:node:ad-widget' => 'Tmz\Schemas\Curator\Node\AdWidgetV1',
@@ -59,6 +60,7 @@
     'tmz:iam:node:sms-app' => 'Tmz\Schemas\Iam\Node\SmsAppV1',
     'tmz:iam:node:user' => 'Tmz\Schemas\Iam\Node\UserV1',
     'tmz:news:node:article' => 'Tmz\Schemas\News\Node\ArticleV1',
+    'tmz:news:node:article-stats' => 'Tmz\Schemas\News\Node\ArticleStatsV1',
     'tmz:notify:node:alexa-notification' => 'Tmz\Schemas\Notify\Node\AlexaNotificationV1',
     'tmz:notify:node:android-notification' => 'Tmz\Schemas\Notify\Node\AndroidNotificationV1',
     'tmz:notify:node:apple-news-notification' => 'Tmz\Schemas\Notify\Node\AppleNewsNotificationV1',

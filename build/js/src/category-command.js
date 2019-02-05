@@ -143,7 +143,7 @@ import '@tmz/schemas/tmz/taxonomy/command/RenameCategoryV1';
 import '@tmz/schemas/tmz/taxonomy/command/RenameChannelV1';
 import '@tmz/schemas/tmz/taxonomy/command/UpdateCategoryV1';
 import '@tmz/schemas/tmz/taxonomy/command/UpdateChannelV1';
-import '@triniti/schemas/triniti/migrator/command/SyncCfNodeV1';
+import '@triniti/schemas/triniti/migrator/command/SyncCfNodesV1';
 import '@triniti/schemas/triniti/ovp.kaltura/command/SyncEntryV1';
 
 export default MessageResolver;

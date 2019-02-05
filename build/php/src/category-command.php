@@ -144,6 +144,6 @@
     'tmz:taxonomy:command:rename-channel' => 'Tmz\Schemas\Taxonomy\Command\RenameChannelV1',
     'tmz:taxonomy:command:update-category' => 'Tmz\Schemas\Taxonomy\Command\UpdateCategoryV1',
     'tmz:taxonomy:command:update-channel' => 'Tmz\Schemas\Taxonomy\Command\UpdateChannelV1',
-    'triniti:migrator:command:sync-cf-node' => 'Triniti\Schemas\Migrator\Command\SyncCfNodeV1',
+    'triniti:migrator:command:sync-cf-nodes' => 'Triniti\Schemas\Migrator\Command\SyncCfNodesV1',
     'triniti:ovp.kaltura:command:sync-entry' => 'Triniti\Schemas\OvpKaltura\Command\SyncEntryV1',
 ]);

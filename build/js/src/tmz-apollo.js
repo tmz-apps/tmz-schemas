@@ -29,6 +29,7 @@ import '@tmz/schemas/tmz/apollo/event/PollUnpublishedV1';
 import '@tmz/schemas/tmz/apollo/event/PollUpdatedV1';
 import '@tmz/schemas/tmz/apollo/event/VoteCastedV1';
 import '@tmz/schemas/tmz/apollo/node/PollV1';
+import '@tmz/schemas/tmz/apollo/node/PollStatsV1';
 import '@tmz/schemas/tmz/apollo/request/GetPollHistoryRequestV1';
 import '@tmz/schemas/tmz/apollo/request/GetPollHistoryResponseV1';
 import '@tmz/schemas/tmz/apollo/request/GetPollRequestV1';

@@ -188,6 +188,13 @@
         "rule": "single"
       }
     },
+    "show_border": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "show_header": {
       "type": "boolean",
       "default": true,
@@ -197,6 +204,24 @@
       }
     },
     "header_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "partner_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "partner_text": {
       "type": "string",
       "minLength": 0,
       "maxLength": 255,
@@ -258,6 +283,20 @@
         "format": "slug"
       }
     },
+    "prefetched_nodes": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "additionalProperties": false,
+      "description": "When nodes have been acquired by another process you can populate this field instead of \"search_request\".",
+      "pbj": {
+        "type": "message",
+        "rule": "list"
+      }
+    },
     "search_request": {
       "type": "object",
       "anyOf": [
@@ -269,6 +308,55 @@
         "type": "message",
         "rule": "single"
       }
+    },
+    "show_pagination": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_item_cta_text": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_item_date": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_item_duration": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_item_excerpt": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_item_icon": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
+    "show_item_media_count": {
+      "type": "boolean",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [
@@ -276,6 +364,14 @@
     "_id"
   ],
   "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    },
     "widget-search-request": {
       "type": "object",
       "anyOf": [

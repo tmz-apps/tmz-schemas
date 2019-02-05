@@ -36,6 +36,7 @@
     'tmz:news:event:article-unpublished' => 'Tmz\Schemas\News\Event\ArticleUnpublishedV1',
     'tmz:news:event:article-updated' => 'Tmz\Schemas\News\Event\ArticleUpdatedV1',
     'tmz:news:node:article' => 'Tmz\Schemas\News\Node\ArticleV1',
+    'tmz:news:node:article-stats' => 'Tmz\Schemas\News\Node\ArticleStatsV1',
     'tmz:news:request:get-article-history-request' => 'Tmz\Schemas\News\Request\GetArticleHistoryRequestV1',
     'tmz:news:request:get-article-history-response' => 'Tmz\Schemas\News\Request\GetArticleHistoryResponseV1',
     'tmz:news:request:get-article-request' => 'Tmz\Schemas\News\Request\GetArticleRequestV1',

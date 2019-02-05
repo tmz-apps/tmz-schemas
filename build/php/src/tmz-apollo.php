@@ -30,6 +30,7 @@
     'tmz:apollo:event:poll-updated' => 'Tmz\Schemas\Apollo\Event\PollUpdatedV1',
     'tmz:apollo:event:vote-casted' => 'Tmz\Schemas\Apollo\Event\VoteCastedV1',
     'tmz:apollo:node:poll' => 'Tmz\Schemas\Apollo\Node\PollV1',
+    'tmz:apollo:node:poll-stats' => 'Tmz\Schemas\Apollo\Node\PollStatsV1',
     'tmz:apollo:request:get-poll-history-request' => 'Tmz\Schemas\Apollo\Request\GetPollHistoryRequestV1',
     'tmz:apollo:request:get-poll-history-response' => 'Tmz\Schemas\Apollo\Request\GetPollHistoryResponseV1',
     'tmz:apollo:request:get-poll-request' => 'Tmz\Schemas\Apollo\Request\GetPollRequestV1',
