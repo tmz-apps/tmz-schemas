@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.4.6
+* Use `triniti/schemas` v0.12.3.
+* __Add Schemas:__
+  * `tmz:news:command:collect-article-stats`
+  * `tmz:news:event:article-stats-collected`
+
+
 ## v0.4.5
 * Use `triniti/schemas` v0.12.2.
 
