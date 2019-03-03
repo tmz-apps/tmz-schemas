@@ -155,6 +155,9 @@
       "items": [
         {
           "$ref": "#/definitions/poll"
+        },
+        {
+          "$ref": "#/definitions/poll-stats"
         }
       ],
       "additionalProperties": false,
@@ -181,6 +184,14 @@
       "anyOf": [
         {
           "$ref": "https://schemas.tmz.com/json-schema/triniti/apollo/mixin/poll/1-0-0.json#"
+        }
+      ]
+    },
+    "poll-stats": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/apollo/mixin/poll-stats/1-0-0.json#"
         }
       ]
     }

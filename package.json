@@ -1,6 +1,6 @@
 {
   "name": "@tmz/schemas",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "^1.5.7",
-    "@triniti/schemas": "^0.12.3"
+    "@triniti/schemas": "^0.13.0"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
