@@ -115,6 +115,7 @@ import '@tmz/schemas/tmz/news/event/ArticlePublishedV1';
 import '@tmz/schemas/tmz/news/event/ArticleRenamedV1';
 import '@tmz/schemas/tmz/news/event/ArticleScheduledV1';
 import '@tmz/schemas/tmz/news/event/ArticleSlottingRemovedV1';
+import '@tmz/schemas/tmz/news/event/ArticleStatsCollectedV1';
 import '@tmz/schemas/tmz/news/event/ArticleUnlockedV1';
 import '@tmz/schemas/tmz/news/event/ArticleUnpublishedV1';
 import '@tmz/schemas/tmz/news/event/ArticleUpdatedV1';

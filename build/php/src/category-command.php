@@ -98,6 +98,7 @@
     'tmz:iam:command:update-app' => 'Tmz\Schemas\Iam\Command\UpdateAppV1',
     'tmz:iam:command:update-role' => 'Tmz\Schemas\Iam\Command\UpdateRoleV1',
     'tmz:iam:command:update-user' => 'Tmz\Schemas\Iam\Command\UpdateUserV1',
+    'tmz:news:command:collect-article-stats' => 'Tmz\Schemas\News\Command\CollectArticleStatsV1',
     'tmz:news:command:create-article' => 'Tmz\Schemas\News\Command\CreateArticleV1',
     'tmz:news:command:delete-article' => 'Tmz\Schemas\News\Command\DeleteArticleV1',
     'tmz:news:command:expire-article' => 'Tmz\Schemas\News\Command\ExpireArticleV1',

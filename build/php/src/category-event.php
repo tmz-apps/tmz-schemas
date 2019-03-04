@@ -116,6 +116,7 @@
     'tmz:news:event:article-renamed' => 'Tmz\Schemas\News\Event\ArticleRenamedV1',
     'tmz:news:event:article-scheduled' => 'Tmz\Schemas\News\Event\ArticleScheduledV1',
     'tmz:news:event:article-slotting-removed' => 'Tmz\Schemas\News\Event\ArticleSlottingRemovedV1',
+    'tmz:news:event:article-stats-collected' => 'Tmz\Schemas\News\Event\ArticleStatsCollectedV1',
     'tmz:news:event:article-unlocked' => 'Tmz\Schemas\News\Event\ArticleUnlockedV1',
     'tmz:news:event:article-unpublished' => 'Tmz\Schemas\News\Event\ArticleUnpublishedV1',
     'tmz:news:event:article-updated' => 'Tmz\Schemas\News\Event\ArticleUpdatedV1',

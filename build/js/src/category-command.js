@@ -97,6 +97,7 @@ import '@tmz/schemas/tmz/iam/command/RevokeRolesFromUserV1';
 import '@tmz/schemas/tmz/iam/command/UpdateAppV1';
 import '@tmz/schemas/tmz/iam/command/UpdateRoleV1';
 import '@tmz/schemas/tmz/iam/command/UpdateUserV1';
+import '@tmz/schemas/tmz/news/command/CollectArticleStatsV1';
 import '@tmz/schemas/tmz/news/command/CreateArticleV1';
 import '@tmz/schemas/tmz/news/command/DeleteArticleV1';
 import '@tmz/schemas/tmz/news/command/ExpireArticleV1';

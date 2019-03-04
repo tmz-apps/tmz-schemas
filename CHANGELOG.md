@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.5.1
+* __Add Schemas (for real this time):__
+  * `tmz:news:command:collect-article-stats`
+  * `tmz:news:event:article-stats-collected`
+
+
 ## v0.5.0
 __BREAKING CHANGES__
 

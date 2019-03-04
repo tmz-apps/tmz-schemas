@@ -9,6 +9,7 @@
  */
 
 \Gdbots\Pbj\MessageResolver::registerMap([
+    'tmz:news:command:collect-article-stats' => 'Tmz\Schemas\News\Command\CollectArticleStatsV1',
     'tmz:news:command:create-article' => 'Tmz\Schemas\News\Command\CreateArticleV1',
     'tmz:news:command:delete-article' => 'Tmz\Schemas\News\Command\DeleteArticleV1',
     'tmz:news:command:expire-article' => 'Tmz\Schemas\News\Command\ExpireArticleV1',
@@ -32,6 +33,7 @@
     'tmz:news:event:article-renamed' => 'Tmz\Schemas\News\Event\ArticleRenamedV1',
     'tmz:news:event:article-scheduled' => 'Tmz\Schemas\News\Event\ArticleScheduledV1',
     'tmz:news:event:article-slotting-removed' => 'Tmz\Schemas\News\Event\ArticleSlottingRemovedV1',
+    'tmz:news:event:article-stats-collected' => 'Tmz\Schemas\News\Event\ArticleStatsCollectedV1',
     'tmz:news:event:article-unlocked' => 'Tmz\Schemas\News\Event\ArticleUnlockedV1',
     'tmz:news:event:article-unpublished' => 'Tmz\Schemas\News\Event\ArticleUnpublishedV1',
     'tmz:news:event:article-updated' => 'Tmz\Schemas\News\Event\ArticleUpdatedV1',
