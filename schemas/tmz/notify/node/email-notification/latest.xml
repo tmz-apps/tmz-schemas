@@ -4,14 +4,6 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:tmz:notify:node:email-notification:1-0-0">
-    <fields>
-      <field name="distro_video_url" type="string" format="url"/>
-      <field name="distro_video_embed" type="text"/>
-      <field name="distro_photo_url" type="string" format="url"/>
-      <field name="distro_document_url" type="string" format="url"/>
-      <field name="distro_date" type="string"/>
-    </fields>
-
     <mixins>
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:notify:mixin:notification:v1</curie-major>

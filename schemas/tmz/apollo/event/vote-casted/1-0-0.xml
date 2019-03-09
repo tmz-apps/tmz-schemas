@@ -4,27 +4,6 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:tmz:apollo:event:vote-casted:1-0-0">
-    <fields>
-      <field name="s256" type="tiny-int">
-        <description>
-          "s256" means shard 256. Used to distribute read/write from storage and speed up
-          replay/reindex processes. It can also be used to distribute workload in front end
-          user interfaces or notifications (like isles in a grocery store).
-          This value should NOT change once set.
-        </description>
-      </field>
-      <field name="s32" type="tiny-int">
-        <description>
-          "s32" means shard 32. See field "s256" for explanation.
-        </description>
-      </field>
-      <field name="s16" type="tiny-int">
-        <description>
-          "s16" means shard 16. See field "s256" for explanation.
-        </description>
-      </field>
-    </fields>
-
     <mixins>
       <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
       <curie-major>triniti:apollo:mixin:vote-casted:v1</curie-major>
