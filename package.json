@@ -1,6 +1,6 @@
 {
   "name": "@tmz/schemas",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "^1.5.10",
-    "@triniti/schemas": "^0.15.2"
+    "@triniti/schemas": "^0.15.3"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -45,7 +45,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "faucet": "0.0.1",
