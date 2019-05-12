@@ -6,8 +6,8 @@
   "license": "Apache-2.0",
   "require": {
     "php": ">=7.1",
-    "gdbots/schemas": "1.5.10",
-    "triniti/schemas": "0.15.4"
+    "gdbots/schemas": "1.5.11",
+    "triniti/schemas": "0.15.5"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.4",
