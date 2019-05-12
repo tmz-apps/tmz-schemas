@@ -200,6 +200,16 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "fcm_api_key": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "An encrypted value of legacy-server-key that can be obtained from the cloud messaging tab of the Firebase console. @link https://firebase.google.com/docs/cloud-messaging/auth-server",
+      "pbj": {
+        "type": "text",
+        "rule": "single"
+      }
     }
   },
   "required": [
