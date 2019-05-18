@@ -121,6 +121,9 @@
       "anyOf": [
         {
           "$ref": "https://schemas.tmz.com/json-schema/gdbots/pbjx/mixin/request/1-0-0.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/pbjx/mixin/request/1-0-1.json#"
         }
       ]
     }
