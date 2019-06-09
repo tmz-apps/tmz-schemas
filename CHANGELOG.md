@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.0.0
+* Peg stable version.
+
+
 ## v0.7.9
 * Use `triniti/schemas` v0.15.7.
 
