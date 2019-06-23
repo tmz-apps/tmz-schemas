@@ -292,6 +292,7 @@
     },
     "show_related_articles": {
       "type": "boolean",
+      "default": true,
       "description": "Determines if the related articles should render. This is intended as a flag on blogroll/lists, not the permalink of an article where you'd always expect to see the related articles.",
       "pbj": {
         "type": "boolean",
