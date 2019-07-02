@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v1.0.2
+* Use `triniti/schemas` v1.0.2.
+* __Add Schemas:__
+  * `tmz:curator:command:update-gallery-image-count`
+  * `tmz:curator:event:gallery-image-count-updated`
+
+
 ## v1.0.1
 * Use `triniti/schemas` v1.0.1.
 

@@ -1,6 +1,6 @@
 {
   "name": "@tmz/schemas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "^1.5.12",
-    "@triniti/schemas": "^1.0.1"
+    "@triniti/schemas": "^1.0.2"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0",
@@ -43,18 +43,18 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb": "^17.1.1",
     "eslint-import-resolver-babel-module": "^4.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
     "faucet": "0.0.1",
     "lodash": "^4.17.10",
     "lodash-es": "^4.17.10",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
     "rimraf": "^2.6.3",
-    "tape": "^4.10.2",
+    "tape": "^4.11.0",
     "utf8": "^3.0.0",
     "uuid": "^3.3.0"
   },
