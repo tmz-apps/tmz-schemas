@@ -665,6 +665,9 @@
       "anyOf": [
         {
           "$ref": "https://schemas.tmz.com/json-schema/triniti/canvas/mixin/block/1-0-0.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/canvas/mixin/block/1-0-1.json#"
         }
       ]
     }

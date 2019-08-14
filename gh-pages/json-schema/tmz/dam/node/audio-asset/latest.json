@@ -253,6 +253,17 @@
         "rule": "single"
       }
     },
+    "duration": {
+      "type": "integer",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 65535,
+      "description": "Duration of the audio in seconds.",
+      "pbj": {
+        "type": "small-int",
+        "rule": "single"
+      }
+    },
     "tags": {
       "type": "object",
       "patternProperties": {
