@@ -67,6 +67,15 @@
         "type": "identifier",
         "rule": "single"
       }
+    },
+    "start_at_poster": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true the gallery should open at the poster image selected. This assumes the poster image is also in the selected gallery.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [
