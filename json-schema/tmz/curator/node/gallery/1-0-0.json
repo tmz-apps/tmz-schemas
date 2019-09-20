@@ -188,6 +188,16 @@
         "rule": "single"
       }
     },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "A URL to link with the credit source.",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
     "allow_comments": {
       "type": "boolean",
       "default": true,

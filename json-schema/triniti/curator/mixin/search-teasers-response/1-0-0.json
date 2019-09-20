@@ -184,6 +184,12 @@
       "anyOf": [
         {
           "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/teaser/1-0-0.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/teaser/1-0-1.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/teaser/1-0-2.json#"
         }
       ]
     }
