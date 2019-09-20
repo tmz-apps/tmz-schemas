@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v1.0.6
+* Use `triniti/schemas` v1.0.7.
+* __Add Schemas:__
+  * `tmz:canvas:block:divider-block`
+  * `tmz:curator:command:remove-teaser-slotting`
+  * `tmz:curator:event:teaser-slotting-removed`
+  * `tmz:curator:node:asset-teaser`
+
+
 ## v1.0.5
 * Use `triniti/schemas` v1.0.5.
 

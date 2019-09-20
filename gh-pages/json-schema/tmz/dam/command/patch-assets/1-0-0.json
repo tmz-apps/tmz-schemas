@@ -244,6 +244,15 @@
         "rule": "single"
       }
     },
+    "display_title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
     "expires_at": {
       "type": "string",
       "format": "date-time",
@@ -259,6 +268,33 @@
       "pbj": {
         "type": "string",
         "rule": "single"
+      }
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
+      }
+    },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
+    },
+    "cta_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "pbj": {
+        "type": "text",
+        "rule": "single",
+        "format": "url"
       }
     },
     "description": {
