@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/canvas/block/image-block/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/canvas/block/image-block/1-0-1.json#
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -7,6 +7,7 @@ import TrinitiCanvasBlockV1Trait from '@triniti/schemas/triniti/canvas/mixin/blo
 import TrinitiCanvasImageBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/image-block/ImageBlockV1Mixin';
 import TrinitiCanvasImageBlockV1Trait from '@triniti/schemas/triniti/canvas/mixin/image-block/ImageBlockV1Trait';
 import TrinitiCanvasNodeRefBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/node-ref-block/NodeRefBlockV1Mixin';
+import TrinitiCommonThemeableV1Mixin from '@triniti/schemas/triniti/common/mixin/themeable/ThemeableV1Mixin';
 
 export default class ImageBlockV1 extends Message {
   /**
@@ -15,12 +16,13 @@ export default class ImageBlockV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:canvas:block:image-block:1-0-0', ImageBlockV1,
+    return new Schema('pbj:tmz:canvas:block:image-block:1-0-1', ImageBlockV1,
       [],
       [
         TrinitiCanvasBlockV1Mixin.create(),
         TrinitiCanvasNodeRefBlockV1Mixin.create(),
         TrinitiCanvasImageBlockV1Mixin.create(),
+        TrinitiCommonThemeableV1Mixin.create(),
       ],
     );
   }

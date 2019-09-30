@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.0.7
+* __Modify Schemas:__
+  * `tmz:canvas:block:image-block` patch revision `1-0-1`
+    * Add mixin `triniti:common:mixin:themeable:v1`
+
+
 ## v1.0.6
 * Use `triniti/schemas` v1.0.7.
 * __Add Schemas:__

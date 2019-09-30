@@ -1,6 +1,6 @@
 {
   "name": "@tmz/schemas",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
