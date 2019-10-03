@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v1.1.0
+* Use `gdbots/schemas` v1.6.0.
+* Use `triniti/schemas` v1.1.0.
+
+
 ## v1.0.7
 * __Modify Schemas:__
   * `tmz:canvas:block:image-block` patch revision `1-0-1`
