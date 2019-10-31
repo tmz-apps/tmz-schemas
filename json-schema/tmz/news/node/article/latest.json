@@ -202,6 +202,15 @@
         "rule": "single"
       }
     },
+    "author_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the author of the article.",
+      "pbj": {
+        "type": "identifier",
+        "rule": "single"
+      }
+    },
     "image_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
