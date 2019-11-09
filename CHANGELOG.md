@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.1.2
+* Use `gdbots/schemas` v1.6.2.
+* Use `triniti/schemas` v1.1.3.
+* __Modify Schemas:__
+  * `tmz:ovp:node:video` patch revision `1-0-1`
+    * Add mixin `triniti:ovp.medialive:mixin:has-channel:v1`
+
+
 ## v1.1.1
 * Use `triniti/schemas` v1.1.2.
 * __Add Schemas:__
