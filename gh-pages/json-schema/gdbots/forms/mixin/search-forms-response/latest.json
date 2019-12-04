@@ -238,6 +238,9 @@
         },
         {
           "$ref": "https://schemas.tmz.com/json-schema/gdbots/forms/mixin/form/1-0-2.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/forms/mixin/form/1-0-3.json#"
         }
       ]
     }
