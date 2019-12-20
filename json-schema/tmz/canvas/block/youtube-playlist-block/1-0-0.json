@@ -77,8 +77,7 @@
   },
   "required": [
     "_schema",
-    "playlist_id",
-    "video_id"
+    "playlist_id"
   ],
   "additionalProperties": false
 }
