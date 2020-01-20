@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v1.1.5
+* Use `triniti/schemas` v1.1.6.
+* __Modify Schemas:__
+  * `tmz:ovp:node:video` patch revision `1-0-2`
+    * Add mixin `triniti:ovp.jwplayer:mixin:has-media:v1`
+
+
 ## v1.1.4
 * Use `triniti/schemas` v1.1.5.
 

@@ -570,6 +570,8 @@ import '@tmz/schemas/tmz/taxonomy/request/SuggestHashtagsResponseV1';
 import '@triniti/schemas/triniti/common/RenderContextV1';
 import '@triniti/schemas/triniti/migrator/command/SyncCfNodesV1';
 import '@triniti/schemas/triniti/notify/NotifierResultV1';
+import '@triniti/schemas/triniti/ovp.jwplayer/command/SyncMediaV1';
+import '@triniti/schemas/triniti/ovp.jwplayer/event/MediaSyncedV1';
 import '@triniti/schemas/triniti/ovp.kaltura/CaptionV1';
 import '@triniti/schemas/triniti/ovp.kaltura/EntryV1';
 import '@triniti/schemas/triniti/ovp.kaltura/FlavorV1';

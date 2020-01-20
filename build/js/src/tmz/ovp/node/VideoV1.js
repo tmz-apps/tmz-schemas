@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
@@ -16,6 +16,7 @@ import TrinitiCommonAdvertisingV1Mixin from '@triniti/schemas/triniti/common/mix
 import TrinitiCommonSeoV1Mixin from '@triniti/schemas/triniti/common/mixin/seo/SeoV1Mixin';
 import TrinitiCommonSwipeableV1Mixin from '@triniti/schemas/triniti/common/mixin/swipeable/SwipeableV1Mixin';
 import TrinitiCuratorTeaserableV1Mixin from '@triniti/schemas/triniti/curator/mixin/teaserable/TeaserableV1Mixin';
+import TrinitiOvpJwplayerHasMediaV1Mixin from '@triniti/schemas/triniti/ovp.jwplayer/mixin/has-media/HasMediaV1Mixin';
 import TrinitiOvpKalturaHasEntryV1Mixin from '@triniti/schemas/triniti/ovp.kaltura/mixin/has-entry/HasEntryV1Mixin';
 import TrinitiOvpMedialiveHasChannelV1Mixin from '@triniti/schemas/triniti/ovp.medialive/mixin/has-channel/HasChannelV1Mixin';
 import TrinitiOvpVideoV1Mixin from '@triniti/schemas/triniti/ovp/mixin/video/VideoV1Mixin';
@@ -32,7 +33,7 @@ export default class VideoV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:ovp:node:video:1-0-1', VideoV1,
+    return new Schema('pbj:tmz:ovp:node:video:1-0-2', VideoV1,
       [
         Fb.create('episode_highlights', T.StringType.create())
           .asAList()
@@ -41,6 +42,7 @@ export default class VideoV1 extends Message {
       [
         GdbotsNcrNodeV1Mixin.create(),
         TrinitiOvpVideoV1Mixin.create(),
+        TrinitiOvpJwplayerHasMediaV1Mixin.create(),
         TrinitiOvpKalturaHasEntryV1Mixin.create(),
         TrinitiOvpMedialiveHasChannelV1Mixin.create(),
         GdbotsCommonTaggableV1Mixin.create(),
