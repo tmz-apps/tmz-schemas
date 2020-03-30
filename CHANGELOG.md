@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v1.1.7
+* Use `gdbots/schemas` v1.6.5.
+* Use `triniti/schemas` v1.1.8.
+* __Add Schemas:__
+  * `tmz:canvas:block:tumblr-post-block`
+
+
 ## v1.1.6
 * Use `gdbots/schemas` v1.6.4.
 * Use `triniti/schemas` v1.1.7.
