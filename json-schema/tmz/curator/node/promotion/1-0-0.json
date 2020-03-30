@@ -339,6 +339,19 @@
         "rule": "list"
       }
     },
+    "slots": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/slot"
+        }
+      ],
+      "additionalProperties": false,
+      "pbj": {
+        "type": "message",
+        "rule": "list"
+      }
+    },
     "tags": {
       "type": "object",
       "patternProperties": {
@@ -375,5 +388,15 @@
     "_schema",
     "_id"
   ],
+  "definitions": {
+    "slot": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/slot/1-0-0.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": false
 }

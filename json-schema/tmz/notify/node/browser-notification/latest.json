@@ -263,6 +263,15 @@
         "type": "string",
         "rule": "set"
       }
+    },
+    "require_interaction": {
+      "type": "boolean",
+      "default": true,
+      "description": "@link https://developer.mozilla.org/en-US/docs/Web/API/notification/Notification Sets the requireInteraction option on a Notification that indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.",
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
     }
   },
   "required": [
