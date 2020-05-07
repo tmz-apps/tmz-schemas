@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.1.8
+* Use `triniti/schemas` v1.1.10.
+* __Modify Schemas:__
+  * `tmz:dam:node:video-asset` patch revision `1-0-1`
+    * Add mixin `triniti:ovp:mixin:transcodeable:v1`
+    * Add mixin `triniti:ovp:mixin:transcribable:v1`
+
+
 ## v1.1.7
 * Use `gdbots/schemas` v1.6.5.
 * Use `triniti/schemas` v1.1.8.

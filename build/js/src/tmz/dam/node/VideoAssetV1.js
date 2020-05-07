@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-1.json#
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
 import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';
@@ -10,6 +10,8 @@ import Schema from '@gdbots/pbj/Schema';
 import TrinitiDamAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/asset/AssetV1Mixin';
 import TrinitiDamVideoAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/video-asset/VideoAssetV1Mixin';
 import TrinitiDamVideoAssetV1Trait from '@triniti/schemas/triniti/dam/mixin/video-asset/VideoAssetV1Trait';
+import TrinitiOvpTranscodeableV1Mixin from '@triniti/schemas/triniti/ovp/mixin/transcodeable/TranscodeableV1Mixin';
+import TrinitiOvpTranscribableV1Mixin from '@triniti/schemas/triniti/ovp/mixin/transcribable/TranscribableV1Mixin';
 import TrinitiPeopleHasPeopleV1Mixin from '@triniti/schemas/triniti/people/mixin/has-people/HasPeopleV1Mixin';
 import TrinitiTaxonomyHashtaggableV1Mixin from '@triniti/schemas/triniti/taxonomy/mixin/hashtaggable/HashtaggableV1Mixin';
 
@@ -20,7 +22,7 @@ export default class VideoAssetV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:dam:node:video-asset:1-0-0', VideoAssetV1,
+    return new Schema('pbj:tmz:dam:node:video-asset:1-0-1', VideoAssetV1,
       [],
       [
         GdbotsNcrNodeV1Mixin.create(),
@@ -29,6 +31,8 @@ export default class VideoAssetV1 extends Message {
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrExpirableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
+        TrinitiOvpTranscodeableV1Mixin.create(),
+        TrinitiOvpTranscribableV1Mixin.create(),
         TrinitiPeopleHasPeopleV1Mixin.create(),
         TrinitiTaxonomyHashtaggableV1Mixin.create(),
       ],

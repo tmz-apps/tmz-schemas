@@ -1,5 +1,5 @@
 <?php
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-1.json#
 namespace Tmz\Schemas\Dam\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -18,6 +18,10 @@ use Triniti\Schemas\Dam\Mixin\Asset\AssetV1Mixin as TrinitiDamAssetV1Mixin;
 use Triniti\Schemas\Dam\Mixin\VideoAsset\VideoAssetV1 as TrinitiDamVideoAssetV1;
 use Triniti\Schemas\Dam\Mixin\VideoAsset\VideoAssetV1Mixin as TrinitiDamVideoAssetV1Mixin;
 use Triniti\Schemas\Dam\Mixin\VideoAsset\VideoAssetV1Trait as TrinitiDamVideoAssetV1Trait;
+use Triniti\Schemas\Ovp\Mixin\Transcodeable\TranscodeableV1 as TrinitiOvpTranscodeableV1;
+use Triniti\Schemas\Ovp\Mixin\Transcodeable\TranscodeableV1Mixin as TrinitiOvpTranscodeableV1Mixin;
+use Triniti\Schemas\Ovp\Mixin\Transcribable\TranscribableV1 as TrinitiOvpTranscribableV1;
+use Triniti\Schemas\Ovp\Mixin\Transcribable\TranscribableV1Mixin as TrinitiOvpTranscribableV1Mixin;
 use Triniti\Schemas\People\Mixin\HasPeople\HasPeopleV1 as TrinitiPeopleHasPeopleV1;
 use Triniti\Schemas\People\Mixin\HasPeople\HasPeopleV1Mixin as TrinitiPeopleHasPeopleV1Mixin;
 use Triniti\Schemas\Taxonomy\Mixin\Hashtaggable\HashtaggableV1 as TrinitiTaxonomyHashtaggableV1;
@@ -31,6 +35,8 @@ final class VideoAssetV1 extends AbstractMessage implements
     GdbotsCommonTaggableV1,
     GdbotsNcrExpirableV1,
     GdbotsNcrIndexedV1,
+    TrinitiOvpTranscodeableV1,
+    TrinitiOvpTranscribableV1,
     TrinitiPeopleHasPeopleV1,
     TrinitiTaxonomyHashtaggableV1
 {
@@ -42,7 +48,7 @@ final class VideoAssetV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:tmz:dam:node:video-asset:1-0-0', __CLASS__,
+        return new Schema('pbj:tmz:dam:node:video-asset:1-0-1', __CLASS__,
             [],
             [
                 GdbotsNcrNodeV1Mixin::create(),
@@ -51,6 +57,8 @@ final class VideoAssetV1 extends AbstractMessage implements
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrExpirableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
+                TrinitiOvpTranscodeableV1Mixin::create(),
+                TrinitiOvpTranscribableV1Mixin::create(),
                 TrinitiPeopleHasPeopleV1Mixin::create(),
                 TrinitiTaxonomyHashtaggableV1Mixin::create(),
             ]
