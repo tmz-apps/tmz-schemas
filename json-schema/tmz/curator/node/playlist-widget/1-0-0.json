@@ -248,6 +248,14 @@
         "rule": "single"
       }
     },
+    "autoplay": {
+      "type": "boolean",
+      "default": true,
+      "pbj": {
+        "type": "boolean",
+        "rule": "single"
+      }
+    },
     "tags": {
       "type": "object",
       "patternProperties": {
