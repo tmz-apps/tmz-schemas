@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.1.10
+* __Modify Schemas:__
+  * `tmz:ovp:node:video` patch revision `1-0-3`
+    * Add `xumo_enabled` boolean field.
+
+
 ## v1.1.9
 * Use `triniti/schemas` v1.1.11.
 
