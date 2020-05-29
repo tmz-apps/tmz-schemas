@@ -3,9 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:tmz:ovp:node:video:1-0-2">
+  <schema id="pbj:tmz:ovp:node:video:1-0-3">
     <fields>
       <field name="episode_highlights" type="string" rule="list"/>
+      <field name="xumo_enabled" type="boolean"/>
     </fields>
 
     <mixins>
