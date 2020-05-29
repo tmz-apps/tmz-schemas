@@ -1,5 +1,5 @@
 <?php
-// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-2.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-3.json#
 namespace Tmz\Schemas\Ovp\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -77,10 +77,12 @@ final class VideoV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:tmz:ovp:node:video:1-0-2', __CLASS__,
+        return new Schema('pbj:tmz:ovp:node:video:1-0-3', __CLASS__,
             [
                 Fb::create('episode_highlights', T\StringType::create())
                     ->asAList()
+                    ->build(),
+                Fb::create('xumo_enabled', T\BooleanType::create())
                     ->build(),
             ],
             [

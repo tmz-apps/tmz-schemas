@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-2.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-3.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
@@ -33,10 +33,12 @@ export default class VideoV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:ovp:node:video:1-0-2', VideoV1,
+    return new Schema('pbj:tmz:ovp:node:video:1-0-3', VideoV1,
       [
         Fb.create('episode_highlights', T.StringType.create())
           .asAList()
+          .build(),
+        Fb.create('xumo_enabled', T.BooleanType.create())
           .build(),
       ],
       [
