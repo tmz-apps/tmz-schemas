@@ -35,6 +35,10 @@ use Triniti\Schemas\OvpKaltura\Mixin\HasEntry\HasEntryV1 as TrinitiOvpKalturaHas
 use Triniti\Schemas\OvpKaltura\Mixin\HasEntry\HasEntryV1Mixin as TrinitiOvpKalturaHasEntryV1Mixin;
 use Triniti\Schemas\OvpMedialive\Mixin\HasChannel\HasChannelV1 as TrinitiOvpMedialiveHasChannelV1;
 use Triniti\Schemas\OvpMedialive\Mixin\HasChannel\HasChannelV1Mixin as TrinitiOvpMedialiveHasChannelV1Mixin;
+use Triniti\Schemas\Ovp\Mixin\Transcodeable\TranscodeableV1 as TrinitiOvpTranscodeableV1;
+use Triniti\Schemas\Ovp\Mixin\Transcodeable\TranscodeableV1Mixin as TrinitiOvpTranscodeableV1Mixin;
+use Triniti\Schemas\Ovp\Mixin\Transcribable\TranscribableV1 as TrinitiOvpTranscribableV1;
+use Triniti\Schemas\Ovp\Mixin\Transcribable\TranscribableV1Mixin as TrinitiOvpTranscribableV1Mixin;
 use Triniti\Schemas\Ovp\Mixin\Video\VideoV1 as TrinitiOvpVideoV1;
 use Triniti\Schemas\Ovp\Mixin\Video\VideoV1Mixin as TrinitiOvpVideoV1Mixin;
 use Triniti\Schemas\Ovp\Mixin\Video\VideoV1Trait as TrinitiOvpVideoV1Trait;
@@ -51,6 +55,8 @@ final class VideoV1 extends AbstractMessage implements
     Video,
     GdbotsNcrNodeV1,
     TrinitiOvpVideoV1,
+    TrinitiOvpTranscodeableV1,
+    TrinitiOvpTranscribableV1,
     TrinitiOvpJwplayerHasMediaV1,
     TrinitiOvpKalturaHasEntryV1,
     TrinitiOvpMedialiveHasChannelV1,
@@ -88,6 +94,8 @@ final class VideoV1 extends AbstractMessage implements
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 TrinitiOvpVideoV1Mixin::create(),
+                TrinitiOvpTranscodeableV1Mixin::create(),
+                TrinitiOvpTranscribableV1Mixin::create(),
                 TrinitiOvpJwplayerHasMediaV1Mixin::create(),
                 TrinitiOvpKalturaHasEntryV1Mixin::create(),
                 TrinitiOvpMedialiveHasChannelV1Mixin::create(),
