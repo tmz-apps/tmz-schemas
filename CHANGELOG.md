@@ -2,6 +2,7 @@
 
 
 ## v1.1.10
+* Use `gdbots/schemas` v1.6.6.
 * __Modify Schemas:__
   * `tmz:curator:node:gallery` patch revision `1-0-1`
     * Add mixin `gdbots:common:mixin:labelable:v1`
