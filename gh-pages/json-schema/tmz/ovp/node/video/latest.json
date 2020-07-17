@@ -445,34 +445,6 @@
         "rule": "single"
       }
     },
-    "transcoding_status": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "processing",
-        "canceled",
-        "completed",
-        "failed"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "transcription_status": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "processing",
-        "canceled",
-        "completed",
-        "failed"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
     "jwplayer_sync_enabled": {
       "type": "boolean",
       "default": true,

@@ -12,8 +12,6 @@
     <mixins>
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:ovp:mixin:video:v1</curie-major>
-      <curie-major>triniti:ovp:mixin:transcodeable:v1</curie-major>
-      <curie-major>triniti:ovp:mixin:transcribable:v1</curie-major>
       <curie-major>triniti:ovp.jwplayer:mixin:has-media:v1</curie-major>
       <curie-major>triniti:ovp.kaltura:mixin:has-entry:v1</curie-major>
       <curie-major>triniti:ovp.medialive:mixin:has-channel:v1</curie-major>

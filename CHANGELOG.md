@@ -5,8 +5,6 @@
 * __Modify Schemas:__
   * `tmz:ovp:node:video` patch revision `1-0-3`
     * Add `xumo_enabled` boolean field.
-    * Add mixin `triniti:ovp:mixin:transcodeable:v1`
-    * Add mixin `triniti:ovp:mixin:transcribable:v1`
 
 
 ## v1.1.9

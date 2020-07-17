@@ -19,8 +19,6 @@ import TrinitiCuratorTeaserableV1Mixin from '@triniti/schemas/triniti/curator/mi
 import TrinitiOvpJwplayerHasMediaV1Mixin from '@triniti/schemas/triniti/ovp.jwplayer/mixin/has-media/HasMediaV1Mixin';
 import TrinitiOvpKalturaHasEntryV1Mixin from '@triniti/schemas/triniti/ovp.kaltura/mixin/has-entry/HasEntryV1Mixin';
 import TrinitiOvpMedialiveHasChannelV1Mixin from '@triniti/schemas/triniti/ovp.medialive/mixin/has-channel/HasChannelV1Mixin';
-import TrinitiOvpTranscodeableV1Mixin from '@triniti/schemas/triniti/ovp/mixin/transcodeable/TranscodeableV1Mixin';
-import TrinitiOvpTranscribableV1Mixin from '@triniti/schemas/triniti/ovp/mixin/transcribable/TranscribableV1Mixin';
 import TrinitiOvpVideoV1Mixin from '@triniti/schemas/triniti/ovp/mixin/video/VideoV1Mixin';
 import TrinitiOvpVideoV1Trait from '@triniti/schemas/triniti/ovp/mixin/video/VideoV1Trait';
 import TrinitiPeopleHasPeopleV1Mixin from '@triniti/schemas/triniti/people/mixin/has-people/HasPeopleV1Mixin';
@@ -46,8 +44,6 @@ export default class VideoV1 extends Message {
       [
         GdbotsNcrNodeV1Mixin.create(),
         TrinitiOvpVideoV1Mixin.create(),
-        TrinitiOvpTranscodeableV1Mixin.create(),
-        TrinitiOvpTranscribableV1Mixin.create(),
         TrinitiOvpJwplayerHasMediaV1Mixin.create(),
         TrinitiOvpKalturaHasEntryV1Mixin.create(),
         TrinitiOvpMedialiveHasChannelV1Mixin.create(),
