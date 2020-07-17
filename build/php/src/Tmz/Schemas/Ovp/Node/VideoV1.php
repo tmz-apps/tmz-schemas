@@ -1,11 +1,13 @@
 <?php
-// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-2.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-3.json#
 namespace Tmz\Schemas\Ovp\Node;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
+use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1 as GdbotsCommonLabelableV1;
+use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1Mixin as GdbotsCommonLabelableV1Mixin;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Expirable\ExpirableV1 as GdbotsNcrExpirableV1;
@@ -54,6 +56,7 @@ final class VideoV1 extends AbstractMessage implements
     TrinitiOvpJwplayerHasMediaV1,
     TrinitiOvpKalturaHasEntryV1,
     TrinitiOvpMedialiveHasChannelV1,
+    GdbotsCommonLabelableV1,
     GdbotsCommonTaggableV1,
     GdbotsNcrExpirableV1,
     GdbotsNcrIndexedV1,
@@ -77,10 +80,12 @@ final class VideoV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:tmz:ovp:node:video:1-0-2', __CLASS__,
+        return new Schema('pbj:tmz:ovp:node:video:1-0-3', __CLASS__,
             [
                 Fb::create('episode_highlights', T\StringType::create())
                     ->asAList()
+                    ->build(),
+                Fb::create('xumo_enabled', T\BooleanType::create())
                     ->build(),
             ],
             [
@@ -89,6 +94,7 @@ final class VideoV1 extends AbstractMessage implements
                 TrinitiOvpJwplayerHasMediaV1Mixin::create(),
                 TrinitiOvpKalturaHasEntryV1Mixin::create(),
                 TrinitiOvpMedialiveHasChannelV1Mixin::create(),
+                GdbotsCommonLabelableV1Mixin::create(),
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrExpirableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
