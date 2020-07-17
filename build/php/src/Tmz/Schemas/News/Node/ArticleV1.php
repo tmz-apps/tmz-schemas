@@ -1,9 +1,11 @@
 <?php
-// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-1.json#
 namespace Tmz\Schemas\News\Node;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
+use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1 as GdbotsCommonLabelableV1;
+use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1Mixin as GdbotsCommonLabelableV1Mixin;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Expirable\ExpirableV1 as GdbotsNcrExpirableV1;
@@ -53,6 +55,7 @@ final class ArticleV1 extends AbstractMessage implements
     Article,
     GdbotsNcrNodeV1,
     TrinitiNewsArticleV1,
+    GdbotsCommonLabelableV1,
     GdbotsCommonTaggableV1,
     GdbotsNcrExpirableV1,
     GdbotsNcrIndexedV1,
@@ -81,11 +84,12 @@ final class ArticleV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:tmz:news:node:article:1-0-0', __CLASS__,
+        return new Schema('pbj:tmz:news:node:article:1-0-1', __CLASS__,
             [],
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 TrinitiNewsArticleV1Mixin::create(),
+                GdbotsCommonLabelableV1Mixin::create(),
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrExpirableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),

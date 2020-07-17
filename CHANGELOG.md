@@ -3,8 +3,13 @@
 
 ## v1.1.10
 * __Modify Schemas:__
+  * `tmz:curator:node:gallery` patch revision `1-0-1`
+    * Add mixin `gdbots:common:mixin:labelable:v1`
+  * `tmz:news:node:article` patch revision `1-0-1`
+    * Add mixin `gdbots:common:mixin:labelable:v1`
   * `tmz:ovp:node:video` patch revision `1-0-3`
     * Add `xumo_enabled` boolean field.
+    * Add mixin `gdbots:common:mixin:labelable:v1`
 
 
 ## v1.1.9

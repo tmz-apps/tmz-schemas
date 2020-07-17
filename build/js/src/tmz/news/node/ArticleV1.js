@@ -1,4 +1,5 @@
-// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-1.json#
+import GdbotsCommonLabelableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/labelable/LabelableV1Mixin';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
 import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';
@@ -33,11 +34,12 @@ export default class ArticleV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:news:node:article:1-0-0', ArticleV1,
+    return new Schema('pbj:tmz:news:node:article:1-0-1', ArticleV1,
       [],
       [
         GdbotsNcrNodeV1Mixin.create(),
         TrinitiNewsArticleV1Mixin.create(),
+        GdbotsCommonLabelableV1Mixin.create(),
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrExpirableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),

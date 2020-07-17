@@ -1,5 +1,6 @@
 // @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-3.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
+import GdbotsCommonLabelableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/labelable/LabelableV1Mixin';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
 import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';
@@ -47,6 +48,7 @@ export default class VideoV1 extends Message {
         TrinitiOvpJwplayerHasMediaV1Mixin.create(),
         TrinitiOvpKalturaHasEntryV1Mixin.create(),
         TrinitiOvpMedialiveHasChannelV1Mixin.create(),
+        GdbotsCommonLabelableV1Mixin.create(),
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrExpirableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
