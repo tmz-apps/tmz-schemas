@@ -23,7 +23,7 @@ switch (env) {
       {
         root: ['./build/js/src'],
         alias: {
-          '@tmz/schemas': './build/js/src',
+          '@tmz/schemas': './build/js/src'
         },
       },
     ]);
