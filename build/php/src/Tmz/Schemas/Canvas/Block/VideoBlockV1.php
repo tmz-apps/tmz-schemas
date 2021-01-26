@@ -1,39 +1,90 @@
 <?php
+declare(strict_types=1);
+
 // @link https://schemas.tmz.com/json-schema/tmz/canvas/block/video-block/1-0-0.json#
 namespace Tmz\Schemas\Canvas\Block;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Triniti\Schemas\Canvas\Mixin\Block\BlockV1 as TrinitiCanvasBlockV1;
+use Gdbots\Pbj\Type as T;
 use Triniti\Schemas\Canvas\Mixin\Block\BlockV1Mixin as TrinitiCanvasBlockV1Mixin;
-use Triniti\Schemas\Canvas\Mixin\Block\BlockV1Trait as TrinitiCanvasBlockV1Trait;
-use Triniti\Schemas\Canvas\Mixin\NodeRefBlock\NodeRefBlockV1 as TrinitiCanvasNodeRefBlockV1;
-use Triniti\Schemas\Canvas\Mixin\NodeRefBlock\NodeRefBlockV1Mixin as TrinitiCanvasNodeRefBlockV1Mixin;
-use Triniti\Schemas\Canvas\Mixin\VideoBlock\VideoBlockV1 as TrinitiCanvasVideoBlockV1;
 use Triniti\Schemas\Canvas\Mixin\VideoBlock\VideoBlockV1Mixin as TrinitiCanvasVideoBlockV1Mixin;
-use Triniti\Schemas\Canvas\Mixin\VideoBlock\VideoBlockV1Trait as TrinitiCanvasVideoBlockV1Trait;
 
-final class VideoBlockV1 extends AbstractMessage implements
-    VideoBlock,
-    TrinitiCanvasBlockV1,
-    TrinitiCanvasNodeRefBlockV1,
-    TrinitiCanvasVideoBlockV1
+final class VideoBlockV1 extends AbstractMessage
 {
-    use TrinitiCanvasBlockV1Trait;
-    use TrinitiCanvasVideoBlockV1Trait;
+    const SCHEMA_ID = 'pbj:tmz:canvas:block:video-block:1-0-0';
+    const SCHEMA_CURIE = 'tmz:canvas:block:video-block';
+    const SCHEMA_CURIE_MAJOR = 'tmz:canvas:block:video-block:v1';
+    const MIXINS = [
+      'triniti:canvas:mixin:block:v1',
+      'triniti:canvas:mixin:block',
+      'triniti:canvas:mixin:node-ref-block:v1',
+      'triniti:canvas:mixin:node-ref-block',
+      'triniti:canvas:mixin:video-block:v1',
+      'triniti:canvas:mixin:video-block',
+    ];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    use TrinitiCanvasBlockV1Mixin;
+
+    use TrinitiCanvasVideoBlockV1Mixin;
+
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:tmz:canvas:block:video-block:1-0-0', __CLASS__,
-            [],
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
-                TrinitiCanvasBlockV1Mixin::create(),
-                TrinitiCanvasNodeRefBlockV1Mixin::create(),
-                TrinitiCanvasVideoBlockV1Mixin::create(),
-            ]
+                Fb::create('etag', T\StringType::create())
+                    ->maxLength(100)
+                    ->pattern('^[\w\.:-]+$')
+                    ->build(),
+                /*
+                 * In rendering environments that support HTML the css_class
+                 * can be appended to the dom elements' class attribute.
+                 */
+                Fb::create('css_class', T\StringType::create())
+                    ->pattern('^[\w\s-]+$')
+                    ->build(),
+                /*
+                 * Represents an update that occurred on the node this block
+                 * is attached to. DOES NOT indicate an update to the block itself.
+                 * eg an article with a twitter block with updated_date means that
+                 * the article was updated to include that twitter block.
+                 */
+                Fb::create('updated_date', T\DateTimeType::create())
+                    ->build(),
+                /*
+                 * When true it means this block represents a portion of a document
+                 * whose content is only indirectly related to the document's main content.
+                 * Asides are frequently presented as sidebars or call-out boxes.
+                 */
+                Fb::create('aside', T\BooleanType::create())
+                    ->build(),
+                Fb::create('node_ref', T\NodeRefType::create())
+                    ->required()
+                    ->build(),
+                /*
+                 * An optional override for the title of the node.
+                 */
+                Fb::create('title', T\StringType::create())
+                    ->build(),
+                Fb::create('autoplay', T\BooleanType::create())
+                    ->build(),
+                Fb::create('launch_text', T\StringType::create())
+                    ->build(),
+                Fb::create('muted', T\BooleanType::create())
+                    ->build(),
+                Fb::create('start_at', T\SmallIntType::create())
+                    ->build(),
+                Fb::create('show_more_videos', T\BooleanType::create())
+                    ->build(),
+                /*
+                 * A reference to an image asset to use as the poster that will
+                 * override what is provided by the target video.
+                 */
+                Fb::create('poster_image_ref', T\NodeRefType::create())
+                    ->build(),
+            ],
+            self::MIXINS
         );
     }
 }

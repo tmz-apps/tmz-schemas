@@ -1,10 +1,11 @@
 // @link https://schemas.tmz.com/json-schema/tmz/dam/request/get-upload-urls-response/1-0-0.json#
+import AssetId from '@triniti/schemas/triniti/dam/AssetId';
+import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
-import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';
 import Message from '@gdbots/pbj/Message';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import TrinitiDamGetUploadUrlsResponseV1Mixin from '@triniti/schemas/triniti/dam/mixin/get-upload-urls-response/GetUploadUrlsResponseV1Mixin';
+import T from '@gdbots/pbj/types';
 
 export default class GetUploadUrlsResponseV1 extends Message {
   /**
@@ -13,17 +14,87 @@ export default class GetUploadUrlsResponseV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:dam:request:get-upload-urls-response:1-0-0', GetUploadUrlsResponseV1,
-      [],
+    return new Schema(this.SCHEMA_ID, this,
       [
-        GdbotsPbjxResponseV1Mixin.create(),
-        TrinitiDamGetUploadUrlsResponseV1Mixin.create(),
+        Fb.create('response_id', T.UuidType.create())
+          .required()
+          .build(),
+        Fb.create('created_at', T.MicrotimeType.create())
+          .build(),
+        /*
+         * Multi-tenant apps can use this field to track the tenant id.
+         */
+        Fb.create('ctx_tenant_id', T.StringType.create())
+          .pattern('^[\\w\\/\\.:-]+$')
+          .build(),
+        Fb.create('ctx_request_ref', T.MessageRefType.create())
+          .build(),
+        /*
+         * The "ctx_request" is the actual request object that "ctx_request_ref" refers to.
+         * In some cases it's useful for request handlers to copy the request into the response
+         * so the requestor has everything in one message. This will NOT always be populated.
+         * A common use case is search request/response cycles where you want to know what the
+         * search criteria was so you can render that along with the results.
+         */
+        Fb.create('ctx_request', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:pbjx:mixin:request',
+          ])
+          .build(),
+        Fb.create('ctx_correlator_ref', T.MessageRefType.create())
+          .build(),
+        /*
+         * Responses can include "dereferenced" messages to prevent
+         * the consumer from needing to make multiple HTTP requests.
+         * It is up to the consumer to make use of the dereferenced
+         * messages if/when they are provided.
+         */
+        Fb.create('derefs', T.MessageType.create())
+          .asAMap()
+          .build(),
+        /*
+         * @link https://en.wikipedia.org/wiki/HATEOAS
+         */
+        Fb.create('links', T.TextType.create())
+          .asAMap()
+          .build(),
+        Fb.create('metas', T.TextType.create())
+          .asAMap()
+          .build(),
+        /*
+         * A map of asset ids with an md5 hash of the client file name as the
+         * key and the generated asset id as the value.
+         */
+        Fb.create('asset_ids', T.IdentifierType.create())
+          .asAMap()
+          .classProto(AssetId)
+          .build(),
+        /*
+         * A map of URLs with an md5 hash of the client file name as the key
+         * and the S3 presigned URL as the value.
+         */
+        Fb.create('s3_presigned_urls', T.TextType.create())
+          .asAMap()
+          .format(Format.URL)
+          .build(),
       ],
+      this.MIXINS,
     );
   }
 }
 
-GdbotsPbjxResponseV1Trait(GetUploadUrlsResponseV1);
-MessageResolver.register('tmz:dam:request:get-upload-urls-response', GetUploadUrlsResponseV1);
-Object.freeze(GetUploadUrlsResponseV1);
-Object.freeze(GetUploadUrlsResponseV1.prototype);
+const M = GetUploadUrlsResponseV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:request:get-upload-urls-response:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:dam:request:get-upload-urls-response';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:dam:request:get-upload-urls-response:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'gdbots:pbjx:mixin:response:v1',
+  'gdbots:pbjx:mixin:response',
+  'triniti:dam:mixin:get-upload-urls-response:v1',
+  'triniti:dam:mixin:get-upload-urls-response',
+];
+
+GdbotsPbjxResponseV1Mixin(M);
+
+Object.freeze(M);
+Object.freeze(M.prototype);

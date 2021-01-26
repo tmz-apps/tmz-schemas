@@ -1,12 +1,12 @@
 // @link https://schemas.tmz.com/json-schema/tmz/sys/node/redirect/1-0-0.json#
-import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';
 import Message from '@gdbots/pbj/Message';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
+import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';
 import Schema from '@gdbots/pbj/Schema';
+import T from '@gdbots/pbj/types';
 import TrinitiSysRedirectV1Mixin from '@triniti/schemas/triniti/sys/mixin/redirect/RedirectV1Mixin';
-import TrinitiSysRedirectV1Trait from '@triniti/schemas/triniti/sys/mixin/redirect/RedirectV1Trait';
 
 export default class RedirectV1 extends Message {
   /**
@@ -15,19 +15,86 @@ export default class RedirectV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:sys:node:redirect:1-0-0', RedirectV1,
-      [],
+    return new Schema(this.SCHEMA_ID, this,
       [
-        GdbotsNcrNodeV1Mixin.create(),
-        TrinitiSysRedirectV1Mixin.create(),
-        GdbotsNcrIndexedV1Mixin.create(),
+        Fb.create('_id', T.IdentifierType.create())
+          .required()
+          .classProto(RedirectId)
+          .overridable(true)
+          .build(),
+        Fb.create('status', T.StringEnumType.create())
+          .withDefault("draft")
+          .classProto(NodeStatus)
+          .build(),
+        Fb.create('etag', T.StringType.create())
+          .maxLength(100)
+          .pattern('^[\\w\\.:-]+$')
+          .build(),
+        Fb.create('created_at', T.MicrotimeType.create())
+          .build(),
+        /*
+         * A fully qualified reference to what created this node. This is intentionally a message-ref
+         * and not a user id because it is often a program that creates nodes, not a user.
+         */
+        Fb.create('creator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('updated_at', T.MicrotimeType.create())
+          .useTypeDefault(false)
+          .build(),
+        /*
+         * A fully qualified reference to what updated this node. This is intentionally a message-ref
+         * and not a user id because it is often a program that updates nodes, not a user.
+         * E.g. "acme:iam:node:app:cli-scheduler" or "acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854"
+         */
+        Fb.create('updater_ref', T.MessageRefType.create())
+          .build(),
+        /*
+         * A reference to the last event that changed the state of this node.
+         * E.g. "acme:blog:event:article-published:60c71df0-fda8-11e5-bfb9-30342d363854"
+         */
+        Fb.create('last_event_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('title', T.StringType.create())
+          .build(),
+        /*
+         * The URL (absolute or relative on the current domain) that the incoming URI
+         * should be redirected to.
+         */
+        Fb.create('redirect_to', T.StringType.create())
+          .build(),
+        /*
+         * When permanent, the HTTP status code should be a 301 and 302 otherwise.
+         */
+        Fb.create('is_permanent', T.BooleanType.create())
+          .build(),
+        /*
+         * Vanity URLs are used for on-air or promotional purposes and are generally
+         * off the root and very short, e.g. /tour or /christmas
+         */
+        Fb.create('is_vanity', T.BooleanType.create())
+          .build(),
       ],
+      this.MIXINS,
     );
   }
 }
 
-GdbotsNcrNodeV1Trait(RedirectV1);
-TrinitiSysRedirectV1Trait(RedirectV1);
-MessageResolver.register('tmz:sys:node:redirect', RedirectV1);
-Object.freeze(RedirectV1);
-Object.freeze(RedirectV1.prototype);
+const M = RedirectV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:sys:node:redirect:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:sys:node:redirect';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:sys:node:redirect:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'gdbots:ncr:mixin:node:v1',
+  'gdbots:ncr:mixin:node',
+  'triniti:sys:mixin:redirect:v1',
+  'triniti:sys:mixin:redirect',
+  'gdbots:ncr:mixin:indexed:v1',
+  'gdbots:ncr:mixin:indexed',
+];
+
+GdbotsNcrNodeV1Mixin(M);
+
+TrinitiSysRedirectV1Mixin(M);
+
+Object.freeze(M);
+Object.freeze(M.prototype);

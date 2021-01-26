@@ -11,7 +11,8 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^6.4",
-    "gdbots/pbjc": "v1.x-dev"
+    "gdbots/pbjc": "v1.x-dev",
+    "symfony/yaml": "^4.4"
   },
   "autoload": {
     "files": [
