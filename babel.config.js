@@ -1,4 +1,3 @@
-
 const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'build';
 
 const presets = [];
