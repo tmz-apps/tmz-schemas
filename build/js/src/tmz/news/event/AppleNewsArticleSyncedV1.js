@@ -1,10 +1,10 @@
 // @link https://schemas.tmz.com/json-schema/tmz/news/event/apple-news-article-synced/1-0-0.json#
+import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
-import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
 import Message from '@gdbots/pbj/Message';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import TrinitiNewsAppleNewsArticleSyncedV1Mixin from '@triniti/schemas/triniti/news/mixin/apple-news-article-synced/AppleNewsArticleSyncedV1Mixin';
+import T from '@gdbots/pbj/types';
 
 export default class AppleNewsArticleSyncedV1 extends Message {
   /**
@@ -13,17 +13,111 @@ export default class AppleNewsArticleSyncedV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:news:event:apple-news-article-synced:1-0-0', AppleNewsArticleSyncedV1,
-      [],
+    return new Schema(this.SCHEMA_ID, this,
       [
-        GdbotsPbjxEventV1Mixin.create(),
-        TrinitiNewsAppleNewsArticleSyncedV1Mixin.create(),
+        Fb.create('event_id', T.TimeUuidType.create())
+          .required()
+          .build(),
+        Fb.create('occurred_at', T.MicrotimeType.create())
+          .build(),
+        /*
+         * Multi-tenant apps can use this field to track the tenant id.
+         */
+        Fb.create('ctx_tenant_id', T.StringType.create())
+          .pattern('^[\\w\\/\\.:-]+$')
+          .build(),
+        Fb.create('ctx_causator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('ctx_correlator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('ctx_user_ref', T.MessageRefType.create())
+          .build(),
+        /*
+         * The "ctx_app" refers to the application used to send the command which
+         * in turn resulted in this event being published.
+         */
+        Fb.create('ctx_app', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:contexts::app',
+          ])
+          .build(),
+        /*
+         * The "ctx_cloud" is usually copied from the command that resulted in this
+         * event being published. This means the value most likely refers to the cloud
+         * that received the command originally, not the machine processing the event.
+         */
+        Fb.create('ctx_cloud', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:contexts::cloud',
+          ])
+          .build(),
+        Fb.create('ctx_ip', T.StringType.create())
+          .format(Format.IPV4)
+          .overridable(true)
+          .build(),
+        Fb.create('ctx_ipv6', T.StringType.create())
+          .format(Format.IPV6)
+          .overridable(true)
+          .build(),
+        Fb.create('ctx_ua', T.TextType.create())
+          .overridable(true)
+          .build(),
+        /*
+         * An optional message/reason for the event being created.
+         * Consider this like a git commit message.
+         */
+        Fb.create('ctx_msg', T.TextType.create())
+          .build(),
+        /*
+         * A reference to the article that was synced.
+         */
+        Fb.create('node_ref', T.NodeRefType.create())
+          .required()
+          .build(),
+        /*
+         * A reference to the notification that caused the sync to take place.
+         */
+        Fb.create('notification_ref', T.NodeRefType.create())
+          .required()
+          .build(),
+        Fb.create('apple_news_operation', T.StringType.create())
+          .pattern('^(notification|create|update|delete)$')
+          .withDefault("notification")
+          .build(),
+        /*
+         * The unique identifier of the Apple News article.
+         */
+        Fb.create('apple_news_id', T.UuidType.create())
+          .useTypeDefault(false)
+          .build(),
+        /*
+         * The new revision token for the Apple News article.
+         * e.g. AAAAAAAAAAAAAAAAAAAAAQ==
+         */
+        Fb.create('apple_news_revision', T.StringType.create())
+          .pattern('^[\\w\\/\\.\\\\\\:=+-]+$')
+          .build(),
+        Fb.create('apple_news_share_url', T.TextType.create())
+          .format(Format.URL)
+          .build(),
       ],
+      this.MIXINS,
     );
   }
 }
 
-GdbotsPbjxEventV1Trait(AppleNewsArticleSyncedV1);
-MessageResolver.register('tmz:news:event:apple-news-article-synced', AppleNewsArticleSyncedV1);
-Object.freeze(AppleNewsArticleSyncedV1);
-Object.freeze(AppleNewsArticleSyncedV1.prototype);
+const M = AppleNewsArticleSyncedV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:news:event:apple-news-article-synced:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:news:event:apple-news-article-synced';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:news:event:apple-news-article-synced:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'gdbots:pbjx:mixin:event:v1',
+  'gdbots:pbjx:mixin:event',
+  'triniti:news:mixin:apple-news-article-synced:v1',
+  'triniti:news:mixin:apple-news-article-synced',
+];
+
+GdbotsPbjxEventV1Mixin(M);
+
+Object.freeze(M);
+Object.freeze(M.prototype);

@@ -1,35 +1,74 @@
 <?php
+declare(strict_types=1);
+
 // @link https://schemas.tmz.com/json-schema/tmz/canvas/block/imgur-post-block/1-0-0.json#
 namespace Tmz\Schemas\Canvas\Block;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Triniti\Schemas\Canvas\Mixin\Block\BlockV1 as TrinitiCanvasBlockV1;
+use Gdbots\Pbj\Type as T;
 use Triniti\Schemas\Canvas\Mixin\Block\BlockV1Mixin as TrinitiCanvasBlockV1Mixin;
-use Triniti\Schemas\Canvas\Mixin\Block\BlockV1Trait as TrinitiCanvasBlockV1Trait;
-use Triniti\Schemas\Canvas\Mixin\ImgurPostBlock\ImgurPostBlockV1 as TrinitiCanvasImgurPostBlockV1;
 use Triniti\Schemas\Canvas\Mixin\ImgurPostBlock\ImgurPostBlockV1Mixin as TrinitiCanvasImgurPostBlockV1Mixin;
-use Triniti\Schemas\Canvas\Mixin\ImgurPostBlock\ImgurPostBlockV1Trait as TrinitiCanvasImgurPostBlockV1Trait;
 
-final class ImgurPostBlockV1 extends AbstractMessage implements
-    ImgurPostBlock,
-    TrinitiCanvasBlockV1,
-    TrinitiCanvasImgurPostBlockV1
+final class ImgurPostBlockV1 extends AbstractMessage
 {
-    use TrinitiCanvasBlockV1Trait;
-    use TrinitiCanvasImgurPostBlockV1Trait;
+    const SCHEMA_ID = 'pbj:tmz:canvas:block:imgur-post-block:1-0-0';
+    const SCHEMA_CURIE = 'tmz:canvas:block:imgur-post-block';
+    const SCHEMA_CURIE_MAJOR = 'tmz:canvas:block:imgur-post-block:v1';
+    const MIXINS = [
+      'triniti:canvas:mixin:block:v1',
+      'triniti:canvas:mixin:block',
+      'triniti:canvas:mixin:imgur-post-block:v1',
+      'triniti:canvas:mixin:imgur-post-block',
+    ];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    use TrinitiCanvasBlockV1Mixin;
+
+    use TrinitiCanvasImgurPostBlockV1Mixin;
+
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:tmz:canvas:block:imgur-post-block:1-0-0', __CLASS__,
-            [],
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
-                TrinitiCanvasBlockV1Mixin::create(),
-                TrinitiCanvasImgurPostBlockV1Mixin::create(),
-            ]
+                Fb::create('etag', T\StringType::create())
+                    ->maxLength(100)
+                    ->pattern('^[\w\.:-]+$')
+                    ->build(),
+                /*
+                 * In rendering environments that support HTML the css_class
+                 * can be appended to the dom elements' class attribute.
+                 */
+                Fb::create('css_class', T\StringType::create())
+                    ->pattern('^[\w\s-]+$')
+                    ->build(),
+                /*
+                 * Represents an update that occurred on the node this block
+                 * is attached to. DOES NOT indicate an update to the block itself.
+                 * eg an article with a twitter block with updated_date means that
+                 * the article was updated to include that twitter block.
+                 */
+                Fb::create('updated_date', T\DateTimeType::create())
+                    ->build(),
+                /*
+                 * When true it means this block represents a portion of a document
+                 * whose content is only indirectly related to the document's main content.
+                 * Asides are frequently presented as sidebars or call-out boxes.
+                 */
+                Fb::create('aside', T\BooleanType::create())
+                    ->build(),
+                Fb::create('id', T\StringType::create())
+                    ->required()
+                    ->pattern('^[\w\/-]+$')
+                    ->build(),
+                /*
+                 * When true, shows the post details.
+                 */
+                Fb::create('show_context', T\BooleanType::create())
+                    ->withDefault(true)
+                    ->build(),
+            ],
+            self::MIXINS
         );
     }
 }

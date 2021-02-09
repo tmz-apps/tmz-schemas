@@ -1,29 +1,44 @@
 <?php
+declare(strict_types=1);
+
 // @link https://schemas.tmz.com/json-schema/tmz/apollo/poll-answer/1-0-0.json#
 namespace Tmz\Schemas\Apollo;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Triniti\Schemas\Apollo\Mixin\PollAnswer\PollAnswerV1 as TrinitiApolloPollAnswerV1;
+use Gdbots\Pbj\Type as T;
 use Triniti\Schemas\Apollo\Mixin\PollAnswer\PollAnswerV1Mixin as TrinitiApolloPollAnswerV1Mixin;
-use Triniti\Schemas\Apollo\Mixin\PollAnswer\PollAnswerV1Trait as TrinitiApolloPollAnswerV1Trait;
 
-final class PollAnswerV1 extends AbstractMessage implements
-    PollAnswer,
-    TrinitiApolloPollAnswerV1
+final class PollAnswerV1 extends AbstractMessage
 {
-    use TrinitiApolloPollAnswerV1Trait;
+    const SCHEMA_ID = 'pbj:tmz:apollo::poll-answer:1-0-0';
+    const SCHEMA_CURIE = 'tmz:apollo::poll-answer';
+    const SCHEMA_CURIE_MAJOR = 'tmz:apollo::poll-answer:v1';
+    const MIXINS = [
+      'triniti:apollo:mixin:poll-answer:v1',
+      'triniti:apollo:mixin:poll-answer',
+    ];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    use TrinitiApolloPollAnswerV1Mixin;
+
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:tmz:apollo::poll-answer:1-0-0', __CLASS__,
-            [],
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
-                TrinitiApolloPollAnswerV1Mixin::create(),
-            ]
+                Fb::create('_id', T\UuidType::create())
+                    ->required()
+                    ->build(),
+                Fb::create('title', T\StringType::create())
+                    ->build(),
+                Fb::create('url', T\TextType::create())
+                    ->format(Format::URL())
+                    ->build(),
+                Fb::create('initial_votes', T\IntType::create())
+                    ->build(),
+            ],
+            self::MIXINS
         );
     }
 }

@@ -1,11 +1,10 @@
 // @link https://schemas.tmz.com/json-schema/tmz/canvas/block/youtube-video-block/1-0-0.json#
+import Fb from '@gdbots/pbj/FieldBuilder';
 import Message from '@gdbots/pbj/Message';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
+import T from '@gdbots/pbj/types';
 import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin';
-import TrinitiCanvasBlockV1Trait from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Trait';
 import TrinitiCanvasYoutubeVideoBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/youtube-video-block/YoutubeVideoBlockV1Mixin';
-import TrinitiCanvasYoutubeVideoBlockV1Trait from '@triniti/schemas/triniti/canvas/mixin/youtube-video-block/YoutubeVideoBlockV1Trait';
 
 export default class YoutubeVideoBlockV1 extends Message {
   /**
@@ -14,18 +13,68 @@ export default class YoutubeVideoBlockV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:canvas:block:youtube-video-block:1-0-0', YoutubeVideoBlockV1,
-      [],
+    return new Schema(this.SCHEMA_ID, this,
       [
-        TrinitiCanvasBlockV1Mixin.create(),
-        TrinitiCanvasYoutubeVideoBlockV1Mixin.create(),
+        Fb.create('etag', T.StringType.create())
+          .maxLength(100)
+          .pattern('^[\\w\\.:-]+$')
+          .build(),
+        /*
+         * In rendering environments that support HTML the css_class
+         * can be appended to the dom elements' class attribute.
+         */
+        Fb.create('css_class', T.StringType.create())
+          .pattern('^[\\w\\s-]+$')
+          .build(),
+        /*
+         * Represents an update that occurred on the node this block
+         * is attached to. DOES NOT indicate an update to the block itself.
+         * eg an article with a twitter block with updated_date means that
+         * the article was updated to include that twitter block.
+         */
+        Fb.create('updated_date', T.DateTimeType.create())
+          .build(),
+        /*
+         * When true it means this block represents a portion of a document
+         * whose content is only indirectly related to the document's main content.
+         * Asides are frequently presented as sidebars or call-out boxes.
+         */
+        Fb.create('aside', T.BooleanType.create())
+          .build(),
+        Fb.create('id', T.StringType.create())
+          .required()
+          .pattern('^[\\w-]+$')
+          .build(),
+        Fb.create('autoplay', T.BooleanType.create())
+          .build(),
+        Fb.create('start_at', T.SmallIntType.create())
+          .build(),
+        /*
+         * A reference to an image asset to use as the poster that will
+         * override what is provided by youtube.
+         */
+        Fb.create('poster_image_ref', T.NodeRefType.create())
+          .build(),
       ],
+      this.MIXINS,
     );
   }
 }
 
-TrinitiCanvasBlockV1Trait(YoutubeVideoBlockV1);
-TrinitiCanvasYoutubeVideoBlockV1Trait(YoutubeVideoBlockV1);
-MessageResolver.register('tmz:canvas:block:youtube-video-block', YoutubeVideoBlockV1);
-Object.freeze(YoutubeVideoBlockV1);
-Object.freeze(YoutubeVideoBlockV1.prototype);
+const M = YoutubeVideoBlockV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:canvas:block:youtube-video-block:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:canvas:block:youtube-video-block';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:canvas:block:youtube-video-block:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'triniti:canvas:mixin:block:v1',
+  'triniti:canvas:mixin:block',
+  'triniti:canvas:mixin:youtube-video-block:v1',
+  'triniti:canvas:mixin:youtube-video-block',
+];
+
+TrinitiCanvasBlockV1Mixin(M);
+
+TrinitiCanvasYoutubeVideoBlockV1Mixin(M);
+
+Object.freeze(M);
+Object.freeze(M.prototype);

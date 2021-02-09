@@ -1,12 +1,12 @@
 // @link https://schemas.tmz.com/json-schema/tmz/ovp/request/search-videos-request/1-0-0.json#
-import GdbotsNcrSearchNodesRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/search-nodes-request/SearchNodesRequestV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
-import GdbotsPbjxRequestV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Trait';
 import Message from '@gdbots/pbj/Message';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
 import Schema from '@gdbots/pbj/Schema';
-import TrinitiCuratorWidgetSearchRequestV1Mixin from '@triniti/schemas/triniti/curator/mixin/widget-search-request/WidgetSearchRequestV1Mixin';
-import TrinitiOvpSearchVideosRequestV1Mixin from '@triniti/schemas/triniti/ovp/mixin/search-videos-request/SearchVideosRequestV1Mixin';
+import SearchVideosSort from '@triniti/schemas/triniti/ovp/enums/SearchVideosSort';
+import T from '@gdbots/pbj/types';
 
 export default class SearchVideosRequestV1 extends Message {
   /**
@@ -15,19 +15,165 @@ export default class SearchVideosRequestV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:ovp:request:search-videos-request:1-0-0', SearchVideosRequestV1,
-      [],
+    return new Schema(this.SCHEMA_ID, this,
       [
-        GdbotsPbjxRequestV1Mixin.create(),
-        GdbotsNcrSearchNodesRequestV1Mixin.create(),
-        TrinitiOvpSearchVideosRequestV1Mixin.create(),
-        TrinitiCuratorWidgetSearchRequestV1Mixin.create(),
+        Fb.create('request_id', T.UuidType.create())
+          .required()
+          .build(),
+        Fb.create('occurred_at', T.MicrotimeType.create())
+          .build(),
+        /*
+         * Multi-tenant apps can use this field to track the tenant id.
+         */
+        Fb.create('ctx_tenant_id', T.StringType.create())
+          .pattern('^[\\w\\/\\.:-]+$')
+          .build(),
+        /*
+         * The "ctx_retries" field is used to keep track of how many attempts were
+         * made to handle this request. In some cases, the service or transport
+         * that handles the request may be down or over capacity and is being retried.
+         */
+        Fb.create('ctx_retries', T.TinyIntType.create())
+          .build(),
+        Fb.create('ctx_causator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('ctx_correlator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('ctx_user_ref', T.MessageRefType.create())
+          .build(),
+        /*
+         * The "ctx_app" refers to the application used to make the request. This is
+         * different from ctx_ua (user_agent) because the agent used (Safari, Firefox)
+         * is not necessarily the app used (cms, iOS app, website)
+         */
+        Fb.create('ctx_app', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:contexts::app',
+          ])
+          .build(),
+        /*
+         * The "ctx_cloud" is set by the server making the request and is generally
+         * only used internally for tracking and performance monitoring.
+         */
+        Fb.create('ctx_cloud', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:contexts::cloud',
+          ])
+          .build(),
+        Fb.create('ctx_ip', T.StringType.create())
+          .format(Format.IPV4)
+          .overridable(true)
+          .build(),
+        Fb.create('ctx_ipv6', T.StringType.create())
+          .format(Format.IPV6)
+          .overridable(true)
+          .build(),
+        Fb.create('ctx_ua', T.TextType.create())
+          .overridable(true)
+          .build(),
+        /*
+         * Field names to dereference, this serves as a hint to the server and is not
+         * necessarily gauranteed since authorization, availability, etc. are determined
+         * by the server not the client.
+         */
+        Fb.create('derefs', T.StringType.create())
+          .asASet()
+          .pattern('^[\\w\\.-]+$')
+          .build(),
+        Fb.create('q', T.TextType.create())
+          .maxLength(2000)
+          .build(),
+        /*
+         * The number of results to return.
+         */
+        Fb.create('count', T.TinyIntType.create())
+          .withDefault(25)
+          .build(),
+        Fb.create('page', T.TinyIntType.create())
+          .min(1)
+          .withDefault(1)
+          .build(),
+        Fb.create('autocomplete', T.BooleanType.create())
+          .build(),
+        /*
+         * A cursor is a string (normally base64 encoded) which marks a specific item in a list of data.
+         * When cursor is present it should be used instead of "page".
+         */
+        Fb.create('cursor', T.StringType.create())
+          .build(),
+        /*
+         * The status a node must be in to match the search request.
+         */
+        Fb.create('status', T.StringEnumType.create())
+          .classProto(NodeStatus)
+          .build(),
+        /*
+         * A set of statuses (node must match at least one) to include in the search results.
+         */
+        Fb.create('statuses', T.StringEnumType.create())
+          .asASet()
+          .classProto(NodeStatus)
+          .build(),
+        Fb.create('created_after', T.DateTimeType.create())
+          .build(),
+        Fb.create('created_before', T.DateTimeType.create())
+          .build(),
+        Fb.create('updated_after', T.DateTimeType.create())
+          .build(),
+        Fb.create('updated_before', T.DateTimeType.create())
+          .build(),
+        Fb.create('published_after', T.DateTimeType.create())
+          .build(),
+        Fb.create('published_before', T.DateTimeType.create())
+          .build(),
+        /*
+         * The fields that are being queried as determined by parsing the "q" field.
+         */
+        Fb.create('fields_used', T.StringType.create())
+          .asASet()
+          .pattern('^[\\w\\.-]+$')
+          .build(),
+        Fb.create('parsed_query_json', T.TextType.create())
+          .build(),
+        Fb.create('is_unlisted', T.TrinaryType.create())
+          .build(),
+        Fb.create('sort', T.StringEnumType.create())
+          .withDefault("relevance")
+          .classProto(SearchVideosSort)
+          .build(),
+        Fb.create('show', T.StringType.create())
+          .format(Format.SLUG)
+          .build(),
+        Fb.create('channel_ref', T.NodeRefType.create())
+          .build(),
+        Fb.create('category_refs', T.NodeRefType.create())
+          .asASet()
+          .build(),
+        Fb.create('person_refs', T.NodeRefType.create())
+          .asASet()
+          .build(),
       ],
+      this.MIXINS,
     );
   }
 }
 
-GdbotsPbjxRequestV1Trait(SearchVideosRequestV1);
-MessageResolver.register('tmz:ovp:request:search-videos-request', SearchVideosRequestV1);
-Object.freeze(SearchVideosRequestV1);
-Object.freeze(SearchVideosRequestV1.prototype);
+const M = SearchVideosRequestV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:ovp:request:search-videos-request:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:ovp:request:search-videos-request';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:ovp:request:search-videos-request:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'gdbots:pbjx:mixin:request:v1',
+  'gdbots:pbjx:mixin:request',
+  'gdbots:ncr:mixin:search-nodes-request:v1',
+  'gdbots:ncr:mixin:search-nodes-request',
+  'triniti:ovp:mixin:search-videos-request:v1',
+  'triniti:ovp:mixin:search-videos-request',
+  'triniti:curator:mixin:widget-search-request:v1',
+  'triniti:curator:mixin:widget-search-request',
+];
+
+GdbotsPbjxRequestV1Mixin(M);
+
+Object.freeze(M);
+Object.freeze(M.prototype);

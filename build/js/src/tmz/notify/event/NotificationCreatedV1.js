@@ -1,10 +1,10 @@
 // @link https://schemas.tmz.com/json-schema/tmz/notify/event/notification-created/1-0-0.json#
-import GdbotsNcrNodeCreatedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-created/NodeCreatedV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/enums/Format';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
-import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
 import Message from '@gdbots/pbj/Message';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
+import T from '@gdbots/pbj/types';
 
 export default class NotificationCreatedV1 extends Message {
   /**
@@ -13,17 +13,86 @@ export default class NotificationCreatedV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:tmz:notify:event:notification-created:1-0-0', NotificationCreatedV1,
-      [],
+    return new Schema(this.SCHEMA_ID, this,
       [
-        GdbotsPbjxEventV1Mixin.create(),
-        GdbotsNcrNodeCreatedV1Mixin.create(),
+        Fb.create('event_id', T.TimeUuidType.create())
+          .required()
+          .build(),
+        Fb.create('occurred_at', T.MicrotimeType.create())
+          .build(),
+        /*
+         * Multi-tenant apps can use this field to track the tenant id.
+         */
+        Fb.create('ctx_tenant_id', T.StringType.create())
+          .pattern('^[\\w\\/\\.:-]+$')
+          .build(),
+        Fb.create('ctx_causator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('ctx_correlator_ref', T.MessageRefType.create())
+          .build(),
+        Fb.create('ctx_user_ref', T.MessageRefType.create())
+          .build(),
+        /*
+         * The "ctx_app" refers to the application used to send the command which
+         * in turn resulted in this event being published.
+         */
+        Fb.create('ctx_app', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:contexts::app',
+          ])
+          .build(),
+        /*
+         * The "ctx_cloud" is usually copied from the command that resulted in this
+         * event being published. This means the value most likely refers to the cloud
+         * that received the command originally, not the machine processing the event.
+         */
+        Fb.create('ctx_cloud', T.MessageType.create())
+          .anyOfCuries([
+            'gdbots:contexts::cloud',
+          ])
+          .build(),
+        Fb.create('ctx_ip', T.StringType.create())
+          .format(Format.IPV4)
+          .overridable(true)
+          .build(),
+        Fb.create('ctx_ipv6', T.StringType.create())
+          .format(Format.IPV6)
+          .overridable(true)
+          .build(),
+        Fb.create('ctx_ua', T.TextType.create())
+          .overridable(true)
+          .build(),
+        /*
+         * An optional message/reason for the event being created.
+         * Consider this like a git commit message.
+         */
+        Fb.create('ctx_msg', T.TextType.create())
+          .build(),
+        Fb.create('node', T.MessageType.create())
+          .required()
+          .anyOfCuries([
+            'gdbots:ncr:mixin:node',
+          ])
+          .overridable(true)
+          .build(),
       ],
+      this.MIXINS,
     );
   }
 }
 
-GdbotsPbjxEventV1Trait(NotificationCreatedV1);
-MessageResolver.register('tmz:notify:event:notification-created', NotificationCreatedV1);
-Object.freeze(NotificationCreatedV1);
-Object.freeze(NotificationCreatedV1.prototype);
+const M = NotificationCreatedV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:notify:event:notification-created:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:notify:event:notification-created';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:notify:event:notification-created:v1';
+M.prototype.MIXINS = M.MIXINS = [
+  'gdbots:pbjx:mixin:event:v1',
+  'gdbots:pbjx:mixin:event',
+  'gdbots:ncr:mixin:node-created:v1',
+  'gdbots:ncr:mixin:node-created',
+];
+
+GdbotsPbjxEventV1Mixin(M);
+
+Object.freeze(M);
+Object.freeze(M.prototype);

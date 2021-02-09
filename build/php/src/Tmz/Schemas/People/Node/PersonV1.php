@@ -1,71 +1,216 @@
 <?php
+declare(strict_types=1);
+
 // @link https://schemas.tmz.com/json-schema/tmz/people/node/person/1-0-0.json#
 namespace Tmz\Schemas\People\Node;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
-use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Indexed\IndexedV1 as GdbotsNcrIndexedV1;
-use Gdbots\Schemas\Ncr\Mixin\Indexed\IndexedV1Mixin as GdbotsNcrIndexedV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1 as GdbotsNcrNodeV1;
+use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\WellKnown\UuidIdentifier;
+use Gdbots\Schemas\Ncr\Enum\NodeStatus;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin as GdbotsNcrNodeV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait as GdbotsNcrNodeV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1 as GdbotsNcrSluggableV1;
-use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1Mixin as GdbotsNcrSluggableV1Mixin;
-use Triniti\Schemas\Canvas\Mixin\HasBlocks\HasBlocksV1 as TrinitiCanvasHasBlocksV1;
-use Triniti\Schemas\Canvas\Mixin\HasBlocks\HasBlocksV1Mixin as TrinitiCanvasHasBlocksV1Mixin;
-use Triniti\Schemas\Common\Mixin\Advertising\AdvertisingV1 as TrinitiCommonAdvertisingV1;
-use Triniti\Schemas\Common\Mixin\Advertising\AdvertisingV1Mixin as TrinitiCommonAdvertisingV1Mixin;
-use Triniti\Schemas\Common\Mixin\Seo\SeoV1 as TrinitiCommonSeoV1;
-use Triniti\Schemas\Common\Mixin\Seo\SeoV1Mixin as TrinitiCommonSeoV1Mixin;
-use Triniti\Schemas\Common\Mixin\Themeable\ThemeableV1 as TrinitiCommonThemeableV1;
-use Triniti\Schemas\Common\Mixin\Themeable\ThemeableV1Mixin as TrinitiCommonThemeableV1Mixin;
-use Triniti\Schemas\Curator\Mixin\Teaserable\TeaserableV1 as TrinitiCuratorTeaserableV1;
-use Triniti\Schemas\Curator\Mixin\Teaserable\TeaserableV1Mixin as TrinitiCuratorTeaserableV1Mixin;
-use Triniti\Schemas\People\Mixin\Person\PersonV1 as TrinitiPeoplePersonV1;
 use Triniti\Schemas\People\Mixin\Person\PersonV1Mixin as TrinitiPeoplePersonV1Mixin;
-use Triniti\Schemas\People\Mixin\Person\PersonV1Trait as TrinitiPeoplePersonV1Trait;
-use Triniti\Schemas\Taxonomy\Mixin\Hashtaggable\HashtaggableV1 as TrinitiTaxonomyHashtaggableV1;
-use Triniti\Schemas\Taxonomy\Mixin\Hashtaggable\HashtaggableV1Mixin as TrinitiTaxonomyHashtaggableV1Mixin;
 
-final class PersonV1 extends AbstractMessage implements
-    Person,
-    GdbotsNcrNodeV1,
-    TrinitiPeoplePersonV1,
-    GdbotsCommonTaggableV1,
-    GdbotsNcrIndexedV1,
-    GdbotsNcrSluggableV1,
-    TrinitiCanvasHasBlocksV1,
-    TrinitiCommonAdvertisingV1,
-    TrinitiCommonSeoV1,
-    TrinitiCommonThemeableV1,
-    TrinitiCuratorTeaserableV1,
-    TrinitiTaxonomyHashtaggableV1
+final class PersonV1 extends AbstractMessage
 {
-    use GdbotsNcrNodeV1Trait;
-    use TrinitiPeoplePersonV1Trait;
+    const SCHEMA_ID = 'pbj:tmz:people:node:person:1-0-0';
+    const SCHEMA_CURIE = 'tmz:people:node:person';
+    const SCHEMA_CURIE_MAJOR = 'tmz:people:node:person:v1';
+    const MIXINS = [
+      'gdbots:ncr:mixin:node:v1',
+      'gdbots:ncr:mixin:node',
+      'triniti:people:mixin:person:v1',
+      'triniti:people:mixin:person',
+      'gdbots:common:mixin:taggable:v1',
+      'gdbots:common:mixin:taggable',
+      'gdbots:ncr:mixin:indexed:v1',
+      'gdbots:ncr:mixin:indexed',
+      'gdbots:ncr:mixin:sluggable:v1',
+      'gdbots:ncr:mixin:sluggable',
+      'triniti:canvas:mixin:has-blocks:v1',
+      'triniti:canvas:mixin:has-blocks',
+      'triniti:common:mixin:advertising:v1',
+      'triniti:common:mixin:advertising',
+      'triniti:common:mixin:seo:v1',
+      'triniti:common:mixin:seo',
+      'triniti:common:mixin:themeable:v1',
+      'triniti:common:mixin:themeable',
+      'triniti:curator:mixin:teaserable:v1',
+      'triniti:curator:mixin:teaserable',
+      'triniti:taxonomy:mixin:hashtaggable:v1',
+      'triniti:taxonomy:mixin:hashtaggable',
+    ];
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    use GdbotsNcrNodeV1Mixin;
+
+    use TrinitiPeoplePersonV1Mixin;
+
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:tmz:people:node:person:1-0-0', __CLASS__,
-            [],
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
-                GdbotsNcrNodeV1Mixin::create(),
-                TrinitiPeoplePersonV1Mixin::create(),
-                GdbotsCommonTaggableV1Mixin::create(),
-                GdbotsNcrIndexedV1Mixin::create(),
-                GdbotsNcrSluggableV1Mixin::create(),
-                TrinitiCanvasHasBlocksV1Mixin::create(),
-                TrinitiCommonAdvertisingV1Mixin::create(),
-                TrinitiCommonSeoV1Mixin::create(),
-                TrinitiCommonThemeableV1Mixin::create(),
-                TrinitiCuratorTeaserableV1Mixin::create(),
-                TrinitiTaxonomyHashtaggableV1Mixin::create(),
-            ]
+                /*
+                 * The "_id" value:
+                 * - MUST NOT change for the life of the node.
+                 * - SHOULD be globally unique
+                 * - SHOULD be generated by the app (ideally in default value closure... e.g. UuidIdentifier::generate())
+                 */
+                Fb::create('_id', T\IdentifierType::create())
+                    ->required()
+                    ->withDefault(function() { return UuidIdentifier::generate(); })
+                    ->className(UuidIdentifier::class)
+                    ->overridable(true)
+                    ->build(),
+                Fb::create('status', T\StringEnumType::create())
+                    ->withDefault("draft")
+                    ->className(NodeStatus::class)
+                    ->build(),
+                Fb::create('etag', T\StringType::create())
+                    ->maxLength(100)
+                    ->pattern('^[\w\.:-]+$')
+                    ->build(),
+                Fb::create('created_at', T\MicrotimeType::create())
+                    ->build(),
+                /*
+                 * A fully qualified reference to what created this node. This is intentionally a message-ref
+                 * and not a user id because it is often a program that creates nodes, not a user.
+                 */
+                Fb::create('creator_ref', T\MessageRefType::create())
+                    ->build(),
+                Fb::create('updated_at', T\MicrotimeType::create())
+                    ->useTypeDefault(false)
+                    ->build(),
+                /*
+                 * A fully qualified reference to what updated this node. This is intentionally a message-ref
+                 * and not a user id because it is often a program that updates nodes, not a user.
+                 * E.g. "acme:iam:node:app:cli-scheduler" or "acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854"
+                 */
+                Fb::create('updater_ref', T\MessageRefType::create())
+                    ->build(),
+                /*
+                 * A reference to the last event that changed the state of this node.
+                 * E.g. "acme:blog:event:article-published:60c71df0-fda8-11e5-bfb9-30342d363854"
+                 */
+                Fb::create('last_event_ref', T\MessageRefType::create())
+                    ->build(),
+                Fb::create('title', T\StringType::create())
+                    ->build(),
+                /*
+                 * A reference to the image asset to use for widgets, sharing, seo.
+                 */
+                Fb::create('image_ref', T\NodeRefType::create())
+                    ->build(),
+                /*
+                 * A short bio of the person. It should typically not have HTML as it is
+                 * used in metadata, feeds, SERP and social.
+                 */
+                Fb::create('bio', T\TextType::create())
+                    ->build(),
+                /*
+                 * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
+                 */
+                Fb::create('bio_source', T\StringType::create())
+                    ->format(Format::SLUG())
+                    ->build(),
+                Fb::create('imdb_url', T\TextType::create())
+                    ->format(Format::URL())
+                    ->build(),
+                Fb::create('twitter_username', T\StringType::create())
+                    ->pattern('^\w{1,15}$')
+                    ->build(),
+                Fb::create('is_celebrity', T\BooleanType::create())
+                    ->build(),
+                /*
+                 * Tags is a map that categorizes data or tracks references in
+                 * external systems. The tags names should be consistent and descriptive,
+                 * e.g. fb_user_id:123, salesforce_customer_id:456.
+                 */
+                Fb::create('tags', T\StringType::create())
+                    ->asAMap()
+                    ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                /*
+                 * The "slug" is a secondary identifier, typically used in a url:
+                 * - MUST be url friendly
+                 * - SHOULD NOT be case sensitive
+                 * - SHOULD be unique within the message curie namespace
+                 * - CAN be changed, but in practice once nodes are published you should avoid it if possible
+                 */
+                Fb::create('slug', T\StringType::create())
+                    ->format(Format::SLUG())
+                    ->build(),
+                Fb::create('blocks', T\MessageType::create())
+                    ->asAList()
+                    ->anyOfCuries([
+                        'triniti:canvas:mixin:block',
+                    ])
+                    ->build(),
+                Fb::create('ads_enabled', T\BooleanType::create())
+                    ->withDefault(true)
+                    ->build(),
+                Fb::create('dfp_ad_unit_path', T\StringType::create())
+                    ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                Fb::create('dfp_cust_params', T\StringType::create())
+                    ->asAMap()
+                    ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                Fb::create('seo_title', T\StringType::create())
+                    ->build(),
+                /*
+                 * A reference to the image asset to use for SEO instead of
+                 * the usual image_ref.
+                 */
+                Fb::create('seo_image_ref', T\NodeRefType::create())
+                    ->build(),
+                /*
+                 * Allows customization of the publish date for SEO purposes.
+                 */
+                Fb::create('seo_published_at', T\DateTimeType::create())
+                    ->build(),
+                /*
+                 * Allows customization of the updated date for SEO purposes. For example
+                 * if something meaningful is updated this date should be used instead of
+                 * the node's normal updated_at field which accounts for every change.
+                 */
+                Fb::create('seo_updated_at', T\DateTimeType::create())
+                    ->build(),
+                Fb::create('meta_description', T\TextType::create())
+                    ->maxLength(5000)
+                    ->build(),
+                Fb::create('meta_keywords', T\StringType::create())
+                    ->asASet()
+                    ->build(),
+                /*
+                 * Unlisted content will not show up in any search results
+                 * but can still be viewed if you know the URL.
+                 */
+                Fb::create('is_unlisted', T\BooleanType::create())
+                    ->build(),
+                /*
+                 * A string used to indicate that a visual treatment should be
+                 * applied to a piece of content, e.g. "christmas" or "taco".
+                 */
+                Fb::create('theme', T\StringType::create())
+                    ->format(Format::SLUG())
+                    ->build(),
+                /*
+                 * Determines the sequence that this teaserable node will be rendered
+                 * in lists, search results, etc. It DOES NOT control visibility or
+                 * publishing. A date was used over an integer (e.g. seq_no) for
+                 * blog-like, reverse chronological, clarity in sorting.
+                 */
+                Fb::create('order_date', T\DateTimeType::create())
+                    ->build(),
+                Fb::create('hashtags', T\StringType::create())
+                    ->asASet()
+                    ->format(Format::HASHTAG())
+                    ->build(),
+            ],
+            self::MIXINS
         );
     }
 }
