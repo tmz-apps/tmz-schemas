@@ -1,5 +1,5 @@
 {
-  "id": "https://schemas.tmz.com/json-schema/triniti/canvas/mixin/document-block/1-0-1.json#",
+  "id": "https://schemas.tmz.com/json-schema/triniti/canvas/mixin/eme-form-block/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -37,7 +37,7 @@
         "rule": "single"
       }
     },
-    "node_ref": {
+    "form_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "pbj": {
@@ -45,71 +45,17 @@
         "rule": "single"
       }
     },
-    "title": {
+    "expires_at": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "An optional override for the title of the node.",
+      "format": "date-time",
       "pbj": {
-        "type": "string",
+        "type": "date-time",
         "rule": "single"
-      }
-    },
-    "launch_text": {
-      "type": "string",
-      "minLength": 0,
-      "maxLength": 255,
-      "pbj": {
-        "type": "string",
-        "rule": "single"
-      }
-    },
-    "aspect_ratio": {
-      "type": "string",
-      "enum": [
-        "unknown",
-        "auto",
-        "1by1",
-        "2by3",
-        "3by2",
-        "3by4",
-        "4by3",
-        "4by5",
-        "5by4",
-        "5by6",
-        "6by5",
-        "9by16",
-        "16by9",
-        "original",
-        "custom"
-      ],
-      "pbj": {
-        "type": "string-enum",
-        "rule": "single"
-      }
-    },
-    "image_ref": {
-      "type": "string",
-      "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "An optional reference to an image asset to use as the poster.",
-      "pbj": {
-        "type": "identifier",
-        "rule": "single"
-      }
-    },
-    "fallback_src_url": {
-      "type": "string",
-      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "description": "For imported document blocks it may be necessary to store the old URL.",
-      "pbj": {
-        "type": "text",
-        "rule": "single",
-        "format": "url"
       }
     }
   },
   "required": [
-    "node_ref"
+    "form_ref"
   ],
   "additionalProperties": true
 }
