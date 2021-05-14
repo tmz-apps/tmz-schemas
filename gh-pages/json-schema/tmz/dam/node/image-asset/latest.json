@@ -204,6 +204,12 @@
       "maximum": 4294967295,
       "description": "An integer value representing the order in which this asset will appear in a gallery."
     },
+    "alt_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535,
+      "description": "Alternate text for an image, if the image cannot be displayed or seen."
+    },
     "width": {
       "type": "integer",
       "default": 0,

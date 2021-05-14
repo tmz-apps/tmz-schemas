@@ -123,6 +123,11 @@ export default class ImageAssetV1 extends Message {
         Fb.create('gallery_seq', T.IntType.create())
           .build(),
         /*
+         * Alternate text for an image, if the image cannot be displayed or seen.
+         */
+        Fb.create('alt_text', T.TextType.create())
+          .build(),
+        /*
          * The image width in pixels.
          */
         Fb.create('width', T.SmallIntType.create())
