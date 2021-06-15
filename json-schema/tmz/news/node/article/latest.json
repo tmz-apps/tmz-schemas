@@ -215,6 +215,11 @@
       "default": true,
       "description": "Determines if Facebook Instant Articles should be enabled for this article."
     },
+    "twitter_publish_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Determines if a twitter notification should be automatically created when this article is published."
+    },
     "show_related_articles": {
       "type": "boolean",
       "default": true,

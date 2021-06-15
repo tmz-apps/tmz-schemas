@@ -196,6 +196,9 @@
         },
         {
           "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/gallery/1-0-2.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/gallery/1-0-3.json#"
         }
       ]
     }

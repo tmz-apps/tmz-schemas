@@ -202,6 +202,9 @@
         },
         {
           "$ref": "https://schemas.tmz.com/json-schema/triniti/news/mixin/article/1-0-3.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/news/mixin/article/1-0-4.json#"
         }
       ]
     },
