@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.1.13
+* Use `gdbots/schemas` v1.6.7.
+* Use `triniti/schemas` v1.1.16.
+* __Add Schemas:__
+  * `tmz:iam:node:twitter-app`
+  * `tmz:notify:node:twitter-notification`
+
+
 ## v1.1.12
 * Use `triniti/schemas` v1.1.15.
 

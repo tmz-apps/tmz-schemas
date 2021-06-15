@@ -215,6 +215,18 @@
         "rule": "single"
       }
     },
+    "layout": {
+      "type": "string",
+      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Visual layout for the page. e.g. \"carousel\", \"list\".",
+      "pbj": {
+        "type": "string",
+        "rule": "single",
+        "format": "slug"
+      }
+    },
     "description": {
       "type": "string",
       "minLength": 0,
