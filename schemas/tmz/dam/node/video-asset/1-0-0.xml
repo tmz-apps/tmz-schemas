@@ -10,7 +10,6 @@
       <curie-major>triniti:dam:mixin:video-asset:v1</curie-major>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:expirable:v1</curie-major>
-      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
       <curie-major>triniti:people:mixin:has-people:v1</curie-major>
       <curie-major>triniti:taxonomy:mixin:hashtaggable:v1</curie-major>
     </mixins>

@@ -18,4 +18,5 @@ return [
     'tmz:iam:node:ios-app:v1',
     'tmz:iam:node:slack-app:v1',
     'tmz:iam:node:sms-app:v1',
+    'tmz:iam:node:twitter-app:v1',
 ];

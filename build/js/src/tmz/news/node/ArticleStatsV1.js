@@ -115,8 +115,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node',
   'triniti:news:mixin:article-stats:v1',
   'triniti:news:mixin:article-stats',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
 ];
 
 GdbotsNcrNodeV1Mixin(M);

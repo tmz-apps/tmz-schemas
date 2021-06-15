@@ -28,8 +28,6 @@ final class GridlerWidgetV1 extends AbstractMessage
       'triniti:curator:mixin:gridler-widget',
       'gdbots:common:mixin:taggable:v1',
       'gdbots:common:mixin:taggable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
       'triniti:common:mixin:themeable:v1',
       'triniti:common:mixin:themeable',
       'triniti:curator:mixin:widget-has-search-request:v1',

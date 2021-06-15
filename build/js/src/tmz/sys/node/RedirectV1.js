@@ -88,8 +88,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node',
   'triniti:sys:mixin:redirect:v1',
   'triniti:sys:mixin:redirect',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
 ];
 
 GdbotsNcrNodeV1Mixin(M);

@@ -30,8 +30,6 @@ final class GalleryV1 extends AbstractMessage
       'gdbots:common:mixin:taggable',
       'gdbots:ncr:mixin:expirable:v1',
       'gdbots:ncr:mixin:expirable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
       'gdbots:ncr:mixin:publishable:v1',
       'gdbots:ncr:mixin:publishable',
       'gdbots:ncr:mixin:sluggable:v1',
@@ -133,6 +131,12 @@ final class GalleryV1 extends AbstractMessage
                     ->withDefault(true)
                     ->build(),
                 Fb::create('launch_text', T\StringType::create())
+                    ->build(),
+                /*
+                 * Visual layout for the page. e.g. "carousel", "list".
+                 */
+                Fb::create('layout', T\StringType::create())
+                    ->format(Format::SLUG())
                     ->build(),
                 /*
                  * A description of the gallery (usually a few sentences). It should typically

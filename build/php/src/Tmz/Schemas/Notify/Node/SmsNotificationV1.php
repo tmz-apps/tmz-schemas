@@ -26,8 +26,6 @@ final class SmsNotificationV1 extends AbstractMessage
       'triniti:notify:mixin:notification',
       'triniti:notify:mixin:sms-notification:v1',
       'triniti:notify:mixin:sms-notification',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

@@ -29,8 +29,6 @@ final class AdWidgetV1 extends AbstractMessage
       'triniti:curator:mixin:ad-widget',
       'gdbots:common:mixin:taggable:v1',
       'gdbots:common:mixin:taggable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

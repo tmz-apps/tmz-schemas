@@ -23,8 +23,6 @@ final class PollStatsV1 extends AbstractMessage
       'gdbots:ncr:mixin:node',
       'triniti:apollo:mixin:poll-stats:v1',
       'triniti:apollo:mixin:poll-stats',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

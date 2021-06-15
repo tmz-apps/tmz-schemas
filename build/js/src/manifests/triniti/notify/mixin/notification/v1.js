@@ -15,4 +15,5 @@ export default [
   'tmz:notify:node:ios-notification:v1',
   'tmz:notify:node:slack-notification:v1',
   'tmz:notify:node:sms-notification:v1',
+  'tmz:notify:node:twitter-notification:v1',
 ];

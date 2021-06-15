@@ -30,8 +30,6 @@ final class DocumentAssetV1 extends AbstractMessage
       'gdbots:common:mixin:taggable',
       'gdbots:ncr:mixin:expirable:v1',
       'gdbots:ncr:mixin:expirable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
       'triniti:people:mixin:has-people:v1',
       'triniti:people:mixin:has-people',
       'triniti:taxonomy:mixin:hashtaggable:v1',

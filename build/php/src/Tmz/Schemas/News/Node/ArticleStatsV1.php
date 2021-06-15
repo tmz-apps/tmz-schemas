@@ -23,8 +23,6 @@ final class ArticleStatsV1 extends AbstractMessage
       'gdbots:ncr:mixin:node',
       'triniti:news:mixin:article-stats:v1',
       'triniti:news:mixin:article-stats',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

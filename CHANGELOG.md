@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v2.0.2
+* Use `gdbots/schemas` v2.1.1
+* Use `triniti/schemas` v2.0.3
+* __Add Schemas:__
+  * `tmz:iam:node:twitter-app`
+  * `tmz:notify:node:twitter-notification`
+* Remove all use of `gdbots:ncr:mixin:indexed:v1` as it is deprecated.
+
+
 ## v2.0.1
 * Use `triniti/schemas` v2.0.2
 

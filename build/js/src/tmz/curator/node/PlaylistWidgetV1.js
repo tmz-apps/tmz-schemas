@@ -160,8 +160,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:curator:mixin:playlist-widget',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
   'triniti:common:mixin:themeable:v1',
   'triniti:common:mixin:themeable',
   'triniti:curator:mixin:widget-has-search-request:v1',

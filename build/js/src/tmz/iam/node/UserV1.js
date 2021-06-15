@@ -129,8 +129,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node',
   'gdbots:iam:mixin:user:v1',
   'gdbots:iam:mixin:user',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
 ];

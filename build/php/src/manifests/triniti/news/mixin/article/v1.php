@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "triniti:news:mixin:article:v1"
- * @link https://schemas.tmz.com/json-schema/triniti/news/mixin/article/1-0-3.json#
+ * @link https://schemas.tmz.com/json-schema/triniti/news/mixin/article/1-0-4.json#
  */
 
 return [

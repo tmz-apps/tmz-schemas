@@ -8,7 +8,6 @@
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:people:mixin:person:v1</curie-major>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
-      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:sluggable:v1</curie-major>
       <curie-major>triniti:canvas:mixin:has-blocks:v1</curie-major>
       <curie-major>triniti:common:mixin:advertising:v1</curie-major>

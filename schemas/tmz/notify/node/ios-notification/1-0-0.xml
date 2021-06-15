@@ -8,7 +8,6 @@
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:notify:mixin:notification:v1</curie-major>
       <curie-major>triniti:notify:mixin:ios-notification:v1</curie-major>
-      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

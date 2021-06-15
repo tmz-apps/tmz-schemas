@@ -27,8 +27,6 @@ final class EmailNotificationV1 extends AbstractMessage
       'triniti:notify:mixin:notification',
       'triniti:notify:mixin:email-notification:v1',
       'triniti:notify:mixin:email-notification',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

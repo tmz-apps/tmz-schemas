@@ -26,8 +26,6 @@ final class IosNotificationV1 extends AbstractMessage
       'triniti:notify:mixin:notification',
       'triniti:notify:mixin:ios-notification:v1',
       'triniti:notify:mixin:ios-notification',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

@@ -28,8 +28,6 @@ final class CodeWidgetV1 extends AbstractMessage
       'triniti:curator:mixin:code-widget',
       'gdbots:common:mixin:taggable:v1',
       'gdbots:common:mixin:taggable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
     ];
 
     use GdbotsNcrNodeV1Mixin;

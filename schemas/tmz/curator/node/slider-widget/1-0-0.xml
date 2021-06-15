@@ -9,7 +9,6 @@
       <curie-major>triniti:curator:mixin:widget:v1</curie-major>
       <curie-major>triniti:curator:mixin:slider-widget:v1</curie-major>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
-      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
       <curie-major>triniti:common:mixin:themeable:v1</curie-major>
       <curie-major>triniti:curator:mixin:widget-has-search-request:v1</curie-major>
     </mixins>

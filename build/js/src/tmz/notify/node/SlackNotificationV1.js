@@ -113,8 +113,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:notify:mixin:notification',
   'triniti:notify:mixin:slack-notification:v1',
   'triniti:notify:mixin:slack-notification',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
 ];
 
 GdbotsNcrNodeV1Mixin(M);

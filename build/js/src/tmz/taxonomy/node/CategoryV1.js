@@ -182,8 +182,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:taxonomy:mixin:category',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
   'gdbots:ncr:mixin:sluggable:v1',
   'gdbots:ncr:mixin:sluggable',
   'triniti:boost:mixin:sponsorable:v1',

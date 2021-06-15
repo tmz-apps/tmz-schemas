@@ -232,8 +232,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:common:mixin:taggable',
   'gdbots:ncr:mixin:expirable:v1',
   'gdbots:ncr:mixin:expirable',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
   'gdbots:ncr:mixin:publishable:v1',
   'gdbots:ncr:mixin:publishable',
   'triniti:boost:mixin:sponsorable:v1',

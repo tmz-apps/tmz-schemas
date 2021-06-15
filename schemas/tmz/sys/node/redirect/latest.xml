@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:sys:mixin:redirect:v1</curie-major>
-      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

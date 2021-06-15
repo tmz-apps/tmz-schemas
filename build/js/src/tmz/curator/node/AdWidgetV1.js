@@ -132,8 +132,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:curator:mixin:ad-widget',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
 ];
 
 GdbotsNcrNodeV1Mixin(M);

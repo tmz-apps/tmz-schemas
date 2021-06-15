@@ -9,7 +9,6 @@
       <curie-major>triniti:canvas:mixin:page:v1</curie-major>
       <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:expirable:v1</curie-major>
-      <curie-major>gdbots:ncr:mixin:indexed:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:publishable:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:sluggable:v1</curie-major>
       <curie-major>triniti:boost:mixin:sponsorable:v1</curie-major>

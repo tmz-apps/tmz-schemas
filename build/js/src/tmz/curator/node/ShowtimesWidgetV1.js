@@ -144,8 +144,6 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:curator:mixin:showtimes-widget',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
-  'gdbots:ncr:mixin:indexed:v1',
-  'gdbots:ncr:mixin:indexed',
   'triniti:common:mixin:themeable:v1',
   'triniti:common:mixin:themeable',
 ];

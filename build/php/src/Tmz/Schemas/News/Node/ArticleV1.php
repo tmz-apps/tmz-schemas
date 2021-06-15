@@ -30,8 +30,6 @@ final class ArticleV1 extends AbstractMessage
       'gdbots:common:mixin:taggable',
       'gdbots:ncr:mixin:expirable:v1',
       'gdbots:ncr:mixin:expirable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
       'gdbots:ncr:mixin:lockable:v1',
       'gdbots:ncr:mixin:lockable',
       'gdbots:ncr:mixin:publishable:v1',
@@ -197,6 +195,13 @@ final class ArticleV1 extends AbstractMessage
                  * Determines if Facebook Instant Articles should be enabled for this article.
                  */
                 Fb::create('facebook_instant_articles_enabled', T\BooleanType::create())
+                    ->withDefault(true)
+                    ->build(),
+                /*
+                 * Determines if a twitter notification should be automatically created when
+                 * this article is published.
+                 */
+                Fb::create('twitter_publish_enabled', T\BooleanType::create())
                     ->withDefault(true)
                     ->build(),
                 /*

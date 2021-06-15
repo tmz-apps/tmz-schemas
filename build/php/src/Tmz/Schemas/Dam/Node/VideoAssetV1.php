@@ -32,8 +32,6 @@ final class VideoAssetV1 extends AbstractMessage
       'gdbots:common:mixin:taggable',
       'gdbots:ncr:mixin:expirable:v1',
       'gdbots:ncr:mixin:expirable',
-      'gdbots:ncr:mixin:indexed:v1',
-      'gdbots:ncr:mixin:indexed',
       'triniti:ovp:mixin:transcodeable:v1',
       'triniti:ovp:mixin:transcodeable',
       'triniti:ovp:mixin:transcribable:v1',
