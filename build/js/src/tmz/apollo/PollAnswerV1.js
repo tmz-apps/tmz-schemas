@@ -1,10 +1,10 @@
 // @link https://schemas.tmz.com/json-schema/tmz/apollo/poll-answer/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiApolloPollAnswerV1Mixin from '@triniti/schemas/triniti/apollo/mixin/poll-answer/PollAnswerV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiApolloPollAnswerV1Mixin from '@triniti/schemas/triniti/apollo/mixin/poll-answer/PollAnswerV1Mixin.js';
 
 export default class PollAnswerV1 extends Message {
   /**

@@ -87,10 +87,10 @@ final class UserV1 extends AbstractMessage
                 Fb::create('last_name', T\StringType::create())
                     ->build(),
                 Fb::create('email', T\StringType::create())
-                    ->format(Format::EMAIL())
+                    ->format(Format::EMAIL)
                     ->build(),
                 Fb::create('email_domain', T\StringType::create())
-                    ->format(Format::HOSTNAME())
+                    ->format(Format::HOSTNAME)
                     ->build(),
                 /*
                  * A general format for international telephone numbers.

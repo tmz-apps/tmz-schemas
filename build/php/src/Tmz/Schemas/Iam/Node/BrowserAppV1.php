@@ -109,7 +109,7 @@ final class BrowserAppV1 extends AbstractMessage
                  * @link https://firebase.google.com/docs/cloud-messaging/concept-options#projectid
                  */
                 Fb::create('fcm_project_id', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A unique numerical value created when you create your Firebase project.

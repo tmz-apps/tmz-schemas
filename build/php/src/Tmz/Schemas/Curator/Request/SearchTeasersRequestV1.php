@@ -79,11 +79,11 @@ final class SearchTeasersRequestV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -112,6 +112,8 @@ final class SearchTeasersRequestV1 extends AbstractMessage
                     ->withDefault(1)
                     ->build(),
                 Fb::create('autocomplete', T\BooleanType::create())
+                    ->build(),
+                Fb::create('track_total_hits', T\BooleanType::create())
                     ->build(),
                 /*
                  * A cursor is a string (normally base64 encoded) which marks a specific item in a list of data.
@@ -164,7 +166,7 @@ final class SearchTeasersRequestV1 extends AbstractMessage
                  * teasers returned in the response. e.g. "home", "sports", "tv"
                  */
                 Fb::create('slotting_key', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A set of teaser types (node must match at least one) to include in
@@ -172,7 +174,7 @@ final class SearchTeasersRequestV1 extends AbstractMessage
                  */
                 Fb::create('types', T\StringType::create())
                     ->asASet()
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A node ref of a gallery that a teaser must be associated with to match the search request.

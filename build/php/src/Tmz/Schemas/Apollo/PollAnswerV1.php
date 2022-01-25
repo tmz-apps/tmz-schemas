@@ -33,7 +33,7 @@ final class PollAnswerV1 extends AbstractMessage
                 Fb::create('title', T\StringType::create())
                     ->build(),
                 Fb::create('url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('initial_votes', T\IntType::create())
                     ->build(),

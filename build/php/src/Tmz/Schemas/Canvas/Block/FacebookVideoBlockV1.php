@@ -60,7 +60,7 @@ final class FacebookVideoBlockV1 extends AbstractMessage
                     ->build(),
                 Fb::create('href', T\TextType::create())
                     ->required()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('autoplay', T\BooleanType::create())
                     ->build(),

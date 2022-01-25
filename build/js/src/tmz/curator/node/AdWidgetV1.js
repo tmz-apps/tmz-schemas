@@ -1,14 +1,14 @@
 // @link https://schemas.tmz.com/json-schema/tmz/curator/node/ad-widget/1-0-0.json#
-import AdSize from '@triniti/schemas/triniti/common/enums/AdSize';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiCuratorAdWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/ad-widget/AdWidgetV1Mixin';
-import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
+import AdSize from '@triniti/schemas/triniti/common/enums/AdSize.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiCuratorAdWidgetV1Mixin from '@triniti/schemas/triniti/curator/mixin/ad-widget/AdWidgetV1Mixin.js';
+import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier.js';
 
 export default class AdWidgetV1 extends Message {
   /**

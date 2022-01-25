@@ -116,7 +116,7 @@ final class EmailNotificationV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('sender', T\StringType::create())
-                    ->format(Format::EMAIL())
+                    ->format(Format::EMAIL)
                     ->build(),
                 /*
                  * A set of list ids that this email notification should be sent to.
@@ -124,13 +124,13 @@ final class EmailNotificationV1 extends AbstractMessage
                  */
                 Fb::create('lists', T\StringType::create())
                     ->asASet()
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * Visual layout for the email. e.g. "breaking-snooze", "exclusive-video".
                  */
                 Fb::create('template', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('subject', T\StringType::create())
                     ->build(),

@@ -108,12 +108,12 @@ final class BlogrollWidgetV1 extends AbstractMessage
                 Fb::create('header_text', T\StringType::create())
                     ->build(),
                 Fb::create('partner_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('partner_text', T\StringType::create())
                     ->build(),
                 Fb::create('view_all_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('view_all_text', T\StringType::create())
                     ->build(),
@@ -122,7 +122,7 @@ final class BlogrollWidgetV1 extends AbstractMessage
                  * in between (aka "separators") items in the blogroll.
                  */
                 Fb::create('promotion_slot_prefix', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * Tags is a map that categorizes data or tracks references in
@@ -138,7 +138,7 @@ final class BlogrollWidgetV1 extends AbstractMessage
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * When nodes have been acquired by another process you can populate

@@ -104,12 +104,12 @@ final class CodeWidgetV1 extends AbstractMessage
                 Fb::create('header_text', T\StringType::create())
                     ->build(),
                 Fb::create('partner_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('partner_text', T\StringType::create())
                     ->build(),
                 Fb::create('view_all_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('view_all_text', T\StringType::create())
                     ->build(),

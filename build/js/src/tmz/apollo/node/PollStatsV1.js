@@ -1,12 +1,12 @@
 // @link https://schemas.tmz.com/json-schema/tmz/apollo/node/poll-stats/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiApolloPollStatsV1Mixin from '@triniti/schemas/triniti/apollo/mixin/poll-stats/PollStatsV1Mixin';
-import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiApolloPollStatsV1Mixin from '@triniti/schemas/triniti/apollo/mixin/poll-stats/PollStatsV1Mixin.js';
+import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier.js';
 
 export default class PollStatsV1 extends Message {
   /**

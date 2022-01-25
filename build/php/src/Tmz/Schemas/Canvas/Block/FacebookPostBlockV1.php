@@ -60,7 +60,7 @@ final class FacebookPostBlockV1 extends AbstractMessage
                     ->build(),
                 Fb::create('href', T\TextType::create())
                     ->required()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('show_text', T\BooleanType::create())
                     ->build(),

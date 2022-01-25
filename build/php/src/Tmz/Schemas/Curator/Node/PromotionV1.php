@@ -91,7 +91,7 @@ final class PromotionV1 extends AbstractMessage
                  * e.g. "desktop-home-sidebar" or "smartphone-global-html-head".
                  */
                 Fb::create('slot', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * If multiple promotions can render in a given slot at the same

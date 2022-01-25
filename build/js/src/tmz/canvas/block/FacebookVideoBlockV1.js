@@ -1,11 +1,11 @@
 // @link https://schemas.tmz.com/json-schema/tmz/canvas/block/facebook-video-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin';
-import TrinitiCanvasFacebookVideoBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/facebook-video-block/FacebookVideoBlockV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin.js';
+import TrinitiCanvasFacebookVideoBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/facebook-video-block/FacebookVideoBlockV1Mixin.js';
 
 export default class FacebookVideoBlockV1 extends Message {
   /**

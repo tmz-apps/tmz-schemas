@@ -121,7 +121,7 @@ final class ImageAssetV1 extends AbstractMessage
                  * A URL to link to the credit source.
                  */
                 Fb::create('credit_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * Call to action text. e.g. "Click here"
@@ -132,7 +132,7 @@ final class ImageAssetV1 extends AbstractMessage
                  * A URL to link with the call to action text.
                  */
                 Fb::create('cta_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * A set of node refs which have been linked to this asset.
@@ -186,7 +186,7 @@ final class ImageAssetV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS

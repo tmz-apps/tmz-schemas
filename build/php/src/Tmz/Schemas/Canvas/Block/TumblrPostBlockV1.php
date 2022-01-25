@@ -60,10 +60,10 @@ final class TumblrPostBlockV1 extends AbstractMessage
                     ->build(),
                 Fb::create('href', T\TextType::create())
                     ->required()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('canonical_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
             ],
             self::MIXINS

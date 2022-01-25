@@ -1,11 +1,11 @@
 // @link https://schemas.tmz.com/json-schema/tmz/sys/request/get-picklist-history-request/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import StreamId from '@gdbots/schemas/gdbots/pbjx/StreamId';
-import T from '@gdbots/pbj/types';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import StreamId from '@gdbots/schemas/gdbots/pbjx/StreamId.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class GetPicklistHistoryRequestV1 extends Message {
   /**

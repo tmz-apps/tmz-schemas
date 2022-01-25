@@ -153,7 +153,7 @@ final class LinkTeaserV1 extends AbstractMessage
                  * URL to be used to link to the teaser source.
                  */
                 Fb::create('credit_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('gallery_ref', T\NodeRefType::create())
                     ->build(),
@@ -161,10 +161,10 @@ final class LinkTeaserV1 extends AbstractMessage
                     ->build(),
                 Fb::create('link_url', T\TextType::create())
                     ->required()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('partner_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('partner_text', T\StringType::create())
                     ->build(),
@@ -236,7 +236,7 @@ final class LinkTeaserV1 extends AbstractMessage
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('primary_person_refs', T\NodeRefType::create())
                     ->asASet()
@@ -251,7 +251,7 @@ final class LinkTeaserV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS

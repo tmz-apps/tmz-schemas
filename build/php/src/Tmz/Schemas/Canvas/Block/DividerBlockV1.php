@@ -61,10 +61,10 @@ final class DividerBlockV1 extends AbstractMessage
                 Fb::create('text', T\StringType::create())
                     ->build(),
                 Fb::create('stroke_color', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('stroke_style', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
             ],
             self::MIXINS

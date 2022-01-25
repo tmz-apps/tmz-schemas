@@ -1,15 +1,15 @@
 // @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-1.json#
-import AssetId from '@triniti/schemas/triniti/dam/AssetId';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TranscodingStatus from '@triniti/schemas/triniti/ovp/enums/TranscodingStatus';
-import TranscriptionStatus from '@triniti/schemas/triniti/ovp/enums/TranscriptionStatus';
-import TrinitiDamVideoAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/video-asset/VideoAssetV1Mixin';
+import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TranscodingStatus from '@triniti/schemas/triniti/ovp/enums/TranscodingStatus.js';
+import TranscriptionStatus from '@triniti/schemas/triniti/ovp/enums/TranscriptionStatus.js';
+import TrinitiDamVideoAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/video-asset/VideoAssetV1Mixin.js';
 
 export default class VideoAssetV1 extends Message {
   /**
