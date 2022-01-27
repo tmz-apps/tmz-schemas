@@ -5,7 +5,7 @@
   "type": "pbj-schema-store",
   "license": "Apache-2.0",
   "require": {
-    "php": ">=8.1",
+    "php": ">=8.0",
     "gdbots/schemas": "3.0.1",
     "triniti/schemas": "3.0.1"
   },
