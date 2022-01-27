@@ -3,7 +3,7 @@
 ## v3.0.0
 __BREAKING CHANGES__
 
-* Require `php>=8.0`.
+* Require `php>=8.1`.
 * Use node v14.18.2.
 * Use `gdbots/schemas` v3.0.1
 * Use `triniti/schemas` v3.0.1
