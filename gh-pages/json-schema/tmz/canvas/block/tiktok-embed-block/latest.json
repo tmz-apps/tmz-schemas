@@ -49,6 +49,14 @@
         "type": "string",
         "rule": "single"
       }
+    },
+    "user_name": {
+      "type": "string",
+      "pattern": "^[\\w\\.]+$",
+      "pbj": {
+        "type": "string",
+        "rule": "single"
+      }
     }
   },
   "required": [
