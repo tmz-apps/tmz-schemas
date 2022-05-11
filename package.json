@@ -27,7 +27,6 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/register": "^7.11.5",
     "@gdbots/pbj": "^3.0.0",
-    "@tmz/schemas": "file:./build/js/src/",
     "faucet": "^0.0.1",
     "lodash-es": "^4.17.15",
     "md5": "^2.3.0",
