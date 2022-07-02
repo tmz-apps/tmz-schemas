@@ -64,6 +64,8 @@ export default class PersonV1 extends Message {
           .build(),
         Fb.create('title', T.StringType.create())
           .build(),
+        Fb.create('display_title', T.StringType.create())
+          .build(),
         /*
          * A reference to the image asset to use for widgets, sharing, seo.
          */

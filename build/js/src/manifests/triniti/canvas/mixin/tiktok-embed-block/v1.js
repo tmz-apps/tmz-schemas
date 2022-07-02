@@ -3,7 +3,7 @@
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "triniti:canvas:mixin:tiktok-embed-block:v1"
- * @link https://schemas.tmz.com/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-0.json#
+ * @link https://schemas.tmz.com/json-schema/triniti/canvas/mixin/tiktok-embed-block/1-0-1.json#
  */
 
 export default [

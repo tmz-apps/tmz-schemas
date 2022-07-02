@@ -45,6 +45,9 @@ export default class TiktokEmbedBlockV1 extends Message {
           .required()
           .pattern('^\\w+$')
           .build(),
+        Fb.create('user_name', T.StringType.create())
+          .pattern('^[\\w\\.]+$')
+          .build(),
       ],
       this.MIXINS,
     );

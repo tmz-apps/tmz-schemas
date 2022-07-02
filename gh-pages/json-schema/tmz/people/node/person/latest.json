@@ -131,6 +131,11 @@
       "minLength": 0,
       "maxLength": 255
     },
+    "display_title": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
     "image_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
