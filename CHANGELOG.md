@@ -6,7 +6,7 @@ __BREAKING CHANGES__
 
 * Require `php>=8.1`.
 * Use node v14.18.2.
-* Use `gdbots/schemas` v3.0.2
+* Use `gdbots/schemas` v3.0.1
 * Use `triniti/schemas` v3.0.2
 * Use npm gdbots/pbj 3.x.
 * Use new php builtin enum instead of custom enum classes.
