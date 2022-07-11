@@ -66,11 +66,11 @@ final class ArticleStatsCollectedV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -90,7 +90,7 @@ final class ArticleStatsCollectedV1 extends AbstractMessage
                  */
                 Fb::create('providers', T\StringType::create())
                     ->asASet()
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A map of stat values that should replace any existing collected values.

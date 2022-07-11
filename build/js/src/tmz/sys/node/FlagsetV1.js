@@ -1,12 +1,12 @@
 // @link https://schemas.tmz.com/json-schema/tmz/sys/node/flagset/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import FlagsetId from '@triniti/schemas/triniti/sys/FlagsetId';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiSysFlagsetV1Mixin from '@triniti/schemas/triniti/sys/mixin/flagset/FlagsetV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import FlagsetId from '@triniti/schemas/triniti/sys/FlagsetId.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiSysFlagsetV1Mixin from '@triniti/schemas/triniti/sys/mixin/flagset/FlagsetV1Mixin.js';
 
 export default class FlagsetV1 extends Message {
   /**

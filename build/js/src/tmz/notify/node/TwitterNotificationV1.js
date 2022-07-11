@@ -1,13 +1,13 @@
 // @link https://schemas.tmz.com/json-schema/tmz/notify/node/twitter-notification/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import NotificationSendStatus from '@triniti/schemas/triniti/notify/enums/NotificationSendStatus';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiNotifyTwitterNotificationV1Mixin from '@triniti/schemas/triniti/notify/mixin/twitter-notification/TwitterNotificationV1Mixin';
-import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import NotificationSendStatus from '@triniti/schemas/triniti/notify/enums/NotificationSendStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiNotifyTwitterNotificationV1Mixin from '@triniti/schemas/triniti/notify/mixin/twitter-notification/TwitterNotificationV1Mixin.js';
+import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier.js';
 
 export default class TwitterNotificationV1 extends Message {
   /**

@@ -1,12 +1,12 @@
 // @link https://schemas.tmz.com/json-schema/tmz/sys/node/picklist/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import PicklistId from '@triniti/schemas/triniti/sys/PicklistId';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiSysPicklistV1Mixin from '@triniti/schemas/triniti/sys/mixin/picklist/PicklistV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import PicklistId from '@triniti/schemas/triniti/sys/PicklistId.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiSysPicklistV1Mixin from '@triniti/schemas/triniti/sys/mixin/picklist/PicklistV1Mixin.js';
 
 export default class PicklistV1 extends Message {
   /**

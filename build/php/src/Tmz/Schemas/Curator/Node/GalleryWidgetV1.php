@@ -108,12 +108,12 @@ final class GalleryWidgetV1 extends AbstractMessage
                 Fb::create('header_text', T\StringType::create())
                     ->build(),
                 Fb::create('partner_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('partner_text', T\StringType::create())
                     ->build(),
                 Fb::create('view_all_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('view_all_text', T\StringType::create())
                     ->build(),
@@ -131,7 +131,7 @@ final class GalleryWidgetV1 extends AbstractMessage
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * When nodes have been acquired by another process you can populate

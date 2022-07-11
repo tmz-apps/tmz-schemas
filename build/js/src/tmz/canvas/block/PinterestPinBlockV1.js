@@ -1,11 +1,11 @@
 // @link https://schemas.tmz.com/json-schema/tmz/canvas/block/pinterest-pin-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin';
-import TrinitiCanvasPinterestPinBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/pinterest-pin-block/PinterestPinBlockV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin.js';
+import TrinitiCanvasPinterestPinBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/pinterest-pin-block/PinterestPinBlockV1Mixin.js';
 
 export default class PinterestPinBlockV1 extends Message {
   /**

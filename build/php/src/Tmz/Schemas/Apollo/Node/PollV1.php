@@ -106,7 +106,7 @@ final class PollV1 extends AbstractMessage
                 Fb::create('question', T\StringType::create())
                     ->build(),
                 Fb::create('question_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('allow_multiple_responses', T\BooleanType::create())
                     ->build(),
@@ -152,7 +152,7 @@ final class PollV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS

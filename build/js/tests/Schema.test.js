@@ -1,10 +1,10 @@
 import test from 'tape';
-import isFunction from 'lodash/isFunction';
-import isPlainObject from 'lodash/isPlainObject';
-import RequiredFieldNotSet from '@gdbots/pbj/exceptions/RequiredFieldNotSet';
-import Message from '@gdbots/pbj/Message';
-import MessageRef from '@gdbots/pbj/well-known/MessageRef';
-import MessageResolver from '@gdbots/pbj/MessageResolver';
+import isFunction from 'lodash-es/isFunction.js';
+import isPlainObject from 'lodash-es/isPlainObject.js';
+import RequiredFieldNotSet from '@gdbots/pbj/exceptions/RequiredFieldNotSet.js';
+import Message from '@gdbots/pbj/Message.js';
+import MessageRef from '@gdbots/pbj/well-known/MessageRef.js';
+import MessageResolver from '@gdbots/pbj/MessageResolver.js';
 import '@tmz/schemas';
 
 
@@ -17,11 +17,11 @@ test('Can create all messages', async (t) => {
   for (const resolver of Object.values(MessageResolver.all())) {
     const message = (await resolveImport(resolver)).create();
     const classProto = message.schema().getClassProto();
-    t.true(message instanceof Message, `Unable to create [${classProto.schema().getId()}].`);
+    t.true(message instanceof Message, `Able to create [${classProto.schema().getId()}].`);
 
     try {
       const ref = message.generateMessageRef('tag');
-      t.true(ref instanceof MessageRef, `Failed to generateMessageRef for [${classProto.schema().getId()}].`);
+      t.true(ref instanceof MessageRef, `Able to generateMessageRef for [${classProto.schema().getId()}].`);
       t.same(`${ref}`, `${message.generateMessageRef('tag')}`);
     } catch (e) {
       if (!(e instanceof RequiredFieldNotSet)) {

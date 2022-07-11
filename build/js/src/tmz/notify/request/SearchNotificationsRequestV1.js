@@ -1,13 +1,13 @@
 // @link https://schemas.tmz.com/json-schema/tmz/notify/request/search-notifications-request/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import NotificationSendStatus from '@triniti/schemas/triniti/notify/enums/NotificationSendStatus';
-import Schema from '@gdbots/pbj/Schema';
-import SearchNotificationsSort from '@triniti/schemas/triniti/notify/enums/SearchNotificationsSort';
-import T from '@gdbots/pbj/types';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import NotificationSendStatus from '@triniti/schemas/triniti/notify/enums/NotificationSendStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import SearchNotificationsSort from '@triniti/schemas/triniti/notify/enums/SearchNotificationsSort.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class SearchNotificationsRequestV1 extends Message {
   /**
@@ -95,6 +95,8 @@ export default class SearchNotificationsRequestV1 extends Message {
           .withDefault(1)
           .build(),
         Fb.create('autocomplete', T.BooleanType.create())
+          .build(),
+        Fb.create('track_total_hits', T.BooleanType.create())
           .build(),
         /*
          * A cursor is a string (normally base64 encoded) which marks a specific item in a list of data.

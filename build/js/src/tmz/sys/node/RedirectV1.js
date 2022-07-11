@@ -1,12 +1,12 @@
 // @link https://schemas.tmz.com/json-schema/tmz/sys/node/redirect/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import RedirectId from '@triniti/schemas/triniti/sys/RedirectId';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiSysRedirectV1Mixin from '@triniti/schemas/triniti/sys/mixin/redirect/RedirectV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import RedirectId from '@triniti/schemas/triniti/sys/RedirectId.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiSysRedirectV1Mixin from '@triniti/schemas/triniti/sys/mixin/redirect/RedirectV1Mixin.js';
 
 export default class RedirectV1 extends Message {
   /**

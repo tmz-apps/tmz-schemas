@@ -125,7 +125,7 @@ final class GalleryV1 extends AbstractMessage
                  * A URL to link with the credit source.
                  */
                 Fb::create('credit_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('allow_comments', T\BooleanType::create())
                     ->withDefault(true)
@@ -136,7 +136,7 @@ final class GalleryV1 extends AbstractMessage
                  * Visual layout for the page. e.g. "carousel", "list".
                  */
                 Fb::create('layout', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A description of the gallery (usually a few sentences). It should typically
@@ -189,7 +189,7 @@ final class GalleryV1 extends AbstractMessage
                  * - CAN be changed, but in practice once nodes are published you should avoid it if possible
                  */
                 Fb::create('slug', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('sponsor_ref', T\NodeRefType::create())
                     ->build(),
@@ -247,7 +247,7 @@ final class GalleryV1 extends AbstractMessage
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * Determines the sequence that this teaserable node will be rendered
@@ -270,7 +270,7 @@ final class GalleryV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS

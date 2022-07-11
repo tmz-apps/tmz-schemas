@@ -60,7 +60,7 @@ final class PinterestPinBlockV1 extends AbstractMessage
                     ->build(),
                 Fb::create('href', T\TextType::create())
                     ->required()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * When true, hides the description.

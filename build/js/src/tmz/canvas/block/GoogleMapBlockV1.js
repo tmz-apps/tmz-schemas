@@ -1,10 +1,10 @@
 // @link https://schemas.tmz.com/json-schema/tmz/canvas/block/google-map-block/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Message from '@gdbots/pbj/Message';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin';
-import TrinitiCanvasGoogleMapBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/google-map-block/GoogleMapBlockV1Mixin';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Message from '@gdbots/pbj/Message.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiCanvasBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/block/BlockV1Mixin.js';
+import TrinitiCanvasGoogleMapBlockV1Mixin from '@triniti/schemas/triniti/canvas/mixin/google-map-block/GoogleMapBlockV1Mixin.js';
 
 export default class GoogleMapBlockV1 extends Message {
   /**

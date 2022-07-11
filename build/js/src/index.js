@@ -7,11 +7,11 @@
  * @link https://schemas.tmz.com/
  */
 
-import MessageResolver from '@gdbots/pbj/MessageResolver';
-import messages from './manifests/messages';
+import MessageResolver from '@gdbots/pbj/MessageResolver.js';
+import messages from './manifests/messages.js';
 
 MessageResolver.register(messages);
 MessageResolver.setDefaultVendor('tmz');
-MessageResolver.setManifestResolver(file => import(`./manifests/${file}`))
+MessageResolver.setManifestResolver(file => import(`./manifests/${file}.js`))
 
 export default MessageResolver;

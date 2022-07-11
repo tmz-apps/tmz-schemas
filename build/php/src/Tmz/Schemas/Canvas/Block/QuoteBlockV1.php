@@ -64,7 +64,7 @@ final class QuoteBlockV1 extends AbstractMessage
                 Fb::create('source', T\StringType::create())
                     ->build(),
                 Fb::create('source_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('is_pull_quote', T\BooleanType::create())
                     ->build(),

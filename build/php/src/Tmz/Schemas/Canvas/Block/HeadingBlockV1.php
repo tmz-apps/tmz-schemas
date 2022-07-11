@@ -65,7 +65,7 @@ final class HeadingBlockV1 extends AbstractMessage
                     ->max(6)
                     ->build(),
                 Fb::create('url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
             ],
             self::MIXINS

@@ -83,7 +83,7 @@ final class DocumentBlockV1 extends AbstractMessage
                  * For imported document blocks it may be necessary to store the old URL.
                  */
                 Fb::create('fallback_src_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
             ],
             self::MIXINS

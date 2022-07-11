@@ -60,7 +60,7 @@ final class IframeBlockV1 extends AbstractMessage
                     ->build(),
                 Fb::create('src', T\TextType::create())
                     ->required()
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('width', T\StringType::create())
                     ->pattern('^\d+(%|px)?$')

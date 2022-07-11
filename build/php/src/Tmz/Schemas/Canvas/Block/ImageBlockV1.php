@@ -77,7 +77,7 @@ final class ImageBlockV1 extends AbstractMessage
                 Fb::create('is_nsfw', T\BooleanType::create())
                     ->build(),
                 Fb::create('url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('launch_text', T\StringType::create())
                     ->build(),
@@ -88,14 +88,14 @@ final class ImageBlockV1 extends AbstractMessage
                  * For imported image blocks it may be necessary to store the old URL.
                  */
                 Fb::create('fallback_src_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 /*
                  * A string used to indicate that a visual treatment should be
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
             ],
             self::MIXINS

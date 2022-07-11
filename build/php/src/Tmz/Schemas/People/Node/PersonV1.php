@@ -96,6 +96,8 @@ final class PersonV1 extends AbstractMessage
                     ->build(),
                 Fb::create('title', T\StringType::create())
                     ->build(),
+                Fb::create('display_title', T\StringType::create())
+                    ->build(),
                 /*
                  * A reference to the image asset to use for widgets, sharing, seo.
                  */
@@ -111,10 +113,10 @@ final class PersonV1 extends AbstractMessage
                  * Indicates where the bio data originated from, e.g. imdb, freebase, custom.
                  */
                 Fb::create('bio_source', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('imdb_url', T\TextType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('twitter_username', T\StringType::create())
                     ->pattern('^\w{1,15}$')
@@ -138,7 +140,7 @@ final class PersonV1 extends AbstractMessage
                  * - CAN be changed, but in practice once nodes are published you should avoid it if possible
                  */
                 Fb::create('slug', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 Fb::create('blocks', T\MessageType::create())
                     ->asAList()
@@ -193,7 +195,7 @@ final class PersonV1 extends AbstractMessage
                  * applied to a piece of content, e.g. "christmas" or "taco".
                  */
                 Fb::create('theme', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * Determines the sequence that this teaserable node will be rendered
@@ -205,7 +207,7 @@ final class PersonV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
             ],
             self::MIXINS

@@ -29,7 +29,8 @@ class SchemaTest extends TestCase
                 throw $e;
             }
 
-            $this->assertTrue(ArrayUtil::isAssoc($message->getUriTemplateVars()));
+            $vars = $message->getUriTemplateVars();
+            $this->assertTrue(!count($vars) || (count($vars) > 0 && ArrayUtil::isAssoc($vars)));
         }
     }
 }

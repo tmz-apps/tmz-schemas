@@ -61,6 +61,9 @@ final class TiktokEmbedBlockV1 extends AbstractMessage
                     ->required()
                     ->pattern('^\w+$')
                     ->build(),
+                Fb::create('user_name', T\StringType::create())
+                    ->pattern('^[\w\.]+$')
+                    ->build(),
             ],
             self::MIXINS
         );

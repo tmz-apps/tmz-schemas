@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v3.0.0
+__BREAKING CHANGES__
+
+* Require `php>=8.1`.
+* Use node v14.18.2.
+* Use `gdbots/schemas` v3.0.1
+* Use `triniti/schemas` v3.0.2
+* Use npm gdbots/pbj 3.x.
+* Use new php builtin enum instead of custom enum classes.
+* __Modify Schemas:__
+  * `gdbots:ncr:mixin:search-nodes-request` patch revision `1-0-4`
+    * Add `track_total_hits` boolean field.
+  * `gdbots:ncr:request:get-node-history-request` patch revision `1-0-1`
+    * Add `topic` string field with pattern `^[\w\.-]+$`.
+    * Add `partition` string field with pattern `^[\w\.-]+$`.
+    * Add `sub_partition` string field with pattern `^[\w\.-]+$`.
+  * `gdbots:pbjx:mixin:search-events-request` patch revision `1-0-1`
+    * Add `track_total_hits` boolean field.
+
+
 ## v2.0.2
 * Use `gdbots/schemas` v2.1.1
 * Use `triniti/schemas` v2.0.3

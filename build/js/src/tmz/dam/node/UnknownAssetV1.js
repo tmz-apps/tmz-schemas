@@ -1,13 +1,13 @@
 // @link https://schemas.tmz.com/json-schema/tmz/dam/node/unknown-asset/1-0-0.json#
-import AssetId from '@triniti/schemas/triniti/dam/AssetId';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
-import Message from '@gdbots/pbj/Message';
-import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
-import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import TrinitiDamUnknownAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/unknown-asset/UnknownAssetV1Mixin';
+import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
+import Message from '@gdbots/pbj/Message.js';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import T from '@gdbots/pbj/types/index.js';
+import TrinitiDamUnknownAssetV1Mixin from '@triniti/schemas/triniti/dam/mixin/unknown-asset/UnknownAssetV1Mixin.js';
 
 export default class UnknownAssetV1 extends Message {
   /**
