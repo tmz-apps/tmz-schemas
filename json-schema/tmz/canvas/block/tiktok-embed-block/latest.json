@@ -29,6 +29,10 @@
     "tiktok_id": {
       "type": "string",
       "pattern": "^\\w+$"
+    },
+    "user_name": {
+      "type": "string",
+      "pattern": "^[\\w\\.]+$"
     }
   },
   "required": [
