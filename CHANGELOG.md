@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v3.0.1
+* Use `triniti/schemas` v3.0.3
+* __Add Schemas:__
+  * `tmz:apollo:node:reactions`
+
+
 ## v3.0.0
 __BREAKING CHANGES__
 

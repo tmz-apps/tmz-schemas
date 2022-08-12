@@ -174,6 +174,7 @@ export default [
   'tmz:taxonomy:event:channel-deleted:v1',
   'tmz:taxonomy:event:channel-renamed:v1',
   'tmz:taxonomy:event:channel-updated:v1',
+  'triniti:apollo:event:reactions-added:v1',
   'triniti:apollo:event:vote-casted:v1',
   'triniti:curator:event:gallery-image-count-updated:v1',
   'triniti:curator:event:teaser-slotting-removed:v1',
