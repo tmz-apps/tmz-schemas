@@ -1,13 +1,8 @@
 {
-  "id": "https://schemas.tmz.com/json-schema/tmz/apollo/node/reactions/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/triniti/apollo/mixin/has-reactions/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "_schema": {
-      "type": "string",
-      "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:tmz:apollo:node:reactions:1-0-0"
-    },
     "_id": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
@@ -130,30 +125,10 @@
       "type": "string",
       "minLength": 0,
       "maxLength": 255
-    },
-    "reactions": {
-      "type": "object",
-      "patternProperties": {
-        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
-          "type": "integer",
-          "default": 0,
-          "minimum": 0,
-          "maximum": 4294967295
-        }
-      },
-      "additionalProperties": false,
-      "description": "Count for each reactions keyed with slug format."
-    },
-    "target": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255
     }
   },
   "required": [
-    "_schema",
     "_id"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }

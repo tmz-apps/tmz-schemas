@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tmz\Schemas\Apollo\Node;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
 use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
@@ -23,6 +24,8 @@ final class ReactionsV1 extends AbstractMessage
       'gdbots:ncr:mixin:node',
       'triniti:apollo:mixin:reactions:v1',
       'triniti:apollo:mixin:reactions',
+      'triniti:apollo:mixin:has-reactions:v1',
+      'triniti:apollo:mixin:has-reactions',
     ];
 
     use GdbotsNcrNodeV1Mixin;
@@ -79,17 +82,14 @@ final class ReactionsV1 extends AbstractMessage
                     ->build(),
                 Fb::create('title', T\StringType::create())
                     ->build(),
-                Fb::create('love', T\IntType::create())
+                /*
+                 * Count for each reactions keyed with slug format.
+                 */
+                Fb::create('reactions', T\IntType::create())
+                    ->asAMap()
                     ->build(),
-                Fb::create('haha', T\IntType::create())
-                    ->build(),
-                Fb::create('wow', T\IntType::create())
-                    ->build(),
-                Fb::create('wtf', T\IntType::create())
-                    ->build(),
-                Fb::create('trash', T\IntType::create())
-                    ->build(),
-                Fb::create('sad', T\IntType::create())
+                Fb::create('target', T\StringType::create())
+                    ->format(Format::SLUG)
                     ->build(),
             ],
             self::MIXINS

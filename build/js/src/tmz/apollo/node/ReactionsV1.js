@@ -1,5 +1,6 @@
 // @link https://schemas.tmz.com/json-schema/tmz/apollo/node/reactions/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
+import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
 import Message from '@gdbots/pbj/Message.js';
 import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
@@ -63,17 +64,14 @@ export default class ReactionsV1 extends Message {
           .build(),
         Fb.create('title', T.StringType.create())
           .build(),
-        Fb.create('love', T.IntType.create())
+        /*
+         * Count for each reactions keyed with slug format.
+         */
+        Fb.create('reactions', T.IntType.create())
+          .asAMap()
           .build(),
-        Fb.create('haha', T.IntType.create())
-          .build(),
-        Fb.create('wow', T.IntType.create())
-          .build(),
-        Fb.create('wtf', T.IntType.create())
-          .build(),
-        Fb.create('trash', T.IntType.create())
-          .build(),
-        Fb.create('sad', T.IntType.create())
+        Fb.create('target', T.StringType.create())
+          .format(Format.SLUG)
           .build(),
       ],
       this.MIXINS,
@@ -90,6 +88,8 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node',
   'triniti:apollo:mixin:reactions:v1',
   'triniti:apollo:mixin:reactions',
+  'triniti:apollo:mixin:has-reactions:v1',
+  'triniti:apollo:mixin:has-reactions',
 ];
 
 GdbotsNcrNodeV1Mixin(M);
