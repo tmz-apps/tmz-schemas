@@ -10,5 +10,5 @@ declare(strict_types=1);
  */
 
 return [
-    'tmz:apollo:node:reactions:v1',
+    'tmz:news:node:article:v1',
 ];

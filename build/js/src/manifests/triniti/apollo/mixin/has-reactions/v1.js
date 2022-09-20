@@ -7,5 +7,5 @@
  */
 
 export default [
-  'tmz:apollo:node:reactions:v1',
+  'tmz:news:node:article:v1',
 ];

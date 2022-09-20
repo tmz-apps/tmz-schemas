@@ -24,8 +24,6 @@ final class ReactionsV1 extends AbstractMessage
       'gdbots:ncr:mixin:node',
       'triniti:apollo:mixin:reactions:v1',
       'triniti:apollo:mixin:reactions',
-      'triniti:apollo:mixin:has-reactions:v1',
-      'triniti:apollo:mixin:has-reactions',
     ];
 
     use GdbotsNcrNodeV1Mixin;

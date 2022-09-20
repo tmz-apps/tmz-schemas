@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>triniti:apollo:mixin:reactions:v1</curie-major>
-      <curie-major>triniti:apollo:mixin:has-reactions:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>
