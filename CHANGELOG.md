@@ -6,6 +6,9 @@
 * Use `triniti/schemas` v3.0.3
 * __Add Schemas:__
   * `tmz:apollo:node:reactions`
+* __Modify Schemas:__
+  * `tmz:news:node:article` patch revision `1-0-2`
+    * Add mixin `triniti:apollo:mixin:has-reactions:v1`
 
 
 ## v3.0.0
