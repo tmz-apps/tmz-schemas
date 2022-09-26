@@ -78,6 +78,7 @@ return [
     'tmz:ovp:event:video-published:v1',
     'tmz:ovp:event:video-scheduled:v1',
     'tmz:ovp:event:video-unpublished:v1',
+    'triniti:apollo:event:reactions-added:v1',
     'triniti:apollo:event:vote-casted:v1',
     'triniti:dam:request:get-upload-urls-request:v1',
     'triniti:notify:event:notification-failed:v1',

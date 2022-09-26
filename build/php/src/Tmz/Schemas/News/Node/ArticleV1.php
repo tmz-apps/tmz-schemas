@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-2.json#
 namespace Tmz\Schemas\News\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\News\Mixin\Article\ArticleV1Mixin as TrinitiNewsArticleV1Mix
 
 final class ArticleV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-1';
+    const SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-2';
     const SCHEMA_CURIE = 'tmz:news:node:article';
     const SCHEMA_CURIE_MAJOR = 'tmz:news:node:article:v1';
     const MIXINS = [
@@ -36,6 +36,8 @@ final class ArticleV1 extends AbstractMessage
       'gdbots:ncr:mixin:publishable',
       'gdbots:ncr:mixin:sluggable:v1',
       'gdbots:ncr:mixin:sluggable',
+      'triniti:apollo:mixin:has-reactions:v1',
+      'triniti:apollo:mixin:has-reactions',
       'triniti:boost:mixin:sponsorable:v1',
       'triniti:boost:mixin:sponsorable',
       'triniti:canvas:mixin:has-blocks:v1',

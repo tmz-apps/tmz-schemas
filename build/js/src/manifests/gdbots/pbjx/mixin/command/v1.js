@@ -162,6 +162,7 @@ export default [
   'tmz:taxonomy:command:rename-channel:v1',
   'tmz:taxonomy:command:update-category:v1',
   'tmz:taxonomy:command:update-channel:v1',
+  'triniti:apollo:command:add-reactions:v1',
   'triniti:apollo:command:cast-vote:v1',
   'triniti:curator:command:remove-teaser-slotting:v1',
   'triniti:curator:command:sync-teaser:v1',

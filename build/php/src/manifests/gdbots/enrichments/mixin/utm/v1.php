@@ -12,6 +12,8 @@ declare(strict_types=1);
 return [
     'tmz:apollo:command:cast-vote:v1',
     'tmz:apollo:event:vote-casted:v1',
+    'triniti:apollo:command:add-reactions:v1',
     'triniti:apollo:command:cast-vote:v1',
+    'triniti:apollo:event:reactions-added:v1',
     'triniti:apollo:event:vote-casted:v1',
 ];

@@ -9,6 +9,7 @@
 export default [
   'tmz:apollo:node:poll-stats:v1',
   'tmz:apollo:node:poll:v1',
+  'tmz:apollo:node:reactions:v1',
   'tmz:boost:node:sponsor:v1',
   'tmz:canvas:node:page:v1',
   'tmz:curator:node:ad-widget:v1',
