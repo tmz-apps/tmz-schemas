@@ -6,7 +6,7 @@ declare(strict_types=1);
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "gdbots:iam:mixin:ios-app:v1"
- * @link https://schemas.tmz.com/json-schema/gdbots/iam/mixin/ios-app/1-0-3.json#
+ * @link https://schemas.tmz.com/json-schema/gdbots/iam/mixin/ios-app/1-0-4.json#
  */
 
 return [

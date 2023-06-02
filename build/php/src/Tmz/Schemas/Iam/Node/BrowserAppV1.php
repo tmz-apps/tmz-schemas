@@ -97,6 +97,13 @@ final class BrowserAppV1 extends AbstractMessage
                 Fb::create('fcm_api_key', T\TextType::create())
                     ->build(),
                 /*
+                 * An encrypted value of the service account file that can be obtained from the service accounts tab of the Firebase
+                 * console.
+                 * @link https://firebase.google.com/docs/cloud-messaging/auth-server
+                 */
+                Fb::create('fcm_auth_config', T\TextType::create())
+                    ->build(),
+                /*
                  * A unique identifier used to identify an app within a Firebase project that can be obtained
                  * from the Firebase console.
                  * @link https://firebase.google.com/docs/web/setup?authuser=0#config-object
