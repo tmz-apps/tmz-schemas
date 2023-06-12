@@ -89,6 +89,13 @@ export default class AndroidAppV1 extends Message {
         Fb.create('fcm_api_key', T.TextType.create())
           .build(),
         /*
+         * An encrypted value of the service account file that can be obtained from the service accounts tab of the Firebase
+         * console.
+         * @link https://firebase.google.com/docs/cloud-messaging/auth-server
+         */
+        Fb.create('fcm_auth_config', T.TextType.create())
+          .build(),
+        /*
          * A unique identifier for your Firebase project, used in requests to the FCM v1 HTTP endpoint.
          * @link https://firebase.google.com/docs/cloud-messaging/concept-options#projectid
          */
