@@ -122,7 +122,6 @@ return [
     'tmz:news:command:create-article:v1',
     'tmz:news:command:delete-article:v1',
     'tmz:news:command:expire-article:v1',
-    'tmz:news:command:inspect-article-seo:v1',
     'tmz:news:command:lock-article:v1',
     'tmz:news:command:mark-article-as-draft:v1',
     'tmz:news:command:mark-article-as-pending:v1',
