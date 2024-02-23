@@ -136,6 +136,7 @@ return [
     'tmz:news:event:article-published:v1',
     'tmz:news:event:article-renamed:v1',
     'tmz:news:event:article-scheduled:v1',
+    'tmz:news:event:article-seo-inspected:v1',
     'tmz:news:event:article-slotting-removed:v1',
     'tmz:news:event:article-stats-collected:v1',
     'tmz:news:event:article-unlocked:v1',
@@ -200,4 +201,5 @@ return [
     'triniti:ovp:event:transcription-completed:v1',
     'triniti:ovp:event:transcription-failed:v1',
     'triniti:ovp:event:transcription-started:v1',
+    'triniti:sys:event:seo-inspected:v1',
 ];
