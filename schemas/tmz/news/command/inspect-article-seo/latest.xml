@@ -6,7 +6,7 @@
   <schema id="pbj:tmz:news:command:inspect-article-seo:1-0-0">
     <mixins>
       <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
-      <curie-major>ttriniti:sys:command:inspect-seo:v1</curie-major>
+      <curie-major>triniti:sys:command:inspect-seo:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>
