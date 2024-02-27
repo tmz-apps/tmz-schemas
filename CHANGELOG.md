@@ -2,8 +2,6 @@
 
 
 ## v3.0.4
-* __Add Schemas:__
-  * `tmz:news:command:inspect-article-seo`
 * Use `triniti/schemas` v3.0.4
 
 
