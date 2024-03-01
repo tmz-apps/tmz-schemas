@@ -3,7 +3,7 @@
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "gdbots:forms:mixin:form:v1"
- * @link https://schemas.tmz.com/json-schema/gdbots/forms/mixin/form/1-0-3.json#
+ * @link https://schemas.tmz.com/json-schema/gdbots/forms/mixin/form/1-0-4.json#
  */
 
 export default [
