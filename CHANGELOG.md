@@ -3,7 +3,8 @@
 
 ## v3.0.4
 * Use `triniti/schemas` v3.0.4
-
+* Use `gdbots/schemas` v3.0.4
+*
 
 ## v3.0.3
 * Use `gdbots/schemas` v3.0.3
