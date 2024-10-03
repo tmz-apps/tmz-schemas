@@ -130,6 +130,24 @@ final class BrowserNotificationV1 extends AbstractMessage
                 Fb::create('require_interaction', T\BooleanType::create())
                     ->withDefault(true)
                     ->build(),
+                /*
+                 * The Braze campaign identifier is required if you wish to track campaign stats.
+                 */
+                Fb::create('braze_campaign_id', T\UuidType::create())
+                    ->useTypeDefault(false)
+                    ->build(),
+                /*
+                 * The Braze segment identifier that defines the target user segment for the message.
+                 */
+                Fb::create('braze_segment_id', T\UuidType::create())
+                    ->useTypeDefault(false)
+                    ->build(),
+                /*
+                 * The Braze message variation identifier is used when providing a campaign_id to specify which message variation
+                 * this message should be tracked under.
+                 */
+                Fb::create('braze_message_variation_id', T\StringType::create())
+                    ->build(),
             ],
             self::MIXINS
         );

@@ -131,6 +131,12 @@ final class BrowserAppV1 extends AbstractMessage
                 Fb::create('fcm_web_api_key', T\StringType::create())
                     ->pattern('^[\w\.-]+$')
                     ->build(),
+                /*
+                 * The Braze REST API Key (also known as an API Identifier) that is used to authenticate API requests to Braze.
+                 * This key should be encrypted for storage and decrypted before use in API calls.
+                 */
+                Fb::create('braze_api_key', T\TextType::create())
+                    ->build(),
             ],
             self::MIXINS
         );
