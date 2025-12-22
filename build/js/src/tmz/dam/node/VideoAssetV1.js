@@ -130,6 +130,11 @@ export default class VideoAssetV1 extends Message {
         Fb.create('duration', T.SmallIntType.create())
           .build(),
         /*
+         * Indicates whether this video is in vertical (portrait) orientation.
+         */
+        Fb.create('is_vertical', T.BooleanType.create())
+          .build(),
+        /*
          * Tags is a map that categorizes data or tracks references in
          * external systems. The tags names should be consistent and descriptive,
          * e.g. fb_user_id:123, salesforce_customer_id:456.

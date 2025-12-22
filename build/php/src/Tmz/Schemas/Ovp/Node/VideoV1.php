@@ -125,6 +125,11 @@ final class VideoV1 extends AbstractMessage
                  */
                 Fb::create('poster_image_ref', T\NodeRefType::create())
                     ->build(),
+                /*
+                 * Indicates whether this video is in vertical (portrait) orientation.
+                 */
+                Fb::create('is_vertical', T\BooleanType::create())
+                    ->build(),
                 Fb::create('is_live', T\BooleanType::create())
                     ->build(),
                 /*
