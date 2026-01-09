@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-2.json#
 namespace Tmz\Schemas\Dam\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -18,7 +18,7 @@ use Triniti\Schemas\Ovp\Enum\TranscriptionStatus;
 
 final class VideoAssetV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:dam:node:video-asset:1-0-1';
+    const SCHEMA_ID = 'pbj:tmz:dam:node:video-asset:1-0-2';
     const SCHEMA_CURIE = 'tmz:dam:node:video-asset';
     const SCHEMA_CURIE_MAJOR = 'tmz:dam:node:video-asset:v1';
     const MIXINS = [

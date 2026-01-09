@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-3.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-4.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
@@ -356,7 +356,7 @@ export default class VideoV1 extends Message {
 }
 
 const M = VideoV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:ovp:node:video:1-0-3';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:ovp:node:video:1-0-4';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:ovp:node:video';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:ovp:node:video:v1';
 M.prototype.MIXINS = M.MIXINS = [
