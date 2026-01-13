@@ -33,6 +33,7 @@
   "scripts": {
     "pbjc": [
       "vendor/bin/pbjc",
+      "git add .",
       "@test"
     ],
     "test": [
