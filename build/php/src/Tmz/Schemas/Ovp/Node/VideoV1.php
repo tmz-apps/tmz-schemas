@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-3.json#
+// @link https://schemas.tmz.com/json-schema/tmz/ovp/node/video/1-0-4.json#
 namespace Tmz\Schemas\Ovp\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -17,7 +17,7 @@ use Triniti\Schemas\Ovp\Mixin\Video\VideoV1Mixin as TrinitiOvpVideoV1Mixin;
 
 final class VideoV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:ovp:node:video:1-0-3';
+    const SCHEMA_ID = 'pbj:tmz:ovp:node:video:1-0-4';
     const SCHEMA_CURIE = 'tmz:ovp:node:video';
     const SCHEMA_CURIE_MAJOR = 'tmz:ovp:node:video:v1';
     const MIXINS = [
@@ -124,6 +124,11 @@ final class VideoV1 extends AbstractMessage
                  * A reference to the image asset to use as the poster.
                  */
                 Fb::create('poster_image_ref', T\NodeRefType::create())
+                    ->build(),
+                /*
+                 * Indicates whether this video is in vertical (portrait) orientation.
+                 */
+                Fb::create('is_vertical', T\BooleanType::create())
                     ->build(),
                 Fb::create('is_live', T\BooleanType::create())
                     ->build(),
