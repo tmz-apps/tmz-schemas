@@ -39,13 +39,5 @@
       "vendor/bin/phpunit",
       "npm test"
     ]
-  },
-  "config": {
-    "audit":{
-      "ignore": {
-        "PKSA-yhcn-xrg3-68b1": "unnecessary",
-        "PKSA-2wrf-1xmk-1pky": "unnecessary"
-      }
-    }
   }
 }
