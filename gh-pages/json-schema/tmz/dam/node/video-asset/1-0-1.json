@@ -211,10 +211,6 @@
       "maximum": 65535,
       "description": "Duration of the video in seconds."
     },
-    "is_vertical": {
-      "type": "boolean",
-      "description": "Indicates whether this video is in vertical (portrait) orientation."
-    },
     "tags": {
       "type": "object",
       "patternProperties": {
