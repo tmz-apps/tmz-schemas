@@ -1,6 +1,6 @@
 {
   "name": "@tmz/schemas",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "main": "./index.js",
   "dependencies": {
     "@gdbots/schemas": "3.0.5",
-    "@triniti/schemas": "3.0.5"
+    "@triniti/schemas": "3.0.6"
   },
   "devDependencies": {
     "@babel/cli": "^7",

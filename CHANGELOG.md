@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v3.0.6
+* Use `triniti/schemas` v3.0.6
+
+
 ## v3.0.5
 * Use `triniti/schemas` v3.0.5
 * Use `gdbots/schemas` v3.0.5

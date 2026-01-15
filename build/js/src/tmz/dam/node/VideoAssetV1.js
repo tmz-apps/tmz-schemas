@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/video-asset/1-0-2.json#
 import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
@@ -130,6 +130,11 @@ export default class VideoAssetV1 extends Message {
         Fb.create('duration', T.SmallIntType.create())
           .build(),
         /*
+         * Indicates whether this video is in vertical (portrait) orientation.
+         */
+        Fb.create('is_vertical', T.BooleanType.create())
+          .build(),
+        /*
          * Tags is a map that categorizes data or tracks references in
          * external systems. The tags names should be consistent and descriptive,
          * e.g. fb_user_id:123, salesforce_customer_id:456.
@@ -163,7 +168,7 @@ export default class VideoAssetV1 extends Message {
 }
 
 const M = VideoAssetV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:node:video-asset:1-0-1';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:node:video-asset:1-0-2';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:dam:node:video-asset';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:dam:node:video-asset:v1';
 M.prototype.MIXINS = M.MIXINS = [

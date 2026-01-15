@@ -3,7 +3,7 @@
  * @link https://github.com/gdbots/pbjc-php
  *
  * Returns an array of curies using mixin "triniti:ovp:mixin:video:v1"
- * @link https://schemas.tmz.com/json-schema/triniti/ovp/mixin/video/1-0-5.json#
+ * @link https://schemas.tmz.com/json-schema/triniti/ovp/mixin/video/1-0-6.json#
  */
 
 export default [
