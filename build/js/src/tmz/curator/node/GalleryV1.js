@@ -157,6 +157,9 @@ export default class GalleryV1 extends Message {
           .asAMap()
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
+        Fb.create('mention_link_enabled', T.BooleanType.create())
+          .withDefault(true)
+          .build(),
         /*
          * A map containing (HTML, JavaScript, CSS, etc.) that is injected into
          * an application at a named insertion point, e.g. "html_head" or "footer".
@@ -226,9 +229,6 @@ export default class GalleryV1 extends Message {
           .asASet()
           .format(Format.HASHTAG)
           .build(),
-        Fb.create('mentionlink_enabled', T.BooleanType.create())
-          .withDefault(true)
-          .build(),
       ],
       this.MIXINS,
     );
@@ -258,6 +258,8 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:boost:mixin:sponsorable',
   'triniti:common:mixin:advertising:v1',
   'triniti:common:mixin:advertising',
+  'tmz:common:mixin:advertising-mention-link:v1',
+  'tmz:common:mixin:advertising-mention-link',
   'triniti:common:mixin:custom-code:v1',
   'triniti:common:mixin:custom-code',
   'triniti:common:mixin:seo:v1',

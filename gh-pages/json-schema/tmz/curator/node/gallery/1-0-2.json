@@ -255,6 +255,10 @@
       },
       "additionalProperties": false
     },
+    "mention_link_enabled": {
+      "type": "boolean",
+      "default": true
+    },
     "custom_code": {
       "type": "object",
       "patternProperties": {
@@ -368,10 +372,6 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false
-    },
-    "mentionlink_enabled": {
-      "type": "boolean",
-      "default": true
     }
   },
   "required": [

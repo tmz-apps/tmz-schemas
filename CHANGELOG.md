@@ -2,9 +2,13 @@
 
 
 ## v3.0.7
-* __Modify Schemas:__                                                                                                                                                                                                  
-  * `tmz:curator:node:gallery` patch revision `1-0-2`                                                                                                                                                                  
+* __Add Schemas:__
+  * `tmz:common:mixin:advertising-mention-link`
+    * Extends `triniti:common:mixin:advertising`.
     * Add `mention_link_enabled` boolean field.
+* __Modify Schemas:__
+  * `tmz:curator:node:gallery` patch revision `1-0-2`
+    * Add mixin `tmz:common:mixin:advertising-mention-link:v1`.
 
 
 ## v3.0.6
