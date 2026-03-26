@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v3.0.7
+* __Modify Schemas:__                                                                                                                                                                                                  
+  * `tmz:curator:node:gallery` patch revision `1-0-2`                                                                                                                                                                  
+    * Add `mention_link_enabled` boolean field.
+
+
 ## v3.0.6
 * Use `triniti/schemas` v3.0.6
 
