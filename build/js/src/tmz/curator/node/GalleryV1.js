@@ -158,7 +158,6 @@ export default class GalleryV1 extends Message {
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
         Fb.create('mentionlink_enabled', T.BooleanType.create())
-          .withDefault(true)
           .build(),
         /*
          * A map containing (HTML, JavaScript, CSS, etc.) that is injected into

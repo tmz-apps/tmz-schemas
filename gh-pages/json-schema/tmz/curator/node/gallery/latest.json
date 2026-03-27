@@ -256,8 +256,7 @@
       "additionalProperties": false
     },
     "mentionlink_enabled": {
-      "type": "boolean",
-      "default": true
+      "type": "boolean"
     },
     "custom_code": {
       "type": "object",
