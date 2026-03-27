@@ -38,8 +38,8 @@ final class GalleryV1 extends AbstractMessage
       'triniti:boost:mixin:sponsorable',
       'triniti:common:mixin:advertising:v1',
       'triniti:common:mixin:advertising',
-      'tmz:common:mixin:advertising-mention-link:v1',
-      'tmz:common:mixin:advertising-mention-link',
+      'tmz:common:mixin:mentionlink:v1',
+      'tmz:common:mixin:mentionlink',
       'triniti:common:mixin:custom-code:v1',
       'triniti:common:mixin:custom-code',
       'triniti:common:mixin:seo:v1',
@@ -205,7 +205,7 @@ final class GalleryV1 extends AbstractMessage
                     ->asAMap()
                     ->pattern('^[\w\/\.:-]+$')
                     ->build(),
-                Fb::create('mention_link_enabled', T\BooleanType::create())
+                Fb::create('mentionlink_enabled', T\BooleanType::create())
                     ->withDefault(true)
                     ->build(),
                 /*

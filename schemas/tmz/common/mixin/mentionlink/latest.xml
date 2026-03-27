@@ -3,10 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:tmz:common:mixin:advertising-mention-link:1-0-0" mixin="true"
-      extends="triniti:common:mixin:advertising:v1">
+  <schema id="pbj:tmz:common:mixin:mentionlink:1-0-0" mixin="true">
     <fields>
-      <field name="mention_link_enabled" type="boolean">
+      <field name="mentionlink_enabled" type="boolean">
         <default>true</default>
       </field>
     </fields>
