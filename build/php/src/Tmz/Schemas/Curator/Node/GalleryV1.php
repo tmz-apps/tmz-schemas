@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/curator/node/gallery/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/node/gallery/1-0-2.json#
 namespace Tmz\Schemas\Curator\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\Curator\Mixin\Gallery\GalleryV1Mixin as TrinitiCuratorGaller
 
 final class GalleryV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:curator:node:gallery:1-0-1';
+    const SCHEMA_ID = 'pbj:tmz:curator:node:gallery:1-0-2';
     const SCHEMA_CURIE = 'tmz:curator:node:gallery';
     const SCHEMA_CURIE_MAJOR = 'tmz:curator:node:gallery:v1';
     const MIXINS = [
@@ -38,6 +38,8 @@ final class GalleryV1 extends AbstractMessage
       'triniti:boost:mixin:sponsorable',
       'triniti:common:mixin:advertising:v1',
       'triniti:common:mixin:advertising',
+      'tmz:common:mixin:mentionlink:v1',
+      'tmz:common:mixin:mentionlink',
       'triniti:common:mixin:custom-code:v1',
       'triniti:common:mixin:custom-code',
       'triniti:common:mixin:seo:v1',
@@ -202,6 +204,8 @@ final class GalleryV1 extends AbstractMessage
                 Fb::create('dfp_cust_params', T\StringType::create())
                     ->asAMap()
                     ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                Fb::create('mentionlink_enabled', T\BooleanType::create())
                     ->build(),
                 /*
                  * A map containing (HTML, JavaScript, CSS, etc.) that is injected into

@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v3.0.7
+* __Add Schemas:__
+  * `tmz:common:mixin:mentionlink`
+    * Add `mentionlink_enabled` boolean field.
+* __Modify Schemas:__
+  * `tmz:curator:node:gallery` patch revision `1-0-2`
+    * Add mixin `tmz:common:mixin:mentionlink:v1`.
+
+
 ## v3.0.6
 * Use `triniti/schemas` v3.0.6
 

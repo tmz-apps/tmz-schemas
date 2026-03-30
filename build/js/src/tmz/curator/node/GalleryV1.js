@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/curator/node/gallery/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/node/gallery/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
@@ -157,6 +157,8 @@ export default class GalleryV1 extends Message {
           .asAMap()
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
+        Fb.create('mentionlink_enabled', T.BooleanType.create())
+          .build(),
         /*
          * A map containing (HTML, JavaScript, CSS, etc.) that is injected into
          * an application at a named insertion point, e.g. "html_head" or "footer".
@@ -233,7 +235,7 @@ export default class GalleryV1 extends Message {
 }
 
 const M = GalleryV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:curator:node:gallery:1-0-1';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:curator:node:gallery:1-0-2';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:curator:node:gallery';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:curator:node:gallery:v1';
 M.prototype.MIXINS = M.MIXINS = [
@@ -255,6 +257,8 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:boost:mixin:sponsorable',
   'triniti:common:mixin:advertising:v1',
   'triniti:common:mixin:advertising',
+  'tmz:common:mixin:mentionlink:v1',
+  'tmz:common:mixin:mentionlink',
   'triniti:common:mixin:custom-code:v1',
   'triniti:common:mixin:custom-code',
   'triniti:common:mixin:seo:v1',
