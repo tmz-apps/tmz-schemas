@@ -5,9 +5,7 @@
 
   <schema id="pbj:tmz:common:mixin:mentionlink:1-0-0" mixin="true">
     <fields>
-      <field name="mentionlink_enabled" type="boolean">
-        <default>false</default>
-      </field>
+      <field name="mentionlink_enabled" type="boolean"/>
     </fields>
   </schema>
 </pbj-schema>
