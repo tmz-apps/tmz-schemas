@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v3.0.8
+* Use `triniti/schemas` v3.0.7
+
+
 ## v3.0.7
 * __Add Schemas:__
   * `tmz:common:mixin:mentionlink`
