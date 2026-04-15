@@ -1,8 +1,9 @@
 # CHANGELOG
 
 
-## v3.0.0
-* Use `triniti/schemas` v3.0.7 (take 2)
+## v3.0.9
+* Use PHP `triniti/schemas` v3.0.7
+* Rebuild generated schemas with `pbjc`
 
 
 ## v3.0.8
