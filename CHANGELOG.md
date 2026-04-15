@@ -2,8 +2,7 @@
 
 
 ## v3.0.9
-* Use PHP `triniti/schemas` v3.0.7
-* Rebuild generated schemas with `pbjc`
+* Use PHP `triniti/schemas` v3.0.7 and rebuild generated schemas with `pbjc`
 
 
 ## v3.0.8
