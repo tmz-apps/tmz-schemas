@@ -277,6 +277,18 @@
       "uniqueItems": true,
       "additionalProperties": false
     },
+    "seo_alternate_urls": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+        }
+      ],
+      "uniqueItems": true,
+      "additionalProperties": false,
+      "description": "Alternate URLs for SEO. Entries should be fully-qualified URLs."
+    },
     "is_unlisted": {
       "type": "boolean",
       "description": "Unlisted content will not show up in any search results but can still be viewed if you know the URL."
