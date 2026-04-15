@@ -181,6 +181,13 @@ export default class ChannelTeaserV1 extends Message {
           .asASet()
           .build(),
         /*
+         * Alternate URLs for SEO. Entries should be fully-qualified URLs.
+         */
+        Fb.create('seo_alternate_urls', T.StringType.create())
+          .asASet()
+          .format(Format.URL)
+          .build(),
+        /*
          * Unlisted content will not show up in any search results
          * but can still be viewed if you know the URL.
          */
