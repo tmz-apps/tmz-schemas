@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v3.0.10
+* Use `triniti/schemas` v3.0.8
+* __Add Schemas:__
+  * `tmz:curator:node:live-blog-update-teaser`
+* Timeline live blog support is inherited from `triniti:curator:mixin:timeline:v1`.
+
+
 ## v3.0.9
 * Use PHP `triniti/schemas` v3.0.7 and rebuild generated schemas with `pbjc`
 
