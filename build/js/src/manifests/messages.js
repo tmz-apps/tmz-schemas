@@ -317,6 +317,7 @@ export default {
   'tmz:curator:node:gridler-widget:v1': () => import('@tmz/schemas/tmz/curator/node/GridlerWidgetV1.js'),
   'tmz:curator:node:hero-bar-widget:v1': () => import('@tmz/schemas/tmz/curator/node/HeroBarWidgetV1.js'),
   'tmz:curator:node:link-teaser:v1': () => import('@tmz/schemas/tmz/curator/node/LinkTeaserV1.js'),
+  'tmz:curator:node:live-blog-update-teaser:v1': () => import('@tmz/schemas/tmz/curator/node/LiveBlogUpdateTeaserV1.js'),
   'tmz:curator:node:media-list-widget:v1': () => import('@tmz/schemas/tmz/curator/node/MediaListWidgetV1.js'),
   'tmz:curator:node:page-teaser:v1': () => import('@tmz/schemas/tmz/curator/node/PageTeaserV1.js'),
   'tmz:curator:node:person-teaser:v1': () => import('@tmz/schemas/tmz/curator/node/PersonTeaserV1.js'),

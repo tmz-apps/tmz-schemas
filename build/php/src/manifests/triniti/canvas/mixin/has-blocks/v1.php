@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 return [
     'tmz:canvas:node:page:v1',
+    'tmz:curator:node:live-blog-update-teaser:v1',
     'tmz:news:node:article:v1',
     'tmz:people:node:person:v1',
 ];
