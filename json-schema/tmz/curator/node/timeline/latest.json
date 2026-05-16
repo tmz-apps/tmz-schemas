@@ -145,6 +145,10 @@
       "type": "boolean",
       "default": true
     },
+    "is_live_blog": {
+      "type": "boolean",
+      "description": "When true, this timeline represents a live blog parent; individual updates are authored as teasers referencing this timeline."
+    },
     "description": {
       "type": "string",
       "minLength": 0,
