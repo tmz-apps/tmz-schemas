@@ -30,6 +30,7 @@ return [
     'tmz:curator:node:gridler-widget:v1',
     'tmz:curator:node:hero-bar-widget:v1',
     'tmz:curator:node:link-teaser:v1',
+    'tmz:curator:node:live-blog-update-teaser:v1',
     'tmz:curator:node:media-list-widget:v1',
     'tmz:curator:node:page-teaser:v1',
     'tmz:curator:node:person-teaser:v1',

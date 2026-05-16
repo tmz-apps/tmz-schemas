@@ -16,6 +16,7 @@ export default [
   'tmz:curator:node:gallery-teaser:v1',
   'tmz:curator:node:gallery:v1',
   'tmz:curator:node:link-teaser:v1',
+  'tmz:curator:node:live-blog-update-teaser:v1',
   'tmz:curator:node:page-teaser:v1',
   'tmz:curator:node:person-teaser:v1',
   'tmz:curator:node:poll-teaser:v1',

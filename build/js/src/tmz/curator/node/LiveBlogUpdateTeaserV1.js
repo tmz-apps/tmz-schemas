@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/node/live-blog-update-teaser/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
@@ -6,10 +6,10 @@ import Message from '@gdbots/pbj/Message.js';
 import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus.js';
 import Schema from '@gdbots/pbj/Schema.js';
 import T from '@gdbots/pbj/types/index.js';
-import TrinitiCuratorTimelineV1Mixin from '@triniti/schemas/triniti/curator/mixin/timeline/TimelineV1Mixin.js';
+import TrinitiCuratorLiveBlogUpdateTeaserV1Mixin from '@triniti/schemas/triniti/curator/mixin/live-blog-update-teaser/LiveBlogUpdateTeaserV1Mixin.js';
 import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier.js';
 
-export default class TimelineV1 extends Message {
+export default class LiveBlogUpdateTeaserV1 extends Message {
   /**
    * @private
    *
@@ -64,31 +64,58 @@ export default class TimelineV1 extends Message {
           .build(),
         Fb.create('title', T.StringType.create())
           .build(),
-        Fb.create('display_title', T.StringType.create())
+        /*
+         * Determines the sequence that this teaser node will be rendered
+         * in lists, search results, etc. It DOES NOT control visibility or
+         * publishing. A date was used over an integer (e.g. seq_no) for
+         * blog-like, reverse chronological, clarity in sorting.
+         */
+        Fb.create('order_date', T.DateTimeType.create())
+          .build(),
+        /*
+         * A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where
+         * teasers will render in lists that use slotting. We call it slotting vs
+         * sticky or pinning as that is generally just one at a time.
+         */
+        Fb.create('slotting', T.TinyIntType.create())
+          .asAMap()
           .build(),
         /*
          * A reference to the image asset to use for widgets, sharing, seo.
          */
         Fb.create('image_ref', T.NodeRefType.create())
           .build(),
-        Fb.create('allow_comments', T.BooleanType.create())
-          .withDefault(true)
-          .build(),
         /*
-         * When true, this timeline represents a live blog parent; individual updates
-         * are authored as teasers referencing this timeline.
-         */
-        Fb.create('is_live_blog', T.BooleanType.create())
-          .build(),
-        /*
-         * A description of the timeline (usually a few sentences). It should typically
+         * A description of the teaser (usually a few sentences). It should typically
          * not have HTML as it is used in metadata, feeds, SERP and social.
          */
         Fb.create('description', T.TextType.create())
           .maxLength(5000)
           .build(),
-        Fb.create('related_timeline_refs', T.NodeRefType.create())
-          .asAList()
+        /*
+         * Text to be used to caption the teaser.
+         */
+        Fb.create('caption', T.StringType.create())
+          .build(),
+        /*
+         * Text to be used for the call to action.
+         */
+        Fb.create('cta_text', T.StringType.create())
+          .build(),
+        /*
+         * Text to be used to credit the teaser source.
+         */
+        Fb.create('credit', T.StringType.create())
+          .build(),
+        /*
+         * URL to be used to link to the teaser source.
+         */
+        Fb.create('credit_url', T.TextType.create())
+          .format(Format.URL)
+          .build(),
+        Fb.create('gallery_ref', T.NodeRefType.create())
+          .build(),
+        Fb.create('timeline_ref', T.NodeRefType.create())
           .build(),
         /*
          * Tags is a map that categorizes data or tracks references in
@@ -103,17 +130,13 @@ export default class TimelineV1 extends Message {
           .build(),
         Fb.create('published_at', T.DateTimeType.create())
           .build(),
-        /*
-         * The "slug" is a secondary identifier, typically used in a url:
-         * - MUST be url friendly
-         * - SHOULD NOT be case sensitive
-         * - SHOULD be unique within the message curie namespace
-         * - CAN be changed, but in practice once nodes are published you should avoid it if possible
-         */
-        Fb.create('slug', T.StringType.create())
-          .format(Format.SLUG)
-          .build(),
         Fb.create('sponsor_ref', T.NodeRefType.create())
+          .build(),
+        Fb.create('blocks', T.MessageType.create())
+          .asAList()
+          .anyOfCuries([
+            'triniti:canvas:mixin:block',
+          ])
           .build(),
         Fb.create('ads_enabled', T.BooleanType.create())
           .withDefault(true)
@@ -165,19 +188,17 @@ export default class TimelineV1 extends Message {
         Fb.create('is_unlisted', T.BooleanType.create())
           .build(),
         /*
+         * A swipe (aka banner/label/overlay) is a short string used in a visual treatment
+         * on the node. e.g. "Exclusive", "NSFW", "Breaking Bad Mojo".
+         */
+        Fb.create('swipe', T.StringType.create())
+          .build(),
+        /*
          * A string used to indicate that a visual treatment should be
          * applied to a piece of content, e.g. "christmas" or "taco".
          */
         Fb.create('theme', T.StringType.create())
           .format(Format.SLUG)
-          .build(),
-        /*
-         * Determines the sequence that this teaserable node will be rendered
-         * in lists, search results, etc. It DOES NOT control visibility or
-         * publishing. A date was used over an integer (e.g. seq_no) for
-         * blog-like, reverse chronological, clarity in sorting.
-         */
-        Fb.create('order_date', T.DateTimeType.create())
           .build(),
         Fb.create('primary_person_refs', T.NodeRefType.create())
           .asASet()
@@ -200,33 +221,35 @@ export default class TimelineV1 extends Message {
   }
 }
 
-const M = TimelineV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:curator:node:timeline:1-0-0';
-M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:curator:node:timeline';
-M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:curator:node:timeline:v1';
+const M = LiveBlogUpdateTeaserV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:curator:node:live-blog-update-teaser:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:curator:node:live-blog-update-teaser';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:curator:node:live-blog-update-teaser:v1';
 M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node:v1',
   'gdbots:ncr:mixin:node',
-  'triniti:curator:mixin:timeline:v1',
-  'triniti:curator:mixin:timeline',
+  'triniti:curator:mixin:teaser:v1',
+  'triniti:curator:mixin:teaser',
+  'triniti:curator:mixin:live-blog-update-teaser:v1',
+  'triniti:curator:mixin:live-blog-update-teaser',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
   'gdbots:ncr:mixin:expirable:v1',
   'gdbots:ncr:mixin:expirable',
   'gdbots:ncr:mixin:publishable:v1',
   'gdbots:ncr:mixin:publishable',
-  'gdbots:ncr:mixin:sluggable:v1',
-  'gdbots:ncr:mixin:sluggable',
   'triniti:boost:mixin:sponsorable:v1',
   'triniti:boost:mixin:sponsorable',
+  'triniti:canvas:mixin:has-blocks:v1',
+  'triniti:canvas:mixin:has-blocks',
   'triniti:common:mixin:advertising:v1',
   'triniti:common:mixin:advertising',
   'triniti:common:mixin:seo:v1',
   'triniti:common:mixin:seo',
+  'triniti:common:mixin:swipeable:v1',
+  'triniti:common:mixin:swipeable',
   'triniti:common:mixin:themeable:v1',
   'triniti:common:mixin:themeable',
-  'triniti:curator:mixin:teaserable:v1',
-  'triniti:curator:mixin:teaserable',
   'triniti:people:mixin:has-people:v1',
   'triniti:people:mixin:has-people',
   'triniti:taxonomy:mixin:categorizable:v1',
@@ -239,7 +262,7 @@ M.prototype.MIXINS = M.MIXINS = [
 
 GdbotsNcrNodeV1Mixin(M);
 
-TrinitiCuratorTimelineV1Mixin(M);
+TrinitiCuratorLiveBlogUpdateTeaserV1Mixin(M);
 
 Object.freeze(M);
 Object.freeze(M.prototype);

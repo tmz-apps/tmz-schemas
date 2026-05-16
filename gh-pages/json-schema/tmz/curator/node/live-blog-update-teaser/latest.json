@@ -1,12 +1,12 @@
 {
-  "id": "https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/tmz/curator/node/live-blog-update-teaser/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:tmz:curator:node:timeline:1-0-0"
+      "default": "pbj:tmz:curator:node:live-blog-update-teaser:1-0-0"
     },
     "_id": {
       "type": "string",
@@ -131,39 +131,65 @@
       "minLength": 0,
       "maxLength": 255
     },
-    "display_title": {
+    "order_date": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255
+      "format": "date-time",
+      "description": "Determines the sequence that this teaser node will be rendered in lists, search results, etc. It DOES NOT control visibility or publishing. A date was used over an integer (e.g. seq_no) for blog-like, reverse chronological, clarity in sorting."
+    },
+    "slotting": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z_]{1}[\\w\\.:-]+$": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "additionalProperties": false,
+      "description": "A map of integers, e.g. {home: 1, sports: 5, tv: 9}, that determine where teasers will render in lists that use slotting. We call it slotting vs sticky or pinning as that is generally just one at a time."
     },
     "image_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the image asset to use for widgets, sharing, seo."
     },
-    "allow_comments": {
-      "type": "boolean",
-      "default": true
-    },
-    "is_live_blog": {
-      "type": "boolean",
-      "description": "When true, this timeline represents a live blog parent; individual updates are authored as teasers referencing this timeline."
-    },
     "description": {
       "type": "string",
       "minLength": 0,
       "maxLength": 5000,
-      "description": "A description of the timeline (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social."
+      "description": "A description of the teaser (usually a few sentences). It should typically not have HTML as it is used in metadata, feeds, SERP and social."
     },
-    "related_timeline_refs": {
-      "type": "array",
-      "items": [
-        {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
-        }
-      ],
-      "additionalProperties": false
+    "caption": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used to caption the teaser."
+    },
+    "cta_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used for the call to action."
+    },
+    "credit": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text to be used to credit the teaser source."
+    },
+    "credit_url": {
+      "type": "string",
+      "pattern": "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "description": "URL to be used to link to the teaser source."
+    },
+    "gallery_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$"
+    },
+    "timeline_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$"
     },
     "tags": {
       "type": "object",
@@ -184,16 +210,18 @@
       "type": "string",
       "format": "date-time"
     },
-    "slug": {
-      "type": "string",
-      "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
-      "minLength": 0,
-      "maxLength": 255,
-      "description": "The \"slug\" is a secondary identifier, typically used in a url: - MUST be url friendly - SHOULD NOT be case sensitive - SHOULD be unique within the message curie namespace - CAN be changed, but in practice once nodes are published you should avoid it if possible"
-    },
     "sponsor_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$"
+    },
+    "blocks": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/block"
+        }
+      ],
+      "additionalProperties": false
     },
     "ads_enabled": {
       "type": "boolean",
@@ -266,17 +294,18 @@
       "type": "boolean",
       "description": "Unlisted content will not show up in any search results but can still be viewed if you know the URL."
     },
+    "swipe": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "A swipe (aka banner/label/overlay) is a short string used in a visual treatment on the node. e.g. \"Exclusive\", \"NSFW\", \"Breaking Bad Mojo\"."
+    },
     "theme": {
       "type": "string",
       "pattern": "^([\\w\\/-]|[\\w-][\\w\\/-]*[\\w-])$",
       "minLength": 0,
       "maxLength": 255,
       "description": "A string used to indicate that a visual treatment should be applied to a piece of content, e.g. \"christmas\" or \"taco\"."
-    },
-    "order_date": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Determines the sequence that this teaserable node will be rendered in lists, search results, etc. It DOES NOT control visibility or publishing. A date was used over an integer (e.g. seq_no) for blog-like, reverse chronological, clarity in sorting."
     },
     "primary_person_refs": {
       "type": "array",
@@ -332,5 +361,18 @@
     "_schema",
     "_id"
   ],
+  "definitions": {
+    "block": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/canvas/mixin/block/1-0-0.json#"
+        },
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/canvas/mixin/block/1-0-1.json#"
+        }
+      ]
+    }
+  },
   "additionalProperties": false
 }
