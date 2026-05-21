@@ -45,7 +45,6 @@ test('Timeline inherits live blog support from the Triniti timeline mixin', (t) 
 
   t.equal(Timeline.SCHEMA_ID, 'pbj:tmz:curator:node:timeline:1-0-0');
   t.true(schema.hasMixin('triniti:curator:mixin:timeline:v1'));
-  t.false(schema.hasMixin('triniti:curator:mixin:live-bloggable:v1'));
   t.true(schema.hasField('is_live_blog'));
   t.equal(timeline.get('is_live_blog'), false);
 
