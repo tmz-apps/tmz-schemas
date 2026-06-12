@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-2.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-3.json#
 namespace Tmz\Schemas\News\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\News\Mixin\Article\ArticleV1Mixin as TrinitiNewsArticleV1Mix
 
 final class ArticleV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-2';
+    const SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-3';
     const SCHEMA_CURIE = 'tmz:news:node:article';
     const SCHEMA_CURIE_MAJOR = 'tmz:news:node:article:v1';
     const MIXINS = [
@@ -44,6 +44,8 @@ final class ArticleV1 extends AbstractMessage
       'triniti:canvas:mixin:has-blocks',
       'triniti:common:mixin:advertising:v1',
       'triniti:common:mixin:advertising',
+      'tmz:common:mixin:advertising:v1',
+      'tmz:common:mixin:advertising',
       'triniti:common:mixin:seo:v1',
       'triniti:common:mixin:seo',
       'triniti:common:mixin:swipeable:v1',
@@ -278,6 +280,8 @@ final class ArticleV1 extends AbstractMessage
                 Fb::create('dfp_cust_params', T\StringType::create())
                     ->asAMap()
                     ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                Fb::create('shopsense_enabled', T\BooleanType::create())
                     ->build(),
                 Fb::create('seo_title', T\StringType::create())
                     ->build(),

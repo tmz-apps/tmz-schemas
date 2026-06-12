@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v3.0.11
+* __Add Schemas:__
+  * `tmz:common:mixin:advertising`
+    * Add `shopsense_enabled` boolean field.
+* __Modify Schemas:__
+  * `tmz:news:node:article` patch revision `1-0-3`
+    * Add mixin `tmz:common:mixin:advertising:v1`.
+
+
 ## v3.0.10
 * Use `triniti/schemas` v3.0.8
 * __Add Schemas:__

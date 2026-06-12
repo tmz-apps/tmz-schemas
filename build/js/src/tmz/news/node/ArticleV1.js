@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-2.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-3.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
@@ -223,6 +223,8 @@ export default class ArticleV1 extends Message {
           .asAMap()
           .pattern('^[\\w\\/\\.:-]+$')
           .build(),
+        Fb.create('shopsense_enabled', T.BooleanType.create())
+          .build(),
         Fb.create('seo_title', T.StringType.create())
           .build(),
         /*
@@ -332,7 +334,7 @@ export default class ArticleV1 extends Message {
 }
 
 const M = ArticleV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-2';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-3';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:news:node:article';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:news:node:article:v1';
 M.prototype.MIXINS = M.MIXINS = [
@@ -360,6 +362,8 @@ M.prototype.MIXINS = M.MIXINS = [
   'triniti:canvas:mixin:has-blocks',
   'triniti:common:mixin:advertising:v1',
   'triniti:common:mixin:advertising',
+  'tmz:common:mixin:advertising:v1',
+  'tmz:common:mixin:advertising',
   'triniti:common:mixin:seo:v1',
   'triniti:common:mixin:seo',
   'triniti:common:mixin:swipeable:v1',
