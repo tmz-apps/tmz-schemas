@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:tmz:canvas:mixin:block-has-search-request:1-0-0" mixin="true">
+    <fields>
+      <field name="prefetched_nodes" type="message" rule="list">
+        <description>
+          When nodes have been acquired by another process you can populate
+          this field instead of "search_request".
+        </description>
+        <any-of>
+          <curie>gdbots:ncr:mixin:node</curie>
+        </any-of>
+      </field>
+      <field name="search_request" type="message">
+        <description>
+          The request that produces the nodes this block renders. The request
+          curie determines the content type (search-articles-request,
+          search-videos-request, etc) and its filters (category_refs, channel_ref,
+          person_refs, timeline_ref, q, count, sort) determine the source.
+        </description>
+        <any-of>
+          <curie>triniti:curator:mixin:widget-search-request</curie>
+        </any-of>
+      </field>
+    </fields>
+  </schema>
+</pbj-schema>

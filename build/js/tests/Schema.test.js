@@ -8,6 +8,7 @@ import MessageResolver from '@gdbots/pbj/MessageResolver.js';
 import '@tmz/schemas';
 import Timeline from '../src/tmz/curator/node/TimelineV1.js';
 import LiveBlogUpdateTeaser from '../src/tmz/curator/node/LiveBlogUpdateTeaserV1.js';
+import SliderBlock from '../src/tmz/canvas/block/SliderBlockV1.js';
 
 
 async function resolveImport(resolver) {
@@ -71,6 +72,28 @@ test('Live blog update teaser has body content and no target behavior', (t) => {
   t.true(Object.prototype.hasOwnProperty.call(uriTemplateVars, '_id'));
   t.true(Object.prototype.hasOwnProperty.call(uriTemplateVars, 'timeline_ref'));
   t.equal(uriTemplateVars.timeline_ref, '');
+
+  t.end();
+});
+
+test('Slider block is a canvas block that sources nodes from a search request', (t) => {
+  const schema = SliderBlock.schema();
+  const block = SliderBlock.create();
+
+  t.equal(SliderBlock.SCHEMA_ID, 'pbj:tmz:canvas:block:slider-block:1-0-0');
+  t.true(schema.hasMixin('triniti:canvas:mixin:block:v1'));
+  t.true(schema.hasMixin('tmz:canvas:mixin:block-has-search-request:v1'));
+  t.true(schema.hasField('etag'));
+  t.true(schema.hasField('aside'));
+  t.true(schema.hasField('search_request'));
+  t.true(schema.hasField('prefetched_nodes'));
+  t.true(schema.hasField('show_header'));
+  t.true(schema.hasField('header_text'));
+  t.true(schema.getField('prefetched_nodes').isAList());
+  t.deepEqual(schema.getField('search_request').getAnyOfCuries(), ['triniti:curator:mixin:widget-search-request']);
+  t.deepEqual(schema.getField('prefetched_nodes').getAnyOfCuries(), ['gdbots:ncr:mixin:node']);
+  t.equal(block.get('show_header'), true);
+  t.false(block.has('header_text'));
 
   t.end();
 });

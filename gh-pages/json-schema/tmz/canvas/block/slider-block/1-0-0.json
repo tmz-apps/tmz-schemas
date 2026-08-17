@@ -1,0 +1,81 @@
+{
+  "id": "https://schemas.tmz.com/json-schema/tmz/canvas/block/slider-block/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_schema": {
+      "type": "string",
+      "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
+      "default": "pbj:tmz:canvas:block:slider-block:1-0-0"
+    },
+    "etag": {
+      "type": "string",
+      "pattern": "^[\\w\\.:-]+$"
+    },
+    "css_class": {
+      "type": "string",
+      "pattern": "^[\\w\\s-]+$",
+      "description": "In rendering environments that support HTML the css_class can be appended to the dom elements' class attribute."
+    },
+    "updated_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Represents an update that occurred on the node this block is attached to. DOES NOT indicate an update to the block itself. eg an article with a twitter block with updated_date means that the article was updated to include that twitter block."
+    },
+    "aside": {
+      "type": "boolean",
+      "description": "When true it means this block represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes."
+    },
+    "prefetched_nodes": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "additionalProperties": false,
+      "description": "When nodes have been acquired by another process you can populate this field instead of \"search_request\"."
+    },
+    "search_request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/widget-search-request"
+        }
+      ],
+      "description": "The request that produces the nodes this block renders. The request curie determines the content type (search-articles-request, search-videos-request, etc) and its filters (category_refs, channel_ref, person_refs, timeline_ref, q, count, sort) determine the source."
+    },
+    "show_header": {
+      "type": "boolean",
+      "default": true
+    },
+    "header_text": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "description": "Text shown above the slider when show_header is true. When empty the rendering application supplies its own default (e.g. \"Related Stories\")."
+    }
+  },
+  "required": [
+    "_schema"
+  ],
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    },
+    "widget-search-request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

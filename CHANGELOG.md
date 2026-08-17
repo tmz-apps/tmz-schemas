@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v3.0.11
+* __Add Schemas:__
+  * `tmz:canvas:mixin:block-has-search-request`
+    * Add `search_request` message field (any-of `triniti:curator:mixin:widget-search-request`).
+    * Add `prefetched_nodes` message list field (any-of `gdbots:ncr:mixin:node`).
+  * `tmz:canvas:block:slider-block`
+    * Uses mixins `triniti:canvas:mixin:block:v1` and `tmz:canvas:mixin:block-has-search-request:v1`.
+    * Add `show_header` boolean field (default `true`) and `header_text` string field.
+
 ## v3.0.10
 * Use `triniti/schemas` v3.0.8
 * __Add Schemas:__
