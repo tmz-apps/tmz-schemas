@@ -27,6 +27,8 @@ final class SearchTeasersRequestV1 extends AbstractMessage
       'triniti:curator:mixin:search-teasers-request',
       'triniti:curator:mixin:widget-search-request:v1',
       'triniti:curator:mixin:widget-search-request',
+      'tmz:canvas:mixin:block-search-request:v1',
+      'tmz:canvas:mixin:block-search-request',
     ];
 
     use GdbotsPbjxRequestV1Mixin;

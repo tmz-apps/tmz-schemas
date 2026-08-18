@@ -22,7 +22,7 @@
           person_refs, timeline_ref, q, count, sort) determine the source.
         </description>
         <any-of>
-          <curie>triniti:curator:mixin:widget-search-request</curie>
+          <curie>tmz:canvas:mixin:block-search-request</curie>
         </any-of>
       </field>
     </fields>

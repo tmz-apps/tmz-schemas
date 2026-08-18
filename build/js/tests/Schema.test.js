@@ -9,6 +9,10 @@ import '@tmz/schemas';
 import Timeline from '../src/tmz/curator/node/TimelineV1.js';
 import LiveBlogUpdateTeaser from '../src/tmz/curator/node/LiveBlogUpdateTeaserV1.js';
 import SliderBlock from '../src/tmz/canvas/block/SliderBlockV1.js';
+import SearchArticlesRequest from '../src/tmz/news/request/SearchArticlesRequestV1.js';
+import SearchVideosRequest from '../src/tmz/ovp/request/SearchVideosRequestV1.js';
+import SearchGalleriesRequest from '../src/tmz/curator/request/SearchGalleriesRequestV1.js';
+import SearchTeasersRequest from '../src/tmz/curator/request/SearchTeasersRequestV1.js';
 
 
 async function resolveImport(resolver) {
@@ -90,10 +94,18 @@ test('Slider block is a canvas block that sources nodes from a search request', 
   t.true(schema.hasField('show_header'));
   t.true(schema.hasField('header_text'));
   t.true(schema.getField('prefetched_nodes').isAList());
-  t.deepEqual(schema.getField('search_request').getAnyOfCuries(), ['triniti:curator:mixin:widget-search-request']);
+  t.deepEqual(schema.getField('search_request').getAnyOfCuries(), ['tmz:canvas:mixin:block-search-request']);
   t.deepEqual(schema.getField('prefetched_nodes').getAnyOfCuries(), ['gdbots:ncr:mixin:node']);
   t.equal(block.get('show_header'), true);
   t.false(block.has('header_text'));
+
+  t.end();
+});
+
+test('Search requests can be used as a slider block search request', (t) => {
+  [SearchArticlesRequest, SearchVideosRequest, SearchGalleriesRequest, SearchTeasersRequest].forEach((request) => {
+    t.true(request.schema().hasMixin('tmz:canvas:mixin:block-search-request:v1'), request.SCHEMA_CURIE);
+  });
 
   t.end();
 });

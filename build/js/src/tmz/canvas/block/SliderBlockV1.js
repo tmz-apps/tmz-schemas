@@ -58,7 +58,7 @@ export default class SliderBlockV1 extends Message {
          */
         Fb.create('search_request', T.MessageType.create())
           .anyOfCuries([
-            'triniti:curator:mixin:widget-search-request',
+            'tmz:canvas:mixin:block-search-request',
           ])
           .build(),
         Fb.create('show_header', T.BooleanType.create())
