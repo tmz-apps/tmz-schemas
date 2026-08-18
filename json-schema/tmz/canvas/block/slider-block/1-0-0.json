@@ -40,7 +40,7 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "#/definitions/widget-search-request"
+          "$ref": "#/definitions/block-search-request"
         }
       ],
       "description": "The request that produces the nodes this block renders. The request curie determines the content type (search-articles-request, search-videos-request, etc) and its filters (category_refs, channel_ref, person_refs, timeline_ref, q, count, sort) determine the source."
@@ -68,11 +68,11 @@
         }
       ]
     },
-    "widget-search-request": {
+    "block-search-request": {
       "type": "object",
       "anyOf": [
         {
-          "$ref": "https://schemas.tmz.com/json-schema/triniti/curator/mixin/widget-search-request/1-0-0.json#"
+          "$ref": "https://schemas.tmz.com/json-schema/tmz/canvas/mixin/block-search-request/1-0-0.json#"
         }
       ]
     }
