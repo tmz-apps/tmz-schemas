@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## v3.0.11
+## v3.1.0
 * __Add Schemas:__
   * `tmz:canvas:mixin:block-search-request`
     * Marker mixin (extends `gdbots:pbjx:mixin:request:v1`) for requests a canvas block can use to source nodes.
