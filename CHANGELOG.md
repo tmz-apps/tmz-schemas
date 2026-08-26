@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v3.1.0
+* __Add Schemas:__
+  * `tmz:canvas:mixin:block-search-request`
+    * Marker mixin (extends `gdbots:pbjx:mixin:request:v1`) for requests a canvas block can use to source nodes.
+  * `tmz:canvas:mixin:block-has-search-request`
+    * Add `search_request` message field (any-of `tmz:canvas:mixin:block-search-request`).
+    * Add `prefetched_nodes` message list field (any-of `gdbots:ncr:mixin:node`).
+  * `tmz:canvas:block:slider-block`
+    * Uses mixins `triniti:canvas:mixin:block:v1` and `tmz:canvas:mixin:block-has-search-request:v1`.
+    * Add `show_header` boolean field (default `true`) and `header_text` string field.
+* __Update Schemas:__
+  * `tmz:curator:request:search-galleries-request`
+    * Add mixin `tmz:canvas:mixin:block-search-request:v1`
+  * `tmz:curator:request:search-teasers-request`
+    * Add mixin `tmz:canvas:mixin:block-search-request:v1`
+  * `tmz:news:request:search-articles-request`
+    * Add mixin `tmz:canvas:mixin:block-search-request:v1`
+  * `tmz:ovp:request:search-videos-request`
+    * Add mixin `tmz:canvas:mixin:block-search-request:v1`
+
 ## v3.0.10
 * Use `triniti/schemas` v3.0.8
 * __Add Schemas:__

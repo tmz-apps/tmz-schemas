@@ -1,0 +1,45 @@
+{
+  "id": "https://schemas.tmz.com/json-schema/tmz/canvas/mixin/block-has-search-request/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "prefetched_nodes": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "additionalProperties": false,
+      "description": "When nodes have been acquired by another process you can populate this field instead of \"search_request\"."
+    },
+    "search_request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/block-search-request"
+        }
+      ],
+      "description": "The request that produces the nodes this block renders. The request curie determines the content type (search-articles-request, search-videos-request, etc) and its filters (category_refs, channel_ref, person_refs, timeline_ref, q, count, sort) determine the source."
+    }
+  },
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    },
+    "block-search-request": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://schemas.tmz.com/json-schema/tmz/canvas/mixin/block-search-request/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

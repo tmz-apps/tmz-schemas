@@ -182,6 +182,7 @@ export default {
   'tmz:canvas:block:poll-block:v1': () => import('@tmz/schemas/tmz/canvas/block/PollBlockV1.js'),
   'tmz:canvas:block:poll-grid-block:v1': () => import('@tmz/schemas/tmz/canvas/block/PollGridBlockV1.js'),
   'tmz:canvas:block:quote-block:v1': () => import('@tmz/schemas/tmz/canvas/block/QuoteBlockV1.js'),
+  'tmz:canvas:block:slider-block:v1': () => import('@tmz/schemas/tmz/canvas/block/SliderBlockV1.js'),
   'tmz:canvas:block:soundcloud-audio-block:v1': () => import('@tmz/schemas/tmz/canvas/block/SoundcloudAudioBlockV1.js'),
   'tmz:canvas:block:spotify-embed-block:v1': () => import('@tmz/schemas/tmz/canvas/block/SpotifyEmbedBlockV1.js'),
   'tmz:canvas:block:spotify-track-block:v1': () => import('@tmz/schemas/tmz/canvas/block/SpotifyTrackBlockV1.js'),

@@ -185,6 +185,7 @@ return [
     'tmz:canvas:block:poll-block:v1' => 'Tmz\Schemas\Canvas\Block\PollBlockV1',
     'tmz:canvas:block:poll-grid-block:v1' => 'Tmz\Schemas\Canvas\Block\PollGridBlockV1',
     'tmz:canvas:block:quote-block:v1' => 'Tmz\Schemas\Canvas\Block\QuoteBlockV1',
+    'tmz:canvas:block:slider-block:v1' => 'Tmz\Schemas\Canvas\Block\SliderBlockV1',
     'tmz:canvas:block:soundcloud-audio-block:v1' => 'Tmz\Schemas\Canvas\Block\SoundcloudAudioBlockV1',
     'tmz:canvas:block:spotify-embed-block:v1' => 'Tmz\Schemas\Canvas\Block\SpotifyEmbedBlockV1',
     'tmz:canvas:block:spotify-track-block:v1' => 'Tmz\Schemas\Canvas\Block\SpotifyTrackBlockV1',

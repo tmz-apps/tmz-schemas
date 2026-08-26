@@ -29,6 +29,7 @@ return [
     'tmz:canvas:block:poll-block:v1',
     'tmz:canvas:block:poll-grid-block:v1',
     'tmz:canvas:block:quote-block:v1',
+    'tmz:canvas:block:slider-block:v1',
     'tmz:canvas:block:soundcloud-audio-block:v1',
     'tmz:canvas:block:spotify-embed-block:v1',
     'tmz:canvas:block:spotify-track-block:v1',

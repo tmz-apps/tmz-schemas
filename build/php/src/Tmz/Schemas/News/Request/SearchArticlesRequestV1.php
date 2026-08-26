@@ -27,6 +27,8 @@ final class SearchArticlesRequestV1 extends AbstractMessage
       'triniti:news:mixin:search-articles-request',
       'triniti:curator:mixin:widget-search-request:v1',
       'triniti:curator:mixin:widget-search-request',
+      'tmz:canvas:mixin:block-search-request:v1',
+      'tmz:canvas:mixin:block-search-request',
     ];
 
     use GdbotsPbjxRequestV1Mixin;

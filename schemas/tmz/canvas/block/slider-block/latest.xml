@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:tmz:canvas:block:slider-block:1-0-0">
+    <fields>
+      <field name="show_header" type="boolean">
+        <default>true</default>
+      </field>
+      <field name="header_text" type="string">
+        <description>
+          Text shown above the slider when show_header is true. When empty
+          the rendering application supplies its own default (e.g. "Related Stories").
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>triniti:canvas:mixin:block:v1</curie-major>
+      <curie-major>tmz:canvas:mixin:block-has-search-request:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>
