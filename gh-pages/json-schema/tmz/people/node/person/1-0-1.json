@@ -298,13 +298,11 @@
     },
     "facebook_username": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255
+      "pattern": "^[\\w\\.]{1,50}$"
     },
     "tiktok_username": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 255
+      "pattern": "^[\\w\\.]{1,24}$"
     }
   },
   "required": [

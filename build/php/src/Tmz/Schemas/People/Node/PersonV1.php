@@ -224,8 +224,10 @@ final class PersonV1 extends AbstractMessage
                 Fb::create('job_title', T\StringType::create())
                     ->build(),
                 Fb::create('facebook_username', T\StringType::create())
+                    ->pattern('^[\w\.]{1,50}$')
                     ->build(),
                 Fb::create('tiktok_username', T\StringType::create())
+                    ->pattern('^[\w\.]{1,24}$')
                     ->build(),
             ],
             self::MIXINS

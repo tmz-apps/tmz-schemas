@@ -11,8 +11,8 @@
         </description>
       </field>
       <field name="job_title" type="string"/>
-      <field name="facebook_username" type="string"/>
-      <field name="tiktok_username" type="string"/>
+      <field name="facebook_username" type="string" pattern="^[\w\.]{1,50}$"/>
+      <field name="tiktok_username" type="string" pattern="^[\w\.]{1,24}$"/>
     </fields>
 
     <mixins>
