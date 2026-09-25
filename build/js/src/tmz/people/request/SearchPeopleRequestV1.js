@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/people/request/search-people-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/request/search-people-request/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin.js';
@@ -145,6 +145,14 @@ export default class SearchPeopleRequestV1 extends Message {
           .withDefault("title-asc")
           .classProto(SearchPeopleSort)
           .build(),
+        Fb.create('is_author', T.TrinaryType.create())
+          .build(),
+        Fb.create('job_title', T.StringType.create())
+          .build(),
+        Fb.create('facebook_username', T.StringType.create())
+          .build(),
+        Fb.create('tiktok_username', T.StringType.create())
+          .build(),
       ],
       this.MIXINS,
     );
@@ -152,7 +160,7 @@ export default class SearchPeopleRequestV1 extends Message {
 }
 
 const M = SearchPeopleRequestV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:people:request:search-people-request:1-0-0';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:people:request:search-people-request:1-0-1';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:people:request:search-people-request';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:people:request:search-people-request:v1';
 M.prototype.MIXINS = M.MIXINS = [

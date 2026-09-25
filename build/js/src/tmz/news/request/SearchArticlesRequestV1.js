@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/news/request/search-articles-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/request/search-articles-request/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin.js';
@@ -160,6 +160,12 @@ export default class SearchArticlesRequestV1 extends Message {
         Fb.create('person_refs', T.NodeRefType.create())
           .asASet()
           .build(),
+        /*
+         * Filter articles that include any of these authors. Order is not significant on search.
+         */
+        Fb.create('author_refs', T.NodeRefType.create())
+          .asASet()
+          .build(),
       ],
       this.MIXINS,
     );
@@ -167,7 +173,7 @@ export default class SearchArticlesRequestV1 extends Message {
 }
 
 const M = SearchArticlesRequestV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:news:request:search-articles-request:1-0-0';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:news:request:search-articles-request:1-0-1';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:news:request:search-articles-request';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:news:request:search-articles-request:v1';
 M.prototype.MIXINS = M.MIXINS = [

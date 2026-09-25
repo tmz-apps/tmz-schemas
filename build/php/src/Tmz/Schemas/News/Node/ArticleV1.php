@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-2.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/node/article/1-0-3.json#
 namespace Tmz\Schemas\News\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\News\Mixin\Article\ArticleV1Mixin as TrinitiNewsArticleV1Mix
 
 final class ArticleV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-2';
+    const SCHEMA_ID = 'pbj:tmz:news:node:article:1-0-3';
     const SCHEMA_CURIE = 'tmz:news:node:article';
     const SCHEMA_CURIE_MAJOR = 'tmz:news:node:article:v1';
     const MIXINS = [
@@ -380,6 +380,12 @@ final class ArticleV1 extends AbstractMessage
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
                     ->format(Format::HASHTAG)
+                    ->build(),
+                /*
+                 * An ordered list of authors for this article. Order is the display order of the byline.
+                 */
+                Fb::create('author_refs', T\NodeRefType::create())
+                    ->asAList()
                     ->build(),
             ],
             self::MIXINS

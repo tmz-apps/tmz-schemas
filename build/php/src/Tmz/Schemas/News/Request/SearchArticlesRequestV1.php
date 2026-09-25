@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/news/request/search-articles-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/news/request/search-articles-request/1-0-1.json#
 namespace Tmz\Schemas\News\Request;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -15,7 +15,7 @@ use Triniti\Schemas\News\Enum\SearchArticlesSort;
 
 final class SearchArticlesRequestV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:news:request:search-articles-request:1-0-0';
+    const SCHEMA_ID = 'pbj:tmz:news:request:search-articles-request:1-0-1';
     const SCHEMA_CURIE = 'tmz:news:request:search-articles-request';
     const SCHEMA_CURIE_MAJOR = 'tmz:news:request:search-articles-request:v1';
     const MIXINS = [
@@ -178,6 +178,12 @@ final class SearchArticlesRequestV1 extends AbstractMessage
                     ->asASet()
                     ->build(),
                 Fb::create('person_refs', T\NodeRefType::create())
+                    ->asASet()
+                    ->build(),
+                /*
+                 * Filter articles that include any of these authors. Order is not significant on search.
+                 */
+                Fb::create('author_refs', T\NodeRefType::create())
                     ->asASet()
                     ->build(),
             ],
