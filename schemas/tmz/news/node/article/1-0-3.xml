@@ -7,7 +7,7 @@
     <fields>
       <field name="author_refs" type="node-ref" rule="list">
         <description>
-          An ordered list of authors for this article. Order is the display order of the byline.
+          References to the authors of the article.
         </description>
       </field>
     </fields>

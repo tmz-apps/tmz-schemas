@@ -288,8 +288,7 @@
       "additionalProperties": false
     },
     "is_author": {
-      "type": "boolean",
-      "description": "When true, this person is a TMZ author and can be associated with articles."
+      "type": "boolean"
     },
     "job_title": {
       "type": "string",
@@ -298,11 +297,13 @@
     },
     "facebook_username": {
       "type": "string",
-      "pattern": "^[\\w\\.]{1,50}$"
+      "minLength": 0,
+      "maxLength": 255
     },
     "tiktok_username": {
       "type": "string",
-      "pattern": "^[\\w\\.]{1,24}$"
+      "minLength": 0,
+      "maxLength": 24
     }
   },
   "required": [

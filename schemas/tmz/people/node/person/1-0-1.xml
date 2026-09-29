@@ -5,14 +5,10 @@
 
   <schema id="pbj:tmz:people:node:person:1-0-1">
     <fields>
-      <field name="is_author" type="boolean">
-        <description>
-          When true, this person is a TMZ author and can be associated with articles.
-        </description>
-      </field>
+      <field name="is_author" type="boolean"/>
       <field name="job_title" type="string"/>
-      <field name="facebook_username" type="string" pattern="^[\w\.]{1,50}$"/>
-      <field name="tiktok_username" type="string" pattern="^[\w\.]{1,24}$"/>
+      <field name="facebook_username" type="string"/>
+      <field name="tiktok_username" type="string" max="24"/>
     </fields>
 
     <mixins>

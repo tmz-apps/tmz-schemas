@@ -485,7 +485,7 @@
         }
       ],
       "additionalProperties": false,
-      "description": "An ordered list of authors for this article. Order is the display order of the byline."
+      "description": "References to the authors of the article."
     }
   },
   "required": [

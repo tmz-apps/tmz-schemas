@@ -6,17 +6,17 @@
   * `tmz:people:node:person` patch revision `1-0-1`
     * Add `is_author` boolean field.
     * Add `job_title` string field.
-    * Add `facebook_username` string field with pattern `^[\w\.]{1,50}$`.
-    * Add `tiktok_username` string field with pattern `^[\w\.]{1,24}$`.
+    * Add `facebook_username` string field.
+    * Add `tiktok_username` string field with a 24-byte maximum.
   * `tmz:news:node:article` patch revision `1-0-3`
-    * Add `author_refs` ordered node-ref list field.
+    * Add `author_refs` node-ref list field.
   * `tmz:people:request:search-people-request` patch revision `1-0-1`
     * Add `is_author` trinary field.
     * Add `job_title` string field.
     * Add `facebook_username` string field.
     * Add `tiktok_username` string field.
   * `tmz:news:request:search-articles-request` patch revision `1-0-1`
-    * Add `author_refs` node-ref set field (search filter; order is stored on the article).
+    * Add `author_refs` node-ref set field.
 
 
 ## v3.1.0

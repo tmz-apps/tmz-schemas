@@ -5,11 +5,7 @@
 
   <schema id="pbj:tmz:news:request:search-articles-request:1-0-1">
     <fields>
-      <field name="author_refs" type="node-ref" rule="set">
-        <description>
-          Filter articles that include any of these authors. Order is not significant on search.
-        </description>
-      </field>
+      <field name="author_refs" type="node-ref" rule="set"/>
     </fields>
 
     <mixins>

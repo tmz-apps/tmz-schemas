@@ -326,7 +326,7 @@ export default class ArticleV1 extends Message {
           .format(Format.HASHTAG)
           .build(),
         /*
-         * An ordered list of authors for this article. Order is the display order of the byline.
+         * References to the authors of the article.
          */
         Fb.create('author_refs', T.NodeRefType.create())
           .asAList()

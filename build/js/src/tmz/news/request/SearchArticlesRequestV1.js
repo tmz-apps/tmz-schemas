@@ -160,9 +160,6 @@ export default class SearchArticlesRequestV1 extends Message {
         Fb.create('person_refs', T.NodeRefType.create())
           .asASet()
           .build(),
-        /*
-         * Filter articles that include any of these authors. Order is not significant on search.
-         */
         Fb.create('author_refs', T.NodeRefType.create())
           .asASet()
           .build(),

@@ -180,9 +180,6 @@ final class SearchArticlesRequestV1 extends AbstractMessage
                 Fb::create('person_refs', T\NodeRefType::create())
                     ->asASet()
                     ->build(),
-                /*
-                 * Filter articles that include any of these authors. Order is not significant on search.
-                 */
                 Fb::create('author_refs', T\NodeRefType::create())
                     ->asASet()
                     ->build(),

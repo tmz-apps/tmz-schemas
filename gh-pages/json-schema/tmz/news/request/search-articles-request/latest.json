@@ -335,8 +335,7 @@
         }
       ],
       "uniqueItems": true,
-      "additionalProperties": false,
-      "description": "Filter articles that include any of these authors. Order is not significant on search."
+      "additionalProperties": false
     }
   },
   "required": [
