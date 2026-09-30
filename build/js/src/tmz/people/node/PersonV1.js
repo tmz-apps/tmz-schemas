@@ -191,7 +191,6 @@ export default class PersonV1 extends Message {
         Fb.create('facebook_username', T.StringType.create())
           .build(),
         Fb.create('tiktok_username', T.StringType.create())
-          .maxLength(24)
           .build(),
       ],
       this.MIXINS,

@@ -223,7 +223,6 @@ final class PersonV1 extends AbstractMessage
                 Fb::create('facebook_username', T\StringType::create())
                     ->build(),
                 Fb::create('tiktok_username', T\StringType::create())
-                    ->maxLength(24)
                     ->build(),
             ],
             self::MIXINS

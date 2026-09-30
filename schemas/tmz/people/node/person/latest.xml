@@ -8,7 +8,7 @@
       <field name="is_author" type="boolean"/>
       <field name="job_title" type="string"/>
       <field name="facebook_username" type="string"/>
-      <field name="tiktok_username" type="string" max="24"/>
+      <field name="tiktok_username" type="string"/>
     </fields>
 
     <mixins>

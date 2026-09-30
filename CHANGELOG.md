@@ -7,7 +7,7 @@
     * Add `is_author` boolean field.
     * Add `job_title` string field.
     * Add `facebook_username` string field.
-    * Add `tiktok_username` string field with a 24-byte maximum.
+    * Add `tiktok_username` string field.
   * `tmz:news:node:article` patch revision `1-0-3`
     * Add `author_refs` node-ref list field.
   * `tmz:people:request:search-people-request` patch revision `1-0-1`
