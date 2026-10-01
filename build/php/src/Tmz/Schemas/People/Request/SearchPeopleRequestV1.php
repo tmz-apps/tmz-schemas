@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/people/request/search-people-request/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/request/search-people-request/1-0-1.json#
 namespace Tmz\Schemas\People\Request;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -15,7 +15,7 @@ use Triniti\Schemas\People\Enum\SearchPeopleSort;
 
 final class SearchPeopleRequestV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:people:request:search-people-request:1-0-0';
+    const SCHEMA_ID = 'pbj:tmz:people:request:search-people-request:1-0-1';
     const SCHEMA_CURIE = 'tmz:people:request:search-people-request';
     const SCHEMA_CURIE_MAJOR = 'tmz:people:request:search-people-request:v1';
     const MIXINS = [
@@ -160,6 +160,14 @@ final class SearchPeopleRequestV1 extends AbstractMessage
                 Fb::create('sort', T\StringEnumType::create())
                     ->withDefault("title-asc")
                     ->className(SearchPeopleSort::class)
+                    ->build(),
+                Fb::create('is_author', T\TrinaryType::create())
+                    ->build(),
+                Fb::create('job_title', T\StringType::create())
+                    ->build(),
+                Fb::create('facebook_username', T\StringType::create())
+                    ->build(),
+                Fb::create('tiktok_username', T\StringType::create())
                     ->build(),
             ],
             self::MIXINS
