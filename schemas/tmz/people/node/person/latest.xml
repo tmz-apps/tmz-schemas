@@ -3,12 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:tmz:people:node:person:1-0-1">
+  <schema id="pbj:tmz:people:node:person:1-0-2">
     <fields>
       <field name="is_author" type="boolean"/>
       <field name="job_title" type="string"/>
       <field name="facebook_username" type="string"/>
       <field name="tiktok_username" type="string"/>
+      <field name="instagram_username" type="string"/>
     </fields>
 
     <mixins>

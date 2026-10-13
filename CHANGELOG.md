@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.2.1
+* __Modify Schemas:__
+  * `tmz:people:node:person` patch revision `1-0-2`
+    * Add `instagram_username` string field.
+  * `tmz:people:request:search-people-request` patch revision `1-0-2`
+    * Add `instagram_username` string field.
+
+
 ## v3.2.0
 * __Modify Schemas:__
   * `tmz:people:node:person` patch revision `1-0-1`

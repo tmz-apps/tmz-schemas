@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/people/node/person/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/node/person/1-0-2.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
@@ -192,6 +192,8 @@ export default class PersonV1 extends Message {
           .build(),
         Fb.create('tiktok_username', T.StringType.create())
           .build(),
+        Fb.create('instagram_username', T.StringType.create())
+          .build(),
       ],
       this.MIXINS,
     );
@@ -199,7 +201,7 @@ export default class PersonV1 extends Message {
 }
 
 const M = PersonV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:people:node:person:1-0-1';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:people:node:person:1-0-2';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:people:node:person';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:people:node:person:v1';
 M.prototype.MIXINS = M.MIXINS = [
