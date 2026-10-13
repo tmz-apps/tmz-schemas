@@ -169,7 +169,7 @@ final class SearchPeopleRequestV1 extends AbstractMessage
                     ->build(),
                 Fb::create('tiktok_username', T\StringType::create())
                     ->build(),
-                Fb::create('istagram_username', T\StringType::create())
+                Fb::create('instagram_username', T\StringType::create())
                     ->build(),
             ],
             self::MIXINS
