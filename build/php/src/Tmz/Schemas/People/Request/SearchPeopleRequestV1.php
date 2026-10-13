@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/people/request/search-people-request/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/request/search-people-request/1-0-2.json#
 namespace Tmz\Schemas\People\Request;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -15,7 +15,7 @@ use Triniti\Schemas\People\Enum\SearchPeopleSort;
 
 final class SearchPeopleRequestV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:people:request:search-people-request:1-0-1';
+    const SCHEMA_ID = 'pbj:tmz:people:request:search-people-request:1-0-2';
     const SCHEMA_CURIE = 'tmz:people:request:search-people-request';
     const SCHEMA_CURIE_MAJOR = 'tmz:people:request:search-people-request:v1';
     const MIXINS = [
@@ -168,6 +168,8 @@ final class SearchPeopleRequestV1 extends AbstractMessage
                 Fb::create('facebook_username', T\StringType::create())
                     ->build(),
                 Fb::create('tiktok_username', T\StringType::create())
+                    ->build(),
+                Fb::create('istagram_username', T\StringType::create())
                     ->build(),
             ],
             self::MIXINS

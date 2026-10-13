@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/people/node/person/1-0-1.json#
+// @link https://schemas.tmz.com/json-schema/tmz/people/node/person/1-0-2.json#
 namespace Tmz\Schemas\People\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\People\Mixin\Person\PersonV1Mixin as TrinitiPeoplePersonV1Mi
 
 final class PersonV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:people:node:person:1-0-1';
+    const SCHEMA_ID = 'pbj:tmz:people:node:person:1-0-2';
     const SCHEMA_CURIE = 'tmz:people:node:person';
     const SCHEMA_CURIE_MAJOR = 'tmz:people:node:person:v1';
     const MIXINS = [
@@ -223,6 +223,8 @@ final class PersonV1 extends AbstractMessage
                 Fb::create('facebook_username', T\StringType::create())
                     ->build(),
                 Fb::create('tiktok_username', T\StringType::create())
+                    ->build(),
+                Fb::create('instagram_username', T\StringType::create())
                     ->build(),
             ],
             self::MIXINS
