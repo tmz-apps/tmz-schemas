@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-1.json#
 namespace Tmz\Schemas\Curator\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\Curator\Mixin\Timeline\TimelineV1Mixin as TrinitiCuratorTime
 
 final class TimelineV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:curator:node:timeline:1-0-0';
+    const SCHEMA_ID = 'pbj:tmz:curator:node:timeline:1-0-1';
     const SCHEMA_CURIE = 'tmz:curator:node:timeline';
     const SCHEMA_CURIE_MAJOR = 'tmz:curator:node:timeline:v1';
     const MIXINS = [

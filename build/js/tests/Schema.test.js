@@ -48,10 +48,11 @@ test('Timeline inherits live blog support from the Triniti timeline mixin', (t) 
   const schema = Timeline.schema();
   const timeline = Timeline.create();
 
-  t.equal(Timeline.SCHEMA_ID, 'pbj:tmz:curator:node:timeline:1-0-0');
+  t.equal(Timeline.SCHEMA_ID, 'pbj:tmz:curator:node:timeline:1-0-1');
   t.true(schema.hasMixin('triniti:curator:mixin:timeline:v1'));
   t.false(schema.hasMixin('triniti:curator:mixin:live-bloggable:v1'));
   t.true(schema.hasField('is_live_blog'));
+  t.true(schema.hasField('video_ref'));
   t.equal(timeline.get('is_live_blog'), false);
 
   t.end();

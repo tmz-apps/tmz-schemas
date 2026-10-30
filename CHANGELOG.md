@@ -7,6 +7,9 @@ __POSSIBLE BREAKING CHANGES__
 * Use `@gdbots/pbj` 4.x (upgraded for the latest `uuid` package for security reasons; interface is unchanged but you may run into npm dependency issues).
 * Use `gdbots/schemas` v3.1.0
 * Use `triniti/schemas` v3.1.0
+* __Modify Schemas:__
+  * `tmz:curator:node:timeline` patch revision `1-0-1`
+    * Add `video_ref` node-ref field (inherited from `triniti:curator:mixin:timeline:v1`).
 
 
 ## v3.2.1
