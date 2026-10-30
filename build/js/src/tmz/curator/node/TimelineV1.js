@@ -71,6 +71,11 @@ export default class TimelineV1 extends Message {
          */
         Fb.create('image_ref', T.NodeRefType.create())
           .build(),
+        /*
+         * A reference to the video to use as the primary media for the timeline.
+         */
+        Fb.create('video_ref', T.NodeRefType.create())
+          .build(),
         Fb.create('allow_comments', T.BooleanType.create())
           .withDefault(true)
           .build(),
