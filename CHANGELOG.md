@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.3.0
+__POSSIBLE BREAKING CHANGES__
+* Require PHP 8.5.12 or later.
+* Use `@gdbots/pbj` 4.x.
+* Use `gdbots/schemas` v3.1.0
+* Use `triniti/schemas` v3.1.0
+
+
 ## v3.2.1
 * __Modify Schemas:__
   * `tmz:people:node:person` patch revision `1-0-2`
