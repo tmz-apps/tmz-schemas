@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-1.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin.js';
@@ -70,6 +70,11 @@ export default class TimelineV1 extends Message {
          * A reference to the image asset to use for widgets, sharing, seo.
          */
         Fb.create('image_ref', T.NodeRefType.create())
+          .build(),
+        /*
+         * A reference to the video to use as the primary media for the timeline.
+         */
+        Fb.create('video_ref', T.NodeRefType.create())
           .build(),
         Fb.create('allow_comments', T.BooleanType.create())
           .withDefault(true)
@@ -201,7 +206,7 @@ export default class TimelineV1 extends Message {
 }
 
 const M = TimelineV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:curator:node:timeline:1-0-0';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:curator:node:timeline:1-0-1';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:curator:node:timeline';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:curator:node:timeline:v1';
 M.prototype.MIXINS = M.MIXINS = [

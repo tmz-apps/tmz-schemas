@@ -1,12 +1,12 @@
 {
-  "id": "https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/tmz/curator/node/timeline/1-0-1.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:tmz:curator:node:timeline:1-0-0"
+      "default": "pbj:tmz:curator:node:timeline:1-0-1"
     },
     "_id": {
       "type": "string",
@@ -140,6 +140,11 @@
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
       "description": "A reference to the image asset to use for widgets, sharing, seo."
+    },
+    "video_ref": {
+      "type": "string",
+      "pattern": "^[\\w\\/\\.:-]+$",
+      "description": "A reference to the video to use as the primary media for the timeline."
     },
     "allow_comments": {
       "type": "boolean",
