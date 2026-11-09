@@ -95,6 +95,7 @@ export default [
   'tmz:curator:command:update-timeline:v1',
   'tmz:curator:command:update-widget:v1',
   'tmz:dam:command:create-asset:v1',
+  'tmz:dam:command:detect-image-warning:v1',
   'tmz:dam:command:delete-asset:v1',
   'tmz:dam:command:expire-asset:v1',
   'tmz:dam:command:link-assets:v1',

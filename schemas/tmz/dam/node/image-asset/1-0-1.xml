@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:tmz:dam:node:image-asset:1-0-1">
+    <fields>
+      <field name="has_warning_banner" type="boolean">
+        <description>True when CV/OCR detected a yellow hazard/warning banner on the original image.</description>
+      </field>
+      <field name="warning_banner_confidence" type="float">
+        <description>Detector confidence in [0, 1] for the warning banner prediction.</description>
+      </field>
+      <field name="warning_banner_bbox" type="float" rule="list">
+        <description>Normalized [x, y, w, h] bbox of the best warning-banner candidate.</description>
+      </field>
+      <field name="warning_banner_ocr_hits" type="string" rule="list">
+        <description>OCR keyword hits that boosted confidence (WARNING, GRAPHIC, etc.).</description>
+      </field>
+      <field name="warning_banner_checked_at" type="date-time">
+        <description>When yellow-banner detection last ran for this asset.</description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
+      <curie-major>triniti:dam:mixin:asset:v1</curie-major>
+      <curie-major>triniti:dam:mixin:image-asset:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:expirable:v1</curie-major>
+      <curie-major>triniti:apollo:mixin:has-poll:v1</curie-major>
+      <curie-major>triniti:people:mixin:has-people:v1</curie-major>
+      <curie-major>triniti:taxonomy:mixin:hashtaggable:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

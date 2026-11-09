@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-1.json#
 namespace Tmz\Schemas\Dam\Node;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -16,7 +16,7 @@ use Triniti\Schemas\Dam\Mixin\ImageAsset\ImageAssetV1Mixin as TrinitiDamImageAss
 
 final class ImageAssetV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:dam:node:image-asset:1-0-0';
+    const SCHEMA_ID = 'pbj:tmz:dam:node:image-asset:1-0-1';
     const SCHEMA_CURIE = 'tmz:dam:node:image-asset';
     const SCHEMA_CURIE_MAJOR = 'tmz:dam:node:image-asset:v1';
     const MIXINS = [
@@ -184,9 +184,37 @@ final class ImageAssetV1 extends AbstractMessage
                 Fb::create('person_refs', T\NodeRefType::create())
                     ->asASet()
                     ->build(),
+
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
                     ->format(Format::HASHTAG)
+                    ->build(),
+                /*
+                 * True when CV/OCR detected a yellow hazard/warning banner on the original image.
+                 */
+                Fb::create('has_warning_banner', T\BooleanType::create())
+                    ->build(),
+                /*
+                 * Detector confidence in [0, 1] for the warning banner prediction.
+                 */
+                Fb::create('warning_banner_confidence', T\FloatType::create())
+                    ->build(),
+                /*
+                 * Normalized [x, y, w, h] bbox of the best warning-banner candidate.
+                 */
+                Fb::create('warning_banner_bbox', T\FloatType::create())
+                    ->asAList()
+                    ->build(),
+                /*
+                 * OCR keyword hits that boosted confidence (WARNING, GRAPHIC, etc.).
+                 */
+                Fb::create('warning_banner_ocr_hits', T\StringType::create())
+                    ->asAList()
+                    ->build(),
+                /*
+                 * When yellow-banner detection last ran for this asset.
+                 */
+                Fb::create('warning_banner_checked_at', T\DateTimeType::create())
                     ->build(),
             ],
             self::MIXINS

@@ -375,6 +375,7 @@ MessageResolver::register([
     'tmz:curator:request:search-widgets-request:v1' => 'Tmz\Schemas\Curator\Request\SearchWidgetsRequestV1',
     'tmz:curator:request:search-widgets-response:v1' => 'Tmz\Schemas\Curator\Request\SearchWidgetsResponseV1',
     'tmz:dam:command:create-asset:v1' => 'Tmz\Schemas\Dam\Command\CreateAssetV1',
+    'tmz:dam:command:detect-image-warning:v1' => 'Tmz\Schemas\Dam\Command\DetectImageWarningV1',
     'tmz:dam:command:delete-asset:v1' => 'Tmz\Schemas\Dam\Command\DeleteAssetV1',
     'tmz:dam:command:expire-asset:v1' => 'Tmz\Schemas\Dam\Command\ExpireAssetV1',
     'tmz:dam:command:link-assets:v1' => 'Tmz\Schemas\Dam\Command\LinkAssetsV1',

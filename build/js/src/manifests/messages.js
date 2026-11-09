@@ -369,6 +369,7 @@ export default {
   'tmz:curator:request:search-widgets-request:v1': () => import('@tmz/schemas/tmz/curator/request/SearchWidgetsRequestV1.js'),
   'tmz:curator:request:search-widgets-response:v1': () => import('@tmz/schemas/tmz/curator/request/SearchWidgetsResponseV1.js'),
   'tmz:dam:command:create-asset:v1': () => import('@tmz/schemas/tmz/dam/command/CreateAssetV1.js'),
+  'tmz:dam:command:detect-image-warning:v1': () => import('@tmz/schemas/tmz/dam/command/DetectImageWarningV1.js'),
   'tmz:dam:command:delete-asset:v1': () => import('@tmz/schemas/tmz/dam/command/DeleteAssetV1.js'),
   'tmz:dam:command:expire-asset:v1': () => import('@tmz/schemas/tmz/dam/command/ExpireAssetV1.js'),
   'tmz:dam:command:link-assets:v1': () => import('@tmz/schemas/tmz/dam/command/LinkAssetsV1.js'),

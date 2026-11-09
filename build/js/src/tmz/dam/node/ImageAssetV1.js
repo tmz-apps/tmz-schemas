@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-1.json#
 import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
@@ -160,6 +160,33 @@ export default class ImageAssetV1 extends Message {
           .asASet()
           .format(Format.HASHTAG)
           .build(),
+        /*
+         * True when CV/OCR detected a yellow hazard/warning banner on the original image.
+         */
+        Fb.create('has_warning_banner', T.BooleanType.create())
+          .build(),
+        /*
+         * Detector confidence in [0, 1] for the warning banner prediction.
+         */
+        Fb.create('warning_banner_confidence', T.FloatType.create())
+          .build(),
+        /*
+         * Normalized [x, y, w, h] bbox of the best warning-banner candidate.
+         */
+        Fb.create('warning_banner_bbox', T.FloatType.create())
+          .asAList()
+          .build(),
+        /*
+         * OCR keyword hits that boosted confidence (WARNING, GRAPHIC, etc.).
+         */
+        Fb.create('warning_banner_ocr_hits', T.StringType.create())
+          .asAList()
+          .build(),
+        /*
+         * When yellow-banner detection last ran for this asset.
+         */
+        Fb.create('warning_banner_checked_at', T.DateTimeType.create())
+          .build(),
       ],
       this.MIXINS,
     );
@@ -167,7 +194,7 @@ export default class ImageAssetV1 extends Message {
 }
 
 const M = ImageAssetV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:node:image-asset:1-0-0';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:node:image-asset:1-0-1';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:dam:node:image-asset';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:dam:node:image-asset:v1';
 M.prototype.MIXINS = M.MIXINS = [
