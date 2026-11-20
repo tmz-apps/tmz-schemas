@@ -3,13 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
-  <schema id="pbj:tmz:dam:command:detect-image-warning:1-0-0">
+  <schema id="pbj:tmz:dam:command:evaluate-image-warning:1-0-0">
     <fields>
       <field name="node_ref" type="node-ref" required="true">
         <description>The ImageAsset node to run yellow-banner CV/OCR detection against.</description>
-      </field>
-      <field name="threshold" type="float">
-        <description>Optional confidence threshold override (default 0.75).</description>
       </field>
     </fields>
 

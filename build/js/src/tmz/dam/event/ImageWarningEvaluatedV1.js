@@ -1,12 +1,12 @@
-// @link https://schemas.tmz.com/json-schema/tmz/dam/command/detect-image-warning/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/event/image-warning-evaluated/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
-import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin.js';
+import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin.js';
 import Message from '@gdbots/pbj/Message.js';
 import Schema from '@gdbots/pbj/Schema.js';
 import T from '@gdbots/pbj/types/index.js';
 
-export default class DetectImageWarningV1 extends Message {
+export default class ImageWarningEvaluatedV1 extends Message {
   /**
    * @private
    *
@@ -15,21 +15,16 @@ export default class DetectImageWarningV1 extends Message {
   static defineSchema() {
     return new Schema(this.SCHEMA_ID, this,
       [
-        Fb.create('command_id', T.TimeUuidType.create())
+        Fb.create('event_id', T.TimeUuidType.create())
           .required()
           .build(),
         Fb.create('occurred_at', T.MicrotimeType.create())
           .build(),
-        Fb.create('expected_etag', T.StringType.create())
-          .maxLength(100)
-          .pattern('^[\\w\\.:-]+$')
-          .build(),
+        /*
+         * Multi-tenant apps can use this field to track the tenant id.
+         */
         Fb.create('ctx_tenant_id', T.StringType.create())
           .pattern('^[\\w\\/\\.:-]+$')
-          .build(),
-        Fb.create('ctx_retries', T.TinyIntType.create())
-          .build(),
-        Fb.create('ctx_causator', T.MessageType.create())
           .build(),
         Fb.create('ctx_causator_ref', T.MessageRefType.create())
           .build(),
@@ -37,11 +32,20 @@ export default class DetectImageWarningV1 extends Message {
           .build(),
         Fb.create('ctx_user_ref', T.MessageRefType.create())
           .build(),
+        /*
+         * The "ctx_app" refers to the application used to send the command which
+         * in turn resulted in this event being published.
+         */
         Fb.create('ctx_app', T.MessageType.create())
           .anyOfCuries([
             'gdbots:contexts::app',
           ])
           .build(),
+        /*
+         * The "ctx_cloud" is usually copied from the command that resulted in this
+         * event being published. This means the value most likely refers to the cloud
+         * that received the command originally, not the machine processing the event.
+         */
         Fb.create('ctx_cloud', T.MessageType.create())
           .anyOfCuries([
             'gdbots:contexts::cloud',
@@ -58,18 +62,17 @@ export default class DetectImageWarningV1 extends Message {
         Fb.create('ctx_ua', T.TextType.create())
           .overridable(true)
           .build(),
+        /*
+         * An optional message/reason for the event being created.
+         * Consider this like a git commit message.
+         */
         Fb.create('ctx_msg', T.TextType.create())
           .build(),
         /*
-         * The ImageAsset node to run yellow-banner CV/OCR detection against.
+         * The ImageAsset node whose yellow-banner evaluation finished.
          */
         Fb.create('node_ref', T.NodeRefType.create())
           .required()
-          .build(),
-        /*
-         * Optional confidence threshold override (default 0.75).
-         */
-        Fb.create('threshold', T.FloatType.create())
           .build(),
       ],
       this.MIXINS,
@@ -77,16 +80,16 @@ export default class DetectImageWarningV1 extends Message {
   }
 }
 
-const M = DetectImageWarningV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:command:detect-image-warning:1-0-0';
-M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:dam:command:detect-image-warning';
-M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:dam:command:detect-image-warning:v1';
+const M = ImageWarningEvaluatedV1;
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:event:image-warning-evaluated:1-0-0';
+M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:dam:event:image-warning-evaluated';
+M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:dam:event:image-warning-evaluated:v1';
 M.prototype.MIXINS = M.MIXINS = [
-  'gdbots:pbjx:mixin:command:v1',
-  'gdbots:pbjx:mixin:command',
+  'gdbots:pbjx:mixin:event:v1',
+  'gdbots:pbjx:mixin:event',
 ];
 
-GdbotsPbjxCommandV1Mixin(M);
+GdbotsPbjxEventV1Mixin(M);
 
 Object.freeze(M);
 Object.freeze(M.prototype);

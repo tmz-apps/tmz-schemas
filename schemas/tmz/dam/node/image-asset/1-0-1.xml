@@ -5,20 +5,14 @@
 
   <schema id="pbj:tmz:dam:node:image-asset:1-0-1">
     <fields>
-      <field name="has_warning_banner" type="boolean">
-        <description>True when CV/OCR detected a yellow hazard/warning banner on the original image.</description>
+      <field name="is_warning" type="boolean">
+        <description>When true the image indicates its unsafe</description>
       </field>
       <field name="warning_banner_confidence" type="float">
         <description>Detector confidence in [0, 1] for the warning banner prediction.</description>
       </field>
-      <field name="warning_banner_bbox" type="float" rule="list">
-        <description>Normalized [x, y, w, h] bbox of the best warning-banner candidate.</description>
-      </field>
       <field name="warning_banner_ocr_hits" type="string" rule="list">
         <description>OCR keyword hits that boosted confidence (WARNING, GRAPHIC, etc.).</description>
-      </field>
-      <field name="warning_banner_checked_at" type="date-time">
-        <description>When yellow-banner detection last ran for this asset.</description>
       </field>
     </fields>
 

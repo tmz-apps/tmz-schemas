@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// @link https://schemas.tmz.com/json-schema/tmz/dam/command/detect-image-warning/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/command/evaluate-image-warning/1-0-0.json#
 namespace Tmz\Schemas\Dam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
@@ -11,11 +11,11 @@ use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
 
-final class DetectImageWarningV1 extends AbstractMessage
+final class EvaluateImageWarningV1 extends AbstractMessage
 {
-    const SCHEMA_ID = 'pbj:tmz:dam:command:detect-image-warning:1-0-0';
-    const SCHEMA_CURIE = 'tmz:dam:command:detect-image-warning';
-    const SCHEMA_CURIE_MAJOR = 'tmz:dam:command:detect-image-warning:v1';
+    const SCHEMA_ID = 'pbj:tmz:dam:command:evaluate-image-warning:1-0-0';
+    const SCHEMA_CURIE = 'tmz:dam:command:evaluate-image-warning';
+    const SCHEMA_CURIE_MAJOR = 'tmz:dam:command:evaluate-image-warning:v1';
     const MIXINS = [
       'gdbots:pbjx:mixin:command:v1',
       'gdbots:pbjx:mixin:command',
@@ -111,11 +111,6 @@ final class DetectImageWarningV1 extends AbstractMessage
                  */
                 Fb::create('node_ref', T\NodeRefType::create())
                     ->required()
-                    ->build(),
-                /*
-                 * Optional confidence threshold override (default 0.75).
-                 */
-                Fb::create('threshold', T\FloatType::create())
                     ->build(),
             ],
             self::MIXINS
