@@ -1,7 +1,6 @@
 # CHANGELOG
 
-
-## v3.2.2
+## v3.4.0
 * __Modify Schemas:__
   * `tmz:dam:node:image-asset` patch revision `1-0-1`
     * Add `has_warning_banner` boolean field.
@@ -12,6 +11,16 @@
 * __New Schemas:__
   * `tmz:dam:command:evaluate-image-warning` revision `1-0-0`
   * `tmz:dam:event:image-warning-evaluated` revision `1-0-0`
+
+## v3.3.0
+__POSSIBLE BREAKING CHANGES__
+* Require PHP 8.5.12 or later (php2shell fixes).
+* Use `@gdbots/pbj` 4.x (upgraded for the latest `uuid` package for security reasons; interface is unchanged but you may run into npm dependency issues).
+* Use `gdbots/schemas` v3.1.0
+* Use `triniti/schemas` v3.1.0
+* __Modify Schemas:__
+  * `tmz:curator:node:timeline` patch revision `1-0-1`
+    * Add `video_ref` node-ref field (inherited from `triniti:curator:mixin:timeline:v1`).
 
 
 ## v3.2.1

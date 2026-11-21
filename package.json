@@ -1,6 +1,6 @@
 {
   "name": "@tmz/schemas",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "Schemas for all TMZ apps and components.",
   "repository": {
     "type": "git",
@@ -18,15 +18,15 @@
   "type": "module",
   "main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "3.0.5",
-    "@triniti/schemas": "3.0.8"
+    "@gdbots/schemas": "3.1.0",
+    "@triniti/schemas": "3.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7",
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
     "@babel/register": "^7",
-    "@gdbots/pbj": "^3",
+    "@gdbots/pbj": "^4",
     "@tmz/schemas": "file:./build/js/src/",
     "faucet": "^0",
     "lodash-es": "^4",
@@ -34,6 +34,6 @@
     "rimraf": "^3",
     "tape": "^5",
     "utf8": "^3",
-    "uuid": "^8"
+    "uuid": "^14.0.3"
   }
 }
