@@ -9,10 +9,10 @@
         <description>When true the image indicates its unsafe</description>
       </field>
       <field name="warning_banner_confidence" type="float">
-        <description>The confidence in [0, 1] for indicating the image is unsafe.</description>
+        <description>The confidence in [0, 1] for indicating the image is unsafe</description>
       </field>
       <field name="warning_banner_ocr_hits" type="string" rule="list">
-        <description>OCR keyword hits that boosted the confidence score.</description>
+        <description>OCR keyword hits</description>
       </field>
     </fields>
 
