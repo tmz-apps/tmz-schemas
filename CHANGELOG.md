@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v3.4.0
+* __Modify Schemas:__
+  * `tmz:dam:node:image-asset` patch revision `1-0-1`
+    * Add `is_warning` boolean field.
+    * Add `warning_confidence` float field.
+    * Add `warning_ocr_hits` string list field.
+* __Add Schemas:__
+  * `tmz:dam:command:evaluate-image-warning` revision `1-0-0`
+  * `tmz:dam:event:image-warning-evaluated` revision `1-0-0`
 
 ## v3.3.0
 __POSSIBLE BREAKING CHANGES__

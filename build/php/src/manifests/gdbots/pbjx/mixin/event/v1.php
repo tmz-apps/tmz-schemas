@@ -113,6 +113,7 @@ return [
     'tmz:dam:event:asset-unlinked:v1',
     'tmz:dam:event:asset-updated:v1',
     'tmz:dam:event:gallery-asset-reordered:v1',
+    'tmz:dam:event:image-warning-evaluated:v1',
     'tmz:iam:event:app-created:v1',
     'tmz:iam:event:app-deleted:v1',
     'tmz:iam:event:app-roles-granted:v1',

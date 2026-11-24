@@ -1,12 +1,12 @@
 {
-  "id": "https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-0.json#",
+  "id": "https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-1.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:tmz:dam:node:image-asset:1-0-0"
+      "default": "pbj:tmz:dam:node:image-asset:1-0-1"
     },
     "_id": {
       "type": "string",
@@ -276,6 +276,27 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false
+    },
+    "is_warning": {
+      "type": "boolean",
+      "description": "When true the image indicates its unsafe"
+    },
+    "warning_confidence": {
+      "type": "number",
+      "default": 0,
+      "description": "The confidence in [0, 1] for indicating the image is a warning"
+    },
+    "warning_ocr_hits": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      ],
+      "additionalProperties": false,
+      "description": "OCR keyword hits"
     }
   },
   "required": [

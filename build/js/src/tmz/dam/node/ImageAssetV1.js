@@ -1,4 +1,4 @@
-// @link https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-0.json#
+// @link https://schemas.tmz.com/json-schema/tmz/dam/node/image-asset/1-0-1.json#
 import AssetId from '@triniti/schemas/triniti/dam/AssetId.js';
 import Fb from '@gdbots/pbj/FieldBuilder.js';
 import Format from '@gdbots/pbj/enums/Format.js';
@@ -160,6 +160,22 @@ export default class ImageAssetV1 extends Message {
           .asASet()
           .format(Format.HASHTAG)
           .build(),
+        /*
+         * When true the image indicates its unsafe
+         */
+        Fb.create('is_warning', T.BooleanType.create())
+          .build(),
+        /*
+         * The confidence in [0, 1] for indicating the image is a warning
+         */
+        Fb.create('warning_confidence', T.FloatType.create())
+          .build(),
+        /*
+         * OCR keyword hits
+         */
+        Fb.create('warning_ocr_hits', T.StringType.create())
+          .asAList()
+          .build(),
       ],
       this.MIXINS,
     );
@@ -167,7 +183,7 @@ export default class ImageAssetV1 extends Message {
 }
 
 const M = ImageAssetV1;
-M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:node:image-asset:1-0-0';
+M.prototype.SCHEMA_ID = M.SCHEMA_ID = 'pbj:tmz:dam:node:image-asset:1-0-1';
 M.prototype.SCHEMA_CURIE = M.SCHEMA_CURIE = 'tmz:dam:node:image-asset';
 M.prototype.SCHEMA_CURIE_MAJOR = M.SCHEMA_CURIE_MAJOR = 'tmz:dam:node:image-asset:v1';
 M.prototype.MIXINS = M.MIXINS = [
