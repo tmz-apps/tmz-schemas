@@ -190,31 +190,20 @@ final class ImageAssetV1 extends AbstractMessage
                     ->format(Format::HASHTAG)
                     ->build(),
                 /*
-                 * True when CV/OCR detected a yellow hazard/warning banner on the original image.
+                 * When true the image indicates its unsafe
                  */
-                Fb::create('has_warning_banner', T\BooleanType::create())
+                Fb::create('is_warning', T\BooleanType::create())
                     ->build(),
                 /*
-                 * Detector confidence in [0, 1] for the warning banner prediction.
+                 * The confidence in [0, 1] for indicating the image is unsafe
                  */
                 Fb::create('warning_banner_confidence', T\FloatType::create())
                     ->build(),
                 /*
-                 * Normalized [x, y, w, h] bbox of the best warning-banner candidate.
-                 */
-                Fb::create('warning_banner_bbox', T\FloatType::create())
-                    ->asAList()
-                    ->build(),
-                /*
-                 * OCR keyword hits that boosted confidence (WARNING, GRAPHIC, etc.).
+                 * OCR keyword hits
                  */
                 Fb::create('warning_banner_ocr_hits', T\StringType::create())
                     ->asAList()
-                    ->build(),
-                /*
-                 * When yellow-banner detection last ran for this asset.
-                 */
-                Fb::create('warning_banner_checked_at', T\DateTimeType::create())
                     ->build(),
             ],
             self::MIXINS

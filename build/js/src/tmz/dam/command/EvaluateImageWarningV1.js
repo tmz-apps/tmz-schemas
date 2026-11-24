@@ -95,7 +95,7 @@ export default class EvaluateImageWarningV1 extends Message {
         Fb.create('ctx_msg', T.TextType.create())
           .build(),
         /*
-         * The ImageAsset node to run yellow-banner CV/OCR detection against.
+         * The ImageAsset node to run warning detection against.
          */
         Fb.create('node_ref', T.NodeRefType.create())
           .required()

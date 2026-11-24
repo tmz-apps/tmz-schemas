@@ -6,7 +6,7 @@
   <schema id="pbj:tmz:dam:command:evaluate-image-warning:1-0-0">
     <fields>
       <field name="node_ref" type="node-ref" required="true">
-        <description>The ImageAsset node to run yellow-banner CV/OCR detection against.</description>
+        <description>The ImageAsset node to run warning detection against.</description>
       </field>
     </fields>
 

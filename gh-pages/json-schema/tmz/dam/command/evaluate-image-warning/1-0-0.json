@@ -161,7 +161,7 @@
     "node_ref": {
       "type": "string",
       "pattern": "^[\\w\\/\\.:-]+$",
-      "description": "The ImageAsset node to run yellow-banner CV/OCR detection against."
+      "description": "The ImageAsset node to run warning detection against."
     }
   },
   "required": [
