@@ -8,10 +8,10 @@
       <field name="is_warning" type="boolean">
         <description>When true the image indicates its unsafe</description>
       </field>
-      <field name="warning_banner_confidence" type="float">
-        <description>The confidence in [0, 1] for indicating the image is unsafe</description>
+      <field name="warning_confidence" type="float">
+        <description>The confidence in [0, 1] for indicating the image is a warning</description>
       </field>
-      <field name="warning_banner_ocr_hits" type="string" rule="list">
+      <field name="warning_ocr_hits" type="string" rule="list">
         <description>OCR keyword hits</description>
       </field>
     </fields>

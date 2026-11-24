@@ -3,11 +3,9 @@
 ## v3.4.0
 * __Modify Schemas:__
   * `tmz:dam:node:image-asset` patch revision `1-0-1`
-    * Add `has_warning_banner` boolean field.
-    * Add `warning_banner_confidence` float field.
-    * Add `warning_banner_bbox` float list field.
-    * Add `warning_banner_ocr_hits` string list field.
-    * Add `warning_banner_checked_at` date-time field.
+    * Add `is_warning` boolean field.
+    * Add `warning_confidence` float field.
+    * Add `warning_ocr_hits` string list field.
 * __Add Schemas:__
   * `tmz:dam:command:evaluate-image-warning` revision `1-0-0`
   * `tmz:dam:event:image-warning-evaluated` revision `1-0-0`

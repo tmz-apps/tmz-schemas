@@ -195,14 +195,14 @@ final class ImageAssetV1 extends AbstractMessage
                 Fb::create('is_warning', T\BooleanType::create())
                     ->build(),
                 /*
-                 * The confidence in [0, 1] for indicating the image is unsafe
+                 * The confidence in [0, 1] for indicating the image is a warning
                  */
-                Fb::create('warning_banner_confidence', T\FloatType::create())
+                Fb::create('warning_confidence', T\FloatType::create())
                     ->build(),
                 /*
                  * OCR keyword hits
                  */
-                Fb::create('warning_banner_ocr_hits', T\StringType::create())
+                Fb::create('warning_ocr_hits', T\StringType::create())
                     ->asAList()
                     ->build(),
             ],

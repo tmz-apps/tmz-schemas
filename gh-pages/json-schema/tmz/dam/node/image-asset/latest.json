@@ -281,12 +281,12 @@
       "type": "boolean",
       "description": "When true the image indicates its unsafe"
     },
-    "warning_banner_confidence": {
+    "warning_confidence": {
       "type": "number",
       "default": 0,
-      "description": "The confidence in [0, 1] for indicating the image is unsafe"
+      "description": "The confidence in [0, 1] for indicating the image is a warning"
     },
-    "warning_banner_ocr_hits": {
+    "warning_ocr_hits": {
       "type": "array",
       "items": [
         {
